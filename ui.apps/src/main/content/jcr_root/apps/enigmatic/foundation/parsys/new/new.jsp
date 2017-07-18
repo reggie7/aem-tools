@@ -1,5 +1,4 @@
 <%@ page session="false" import="
-	com.day.text.Text,
 	com.day.cq.wcm.api.components.EditConfig,
 	org.apache.commons.lang3.StringUtils" %>
 <%@include file="/libs/foundation/global.jsp"%>
