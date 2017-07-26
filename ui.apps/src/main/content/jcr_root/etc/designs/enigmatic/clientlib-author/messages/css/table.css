@@ -1,0 +1,51 @@
+.author-margin {
+	margin: 10px !important;
+}
+
+.author-table {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #3b3b3b;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	width: auto;
+}
+
+.author-table.stretch {
+	width: 100%;
+}
+
+.author-table tr {
+	background: #e9e9e9;
+}
+
+.author-table tr:nth-of-type(even) {
+	background: #f6f6f6;
+}
+
+.author-table thead tr {
+	background: #ea6153;
+}
+
+.author-table thead tr th {
+	font-weight: 900;
+	color: #ffffff;
+}
+
+.author-table thead.green tr {
+	background: #27ae60;
+}
+
+.author-table thead.blue tr {
+	background: #2980b9;
+}
+
+.author-table td {
+	padding: 6px 12px;
+}
+
+.author-table th {
+	padding: 6px 12px;
+}
