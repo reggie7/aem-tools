@@ -1,0 +1,4 @@
+<sly data-sly-use.clientLib="granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientLib.css @ categories='enigmatic.all'}" />
+<sly data-sly-test="${!wcmmode.disabled}"
+	data-sly-call="${clientLib.all @ categories='enigmatic.author'}" />

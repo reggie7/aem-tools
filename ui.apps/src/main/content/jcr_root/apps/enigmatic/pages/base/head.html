@@ -1,0 +1,14 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"
+	data-sly-use.head="head.js"
+	data-sly-use.headlibRenderer="headlibs.html"
+	data-sly-use.clientLib="granite/sightly/templates/clientlib.html" />
+<meta data-sly-test.keywords="${head.keywords}" name="keywords" content="${keywords}" />
+<meta data-sly-test.description="${head.description}" name="description" content="${description}" />
+<sly data-sly-test="${!wcmmode.disabled}">
+	<sly data-sly-call="${headlibRenderer.headlibs @ designPath=head.designPath}" />
+	<sly data-sly-include="author.html" />
+	<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" />
+	<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}" />
+</sly>
+<sly data-sly-include="customheaderlibs.html" />
+<title>${currentPage.pageTitle || currentPage.navigationTitle || currentPage.title || currentPage.name}${properties.subtitle ? ':' : null} ${properties.subtitle}</title>
