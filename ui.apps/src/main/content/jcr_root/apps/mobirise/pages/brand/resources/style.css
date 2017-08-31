@@ -371,6 +371,7 @@ html {
 .content-2 .thumbnail > img,
 .content-2 .thumbnail .image img {
   max-width: 50%;
+  display: inline;
 }
 @media (max-width: 767px) {
   .content-2 .thumbnail > img,
@@ -983,7 +984,7 @@ html {
   position: absolute;
 }
 .mbr-navbar--transparent .mbr-navbar__section {
-  background: none;
+  background-color: rgba(160, 160, 160, 0.5);
 }
 .mbr-navbar--stuck .mbr-navbar__section,
 .mbr-navbar--relative .mbr-navbar__section {

@@ -8,12 +8,12 @@
 		cq:template="/apps/mobirise/templates/brand">
 		<par jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
-			<stage jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/stage" />
+			<!--stage jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/stage" /-->
 			<features-v4 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/features/v4" />
-			<header jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/header" />
+			<!--header jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/header" /-->
 			<features-v3 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/features/v3" />
 			<slider jcr:primaryType="nt:unstructured"
