@@ -3,14 +3,13 @@
 	jcr:primaryType="cq:Template"
 	jcr:title="Brand Page"
 	jcr:description="Brand Page to serve as the start of brand tree"
-	allowedChildren="[/apps/kyocera/templates/domain]"
 	allowedPaths="[/content/?]"
 	ranking="{Long}1">
 	<jcr:content jcr:primaryType="cq:PageContent"
-		sling:resourceType="kyocera/pages/brand"
-		cq:allowedTemplates="[/apps/kyocera/templates/.*]"
-		cq:designPath="/etc/designs/kyocera">
+		sling:resourceType="enigmatic/pages/brand"
+		cq:allowedTemplates="[/apps/enigmatic/templates/.*]"
+		cq:designPath="/etc/designs/enigmatic">
 		<par jcr:primaryType="nt:unstructured"
-			sling:resourceType="kyocera/foundation/parsys" />
+			sling:resourceType="enigmatic/foundation/parsys" />
 	</jcr:content>
 </jcr:root>
