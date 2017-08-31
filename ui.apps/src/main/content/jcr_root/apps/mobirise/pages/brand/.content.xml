@@ -3,4 +3,4 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="Mobirise"
 	jcr:description="Mobirise Tutorial Excercise Page"
-	sling:resourceSuperType="foundation/components/page" />
+	sling:resourceSuperType="wcm/foundation/components/page" />
