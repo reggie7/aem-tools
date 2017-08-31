@@ -1,0 +1,27 @@
+#jarallax-container-1 {
+	clip: rect(0px 1903px 901px 0);
+	clip: rect(0px, 1903px, 901px, 0);
+}
+
+#jarallax-container-2 {
+	clip: rect(0px 1903px 587px 0);
+	clip: rect(0px, 1903px, 587px, 0);
+}
+
+#jarallax-container-0 {
+	clip: rect(0px 1903px 901px 0);
+	clip: rect(0px, 1903px, 901px, 0);
+}
+
+.gm-style {
+	font: 400 11px Roboto, Arial, sans-serif;
+	text-decoration: none;
+}
+.gm-style img { max-width: none; }
+
+@-webkit-keyframes _gm7916 {
+	0% { -webkit-transform: translate3d(0px,-500px,0); -webkit-animation-timing-function: ease-in; }
+	50% { -webkit-transform: translate3d(0px,0px,0); -webkit-animation-timing-function: ease-out; }
+	75% { -webkit-transform: translate3d(0px,-20px,0); -webkit-animation-timing-function: ease-in; }
+	100% { -webkit-transform: translate3d(0px,0px,0); -webkit-animation-timing-function: ease-out; }
+}
