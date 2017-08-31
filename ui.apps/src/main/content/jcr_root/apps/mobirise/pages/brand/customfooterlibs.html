@@ -1,7 +1,2 @@
-<script src="/etc/designs/mobirise/clientlib-site/js/jquery.min.js"></script>
-<script src="/etc/designs/mobirise/clientlib-site/js/bootstrap.min.js"></script>
-<script src="/etc/designs/mobirise/clientlib-site/js/jarallax.js"></script>
-<script src="/etc/designs/mobirise/clientlib-site/js/bootstrap-carousel-swipe.js"></script>
-<script src="/etc/designs/mobirise/clientlib-site/js/masonry.pkgd.min.js"></script>
-<script src="/etc/designs/mobirise/clientlib-site/js/gallery_1.js"></script>
-<script src="/etc/designs/mobirise/clientlib-site/js/gallery_2.js"></script>
+<sly data-sly-use.clientLib="granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientLib.js @ categories='mobirise.all'}" />
