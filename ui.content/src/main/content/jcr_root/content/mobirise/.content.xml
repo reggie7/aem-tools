@@ -7,6 +7,41 @@
 		cq:designPath="/etc/designs/mobirise"
 		cq:template="/apps/mobirise/templates/brand">
 		<par jcr:primaryType="nt:unstructured"
-			sling:resourceType="foundation/components/parsys" />
+			sling:resourceType="enigmatic/foundation/parsys">
+			<stage jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/stage" />
+			<features-v4 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features/v4" />
+			<header jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/header" />
+			<features-v3 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features/v3" />
+			<slider jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/slider" />
+			<imagebox jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/imagebox" />
+			<features-v2 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features/v2" />
+			<headline jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/headline" />
+			<gallery jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/gallery" />
+			<msgbox jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/msgbox" />
+			<social-buttons-v2 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/social-buttons/v2" />
+			<features jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features" />
+			<pricing-table jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/pricing-table" />
+			<social-buttons jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/social-buttons" />
+			<testimonials jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/testimonials" />
+			<contact-form jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/contact-form" />
+			<contact-info jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/contact-info" />
+		</par>
 	</jcr:content>
 </jcr:root>
