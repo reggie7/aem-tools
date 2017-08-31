@@ -2,4 +2,7 @@
 <workspaceFilter version="1.0">
 	<filter root="/content/enigmatic" />
 	<filter root="/content/dam/enigmatic" />
+
+	<filter root="/content/mobirise" />
+	<filter root="/content/dam/mobirise" />
 </workspaceFilter>

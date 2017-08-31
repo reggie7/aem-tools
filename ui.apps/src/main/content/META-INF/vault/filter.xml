@@ -3,4 +3,7 @@
 	<filter root="/apps/enigmatic" />
 	<filter root="/apps/sling" />
 	<filter root="/etc/designs/enigmatic" />
+
+	<filter root="/apps/mobirise" />
+	<filter root="/etc/designs/mobirise" />
 </workspaceFilter>
