@@ -1,0 +1,3 @@
+#base=js
+gallery_1.js
+gallery_2.js

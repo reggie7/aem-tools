@@ -4,5 +4,3 @@ bootstrap.min.js
 jarallax.js
 bootstrap-carousel-swipe.js
 masonry.pkgd.min.js
-gallery_1.js
-gallery_2.js
