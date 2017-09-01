@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="54281fd7-1f0c-460a-82b1-1eb8ba4dfc73">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="mobirise/facebook-350x350-71.png"
+        jcr:lastModified="{Date}2017-05-29T15:07:29.458+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}32"
+            dam:extracted="{Date}2017-05-29T15:07:28.860+02:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}4.860503673553467"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}4.860503673553467"
+            dam:Progressive="no"
+            dam:sha1="a94afb41bee4da95ee46984f72c5da325d8615d0"
+            dam:size="{Long}8940"
+            dc:format="image/png"
+            exif:ColorSpace="{Long}1"
+            exif:PixelXDimension="{Long}350"
+            exif:PixelYDimension="{Long}350"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:ColorMode="{Long}3"
+            photoshop:ICCProfile="sRGB IEC61966-2.1"
+            tiff:ImageLength="{Long}350"
+            tiff:ImageWidth="{Long}350"
+            tiff:Orientation="{Long}1"
+            tiff:ResolutionUnit="{Long}2"
+            tiff:XResolution="720000/10000"
+            tiff:YResolution="720000/10000"
+            xmp:CreateDate="{Date}2015-04-18T02:37:23.000+01:00"
+            xmp:CreatorTool="Adobe Photoshop CC 2014 (Macintosh)"
+            xmp:MetadataDate="{Date}2015-04-18T02:57:18.000+01:00"
+            xmp:ModifyDate="{Date}2015-04-18T02:57:18.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:5a681964-2267-1178-814e-fae51bd89598"
+            xmpMM:InstanceID="xmp.iid:80b1b380-9369-4359-9299-9f5e3c0569d8"
+            xmpMM:OriginalDocumentID="xmp.did:3c3479b6-04ff-4ca4-af1e-8ebfd06ad5cc">
+            <xmpMM:History
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}5"
+                xmpArrayType="rdf:Seq"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="created"
+                    stEvt:instanceID="xmp.iid:3c3479b6-04ff-4ca4-af1e-8ebfd06ad5cc"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2014 (Macintosh)"
+                    stEvt:when="{Date}2015-04-18T02:37:23.000+01:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:d817152c-08fa-4787-9674-8a8c237adec1"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2014 (Macintosh)"
+                    stEvt:when="{Date}2015-04-18T02:57:18.000+01:00"
+                    xmpNodeType="xmpStruct"/>
+                <_x0033_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="converted"
+                    stEvt:parameters="from application/vnd.adobe.photoshop to image/png"
+                    xmpNodeType="xmpStruct"/>
+                <_x0034_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="derived"
+                    stEvt:parameters="converted from application/vnd.adobe.photoshop to image/png"
+                    xmpNodeType="xmpStruct"/>
+                <_x0035_
+                    jcr:primaryType="nt:unstructured"
+                    stEvt:action="saved"
+                    stEvt:changed="/"
+                    stEvt:instanceID="xmp.iid:80b1b380-9369-4359-9299-9f5e3c0569d8"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2014 (Macintosh)"
+                    stEvt:when="{Date}2015-04-18T02:57:18.000+01:00"
+                    xmpNodeType="xmpStruct"/>
+            </xmpMM:History>
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:3c3479b6-04ff-4ca4-af1e-8ebfd06ad5cc"
+                stRef:instanceID="xmp.iid:d817152c-08fa-4787-9674-8a8c237adec1"
+                stRef:originalDocumentID="xmp.did:3c3479b6-04ff-4ca4-af1e-8ebfd06ad5cc"
+                xmpNodeType="xmpStruct"/>
+            <photoshop:TextLayers
+                jcr:primaryType="nt:unstructured"
+                xmpArraySize="{Long}5"
+                xmpArrayType="rdf:Bag"
+                xmpNodeType="xmpArray">
+                <_x0031_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName=">_"
+                    photoshop:LayerText=">_"
+                    xmpNodeType="xmpStruct"/>
+                <_x0032_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="A"
+                    photoshop:LayerText="A"
+                    xmpNodeType="xmpStruct"/>
+                <_x0033_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="IMDB"
+                    photoshop:LayerText="IMDB"
+                    xmpNodeType="xmpStruct"/>
+                <_x0034_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="+"
+                    photoshop:LayerText="+"
+                    xmpNodeType="xmpStruct"/>
+                <_x0035_
+                    jcr:primaryType="nt:unstructured"
+                    photoshop:LayerName="t"
+                    photoshop:LayerText="t"
+                    xmpNodeType="xmpStruct"/>
+            </photoshop:TextLayers>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
