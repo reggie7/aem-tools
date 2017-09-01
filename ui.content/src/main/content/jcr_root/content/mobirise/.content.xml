@@ -10,18 +10,249 @@
 			sling:resourceType="enigmatic/foundation/parsys">
 			<!--stage jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/stage" /-->
-			<features-v4 jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/features/v4" />
+			<features_1 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features"
+				columnsNumber="{Long}4"
+				backgroundColor="rgba(255, 255, 255, 1)">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<par_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="IMAGE/CONTENT SLIDER"
+							text="Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in.
+									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/google-slides-350x350-16.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="default" />
+							</links>
+						</item>
+					</par_1>
+					<par_2 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="CONTACT FORMS"
+							text="Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in.
+									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/reminders-350x350-18.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="default" />
+							</links>
+						</item>
+					</par_2>
+					<par_3 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="IMAGE GALLERY"
+							text="Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in.
+									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/photos-350x350-95.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="default" />
+							</links>
+						</item>
+					</par_3>
+					<par_4 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="MOBILE MENU"
+							text="Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in.
+									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/kindle-350x350-47.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="default" />
+							</links>
+						</item>
+					</par_4>
+				</items>
+			</features_1>
 			<!--header jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/header" /-->
-			<features-v3 jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/features/v3" />
+			<features_2 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features"
+				columnsNumber="{Long}4"
+				backgroundColor="rgba(28, 73, 110, 1)">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<par_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="GOOGLE MAPS"
+							text="Duis sodales arcu eget gravida mollis. Sed condimentum nibh at dapibus semper. Etiam mattis leo at commodo eleifend.
+									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/maps-350x350-26.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="info" />
+							</links>
+						</item>
+					</par_1>
+					<par_2 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="SOCIAL BUTTONS"
+							text="Duis sodales arcu eget gravida mollis. Sed condimentum nibh at dapibus semper. Etiam mattis leo at commodo eleifend.
+									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/facebook-350x350-71.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="info" />
+							</links>
+						</item>
+					</par_2>
+					<par_3 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="GOOGLE FONTS"
+							text="Duis sodales arcu eget gravida mollis. Sed condimentum nibh at dapibus semper. Etiam mattis leo at commodo eleifend.
+									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/bytafont-350x350-38.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="info" />
+							</links>
+						</item>
+					</par_3>
+					<par_4 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="VIDEO BACKGROUND"
+							text="Duis sodales arcu eget gravida mollis. Sed condimentum nibh at dapibus semper. Etiam mattis leo at commodo eleifend.
+									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/youtube-350x350-69.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="info" />
+							</links>
+						</item>
+					</par_4>
+				</items>
+			</features_2>
 			<slider jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/slider" />
 			<imagebox jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/imagebox" />
-			<features-v2 jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/features/v2" />
+			<features_3 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features"
+				columnsNumber="{Long}3"
+				backgroundColor="rgba(239, 239, 239, 1)">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<par_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="MOBILE-FRIENDLY"
+							text="Sed vel vulputate lacus. Nulla et fringilla turpis. Etiam non urna magna. Fusce rutrum nec eros id dapibus.
+									In tincidunt mi eget molestie condimentum.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/phone-350x350-12.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys" />
+						</item>
+					</par_1>
+					<par_2 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="EASY-TO-USE"
+							text="Sed vel vulputate lacus. Nulla et fringilla turpis. Etiam non urna magna. Fusce rutrum nec eros id dapibus.
+									In tincidunt mi eget molestie condimentum.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/anemone-350x350-67.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys" />
+						</item>
+					</par_2>
+					<par_3 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="FREE"
+							text="Sed vel vulputate lacus. Nulla et fringilla turpis. Etiam non urna magna. Fusce rutrum nec eros id dapibus.
+									In tincidunt mi eget molestie condimentum.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/clear-350x350-99.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys" />
+						</item>
+					</par_3>
+				</items>
+			</features_3>
 			<headline jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/headline" />
 			<gallery jcr:primaryType="nt:unstructured"
@@ -30,8 +261,98 @@
 				sling:resourceType="mobirise/components/msgbox" />
 			<social-buttons-v2 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/social-buttons/v2" />
-			<features jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/features" />
+			<features_4 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features"
+				columnsNumber="{Long}4"
+				backgroundColor="rgba(255, 255, 255, 1)">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<par_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="PARALLAX SCROLLING"
+							text="Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie.
+									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/workflow-350x350-59.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="default" />
+							</links>
+						</item>
+					</par_1>
+					<par_2 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="FULL SCREEN INTRO"
+							text="Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie.
+									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/chrome-remote-desktop-350x350-23.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="info" />
+							</links>
+						</item>
+					</par_2>
+					<par_3 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="WEB FONTS"
+							text="Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie.
+									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/com-350x350-41.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="default" />
+							</links>
+						</item>
+					</par_3>
+					<par_4 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<item jcr:primaryType="nt:unstructured"
+							sling:resourceType="mobirise/components/features/item"
+							title="PRICE TABLES"
+							text="Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie.
+									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
+							<image jcr:primaryType="nt:unstructured"
+								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+								sling:resourceType="wcm/foundation/components/image"
+								fileReference="/content/dam/mobirise/calculator-350x350-78.png" />
+							<links jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/foundation/parsys">
+								<link jcr:primaryType="nt:unstructured"
+									sling:resourceType="mobirise/components/features/item/link"
+									text="LEARN MORE"
+									path="http://enigmatic.pl/"
+									css="info" />
+							</links>
+						</item>
+					</par_4>
+				</items>
+			</features_4>
 			<pricing-table jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/pricing-table" />
 			<social-buttons jcr:primaryType="nt:unstructured"

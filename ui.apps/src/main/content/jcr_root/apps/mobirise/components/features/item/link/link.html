@@ -1,0 +1,4 @@
+<sly data-sly-test="${!(properties.path && properties.text)}" data-sly-include="/apps/enigmatic/edit.html" />
+<a data-sly-test="${properties.path && properties.text}"
+	data-sly-use.helper="${'pl.enigmatic.aem.URLNormalizer' @ input=properties.path}"
+	href="${helper.url}" class="btn btn-${properties.css}">${properties.text}</a>

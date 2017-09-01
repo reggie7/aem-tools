@@ -1,54 +1,11 @@
-<section class="content-2 col-4" id="features1-85" style="background-color: rgb(255, 255, 255);">
+<section class="content-2 col-${properties.columnsNumber}"
+	data-sly-use.helper="pl.enigmatic.aem.ResourceIDComponent" id="${helper.id}"
+	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
 	<div class="container">
-		<div class="row">
-			<div>
-				<div class="thumbnail">
-					<div class="image"><img class="undefined" src="/content/dam/mobirise/workflow-350x350-59.png"></div>
-					<div class="caption">
-						<div>
-							<h3>PARALLAX SCROLLING</h3>
-							<p>Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie. Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.</p>
-						</div>
-						<p class="group"><a href="https://mobirise.com/" class="btn btn-default">LEARN MORE</a></p>
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="thumbnail">
-					<div class="image"><img class="undefined" src="/content/dam/mobirise/chrome-remote-desktop-350x350-23.png"></div>
-					<div class="caption">
-						<div>
-							<h3>FULL SCREEN INTRO</h3>
-							<p>Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie. Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.</p>
-						</div>
-						<p class="group"><a href="https://mobirise.com/" class="btn btn-default">LEARN MORE</a></p>
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="thumbnail">
-					<div class="image"><img class="undefined" src="/content/dam/mobirise/com-350x350-41.png"></div>
-					<div class="caption">
-						<div>
-							<h3>WEB FONTS</h3>
-							<p>Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie. Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.</p>
-						</div>
-						<p class="group"><a href="https://mobirise.com/" class="btn btn-default">LEARN MORE</a></p>
-					</div>
-				</div>
-			</div>
-			<div>
-				<div class="thumbnail">
-					<div class="image"><img class="undefined" src="/content/dam/mobirise/calculator-350x350-78.png"></div>
-					<div class="caption">
-						<div>
-							<h3>PRICE TABLES</h3>
-							<p>Etiam lacinia volutpat magna, sed lobortis risus egestas in. Nunc fringilla urna ac libero venenatis molestie. Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.</p>
-						</div>
-						<p class="group"><a href="https://mobirise.com/" class="btn btn-default">LEARN MORE</a></p>
-					</div>
-				</div>
-			</div>
+		<div class="row" data-sly-use.range="${'pl.enigmatic.aem.Range' @ to=properties.columnsNumber}"
+			data-sly-list="${range.iterator}">
+			<div data-sly-test.path="items/par_${item}"
+				data-sly-resource="${path @ resourceType='enigmatic/foundation/parsys'}"></div>
 		</div>
 	</div>
 </section>

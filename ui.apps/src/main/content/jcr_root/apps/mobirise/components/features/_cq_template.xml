@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	jcr:primaryType="nt:unstructured"
+	columnsNumber="{Long}4">
+	<items jcr:primaryType="nt:unstructured"
+		sling:resourceType="enigmatic/foundation/parsys">
+		<par_1 jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<item jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features/item">
+				<image jcr:primaryType="nt:unstructured"
+					sling:resourceType="wcm/foundation/components/image" />
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/features/item/link" />
+				</links>
+			</item>
+		</par_1>
+		<par_2 jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<item jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features/item">
+				<image jcr:primaryType="nt:unstructured"
+					sling:resourceType="wcm/foundation/components/image" />
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/features/item/link" />
+				</links>
+			</item>
+		</par_2>
+		<par_3 jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<item jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features/item">
+				<image jcr:primaryType="nt:unstructured"
+					sling:resourceType="wcm/foundation/components/image" />
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/features/item/link" />
+				</links>
+			</item>
+		</par_3>
+		<par_4 jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<item jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/features/item">
+				<image jcr:primaryType="nt:unstructured"
+					sling:resourceType="wcm/foundation/components/image" />
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/features/item/link" />
+				</links>
+			</item>
+		</par_4>
+	</items>
+</jcr:root>
