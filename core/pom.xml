@@ -47,7 +47,7 @@
 						<!-- Import any version of javax.inject, to allow running on multiple versions of AEM -->
 						<Import-Package>javax.inject;version=0.0.0,*</Import-Package>
 						<Sling-Model-Packages>
-							pl.enigmatic.aem.core
+							pl.enigmatic.aem
 						</Sling-Model-Packages>
 					</instructions>
 				</configuration>
@@ -73,6 +73,10 @@
 			<artifactId>osgi.annotation</artifactId>
 		</dependency>
 		<!-- Other Dependencies -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
