@@ -1,9 +1,7 @@
-<sly data-sly-resource="${'header' @ resourceType='mobirise/structure/header'}" />
+<sly data-sly-test="${!component.properties.hideHeader}" data-sly-resource="${'header' @ resourceType='mobirise/structure/header'}" />
 
 <div data-sly-resource="${'par' @ resourceType='enigmatic/foundation/parsys'}" data-sly-unwrap="${wcmmode.disabled}"></div>
-
 <footer data-sly-resource="${'footer' @ resourceType='mobirise/structure/footer'}"
 	class="mbr-section mbr-section--relative mbr-section--fixed-size" id="footer1-91"
 	style="background-color: rgb(68, 68, 68);"></footer>
-
 <sly data-sly-include="footerlibs.html" />

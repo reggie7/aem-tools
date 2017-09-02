@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
 	jcr:primaryType="cq:Template"
-	jcr:title="Mobirise Brand"
-	jcr:description="Mobirise Brand Page Template to serve as the start of a brand tree"
-	allowedChildren="[/apps/mobirise/templates/domain]"
-	allowedPaths="[/content/?]"
+	jcr:title="Mobirise Domain"
+	jcr:description="Mobirise Domain Page Template to serve as the start of a domain tree"
+	allowedParents="[/apps/mobirise/templates/brand]"
+	allowedChildren="[/apps/mobirise/templates/lang]"
 	ranking="{Long}1">
 	<jcr:content jcr:primaryType="cq:PageContent"
-		sling:resourceType="mobirise/pages/brand"
+		sling:resourceType="mobirise/pages/domain"
 		cq:allowedTemplates="[/apps/mobirise/templates/.*]"
 		cq:designPath="/etc/designs/mobirise">
 		<par jcr:primaryType="nt:unstructured"
