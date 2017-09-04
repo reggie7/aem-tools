@@ -1,0 +1,6 @@
+.mbr-navbar--absolute {
+	position: relative;
+}
+.mbr-navbar--sticky .mbr-navbar__section {
+	position: absolute;
+}
