@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="Links"
+	jcr:description="Widgets for links to include inside the dialogs">
+	<reference jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+		fieldLabel="Reference"
+		fieldDescription="Path (or URL) to a webpage this link should direct to. In case you leave the text and label options empty below -
+			the page properties will be used to determine the link text or, in case the link is outside the pages tree, the URL itself
+			will be placed as the text. Don't add the .html extension in case you point to a page within this system."
+		name="./reference"
+		required="{Boolean}true" />
+	<text jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/form/textfield"
+		fieldLabel="Text"
+		fieldDescription="Text / Label that will be used with the highest priority. If you fill something here - it will be used regardless of
+			whatever you entered in the 'Global Label' field below."
+		name="./text" />
+	<label jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/form/select"
+		fieldLabel="Global Label"
+		fieldDescription="You can set the label to simply reference some of the global labels that you can configure for a whole page tree.
+			It will be used in case you left the above 'Text' field empty."
+		name="./label">
+		<items jcr:primaryType="nt:unstructured">
+			<none jcr:primaryType="nt:unstructured"
+				text=""
+				value="" />
+			<learnMore jcr:primaryType="nt:unstructured"
+				text="Learn More"
+				value="learnMore" />
+		</items>
+	</label>
+</jcr:root>

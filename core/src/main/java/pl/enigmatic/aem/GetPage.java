@@ -7,6 +7,7 @@ import javax.inject.Inject;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Optional;
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
@@ -23,6 +24,7 @@ public class GetPage {
 	 * page path
 	 */
 	@Inject
+	@Optional
 	private String input;
 	/**
 	 * {@link PageManager page manager}

@@ -263,7 +263,18 @@
 			<gallery jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/gallery" />
 			<msgbox jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/msgbox" />
+				sling:resourceType="mobirise/components/content/msgbox"
+				text="BOOTSTRAP ONE PAGE TEMPLATE"
+				backgroundColor="rgba(255, 255, 255, 1)">
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/msgbox/link"
+						text="GET IT NOW"
+						reference="http://enigma.edu.pl/"
+						css="default" />
+				</links>
+			</msgbox>
 			<social-buttons-v2 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/social-buttons/v2" />
 			<features_4 jcr:primaryType="nt:unstructured"

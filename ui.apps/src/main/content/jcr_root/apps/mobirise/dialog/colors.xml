@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="Colors"
+	jcr:description="Widgets for colors to include inside the dialogs">
+	<backgroundColor jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/form/colorpicker"
+		fieldLabel="Background Color"
+		fieldDescription="This will be the color of the whole paragraph that this component occupies."
+		name="./backgroundColor"
+		editType="{Boolean}true" />
+</jcr:root>

@@ -2,7 +2,7 @@
 <sly data-sly-test.reference="${model.path || properties.reference}" />
 <sly data-sly-test="${!reference}" data-sly-include="/apps/enigmatic/edit.html" />
 <a data-sly-test="${reference}" data-sly-use.helper="${'pl.enigmatic.aem.URLNormalizer' @ input=reference}"
-	href="${helper.url}" class="${component.properties.css}">
+	href="${helper.url}" class="${component.properties.css || 'btn'} btn-${properties.css}">
 	<sly data-sly-use.ref="${'pl.enigmatic.aem.GetPage' @ input=(properties.reference || model.path)}" />
 	<sly data-sly-test.page="${ref.page}" />
 	<sly data-sly-test="${properties.label}">

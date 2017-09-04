@@ -1,10 +1,16 @@
-<section class="msgbox-1" id="msg-box2-83" style="background-color: rgb(255, 255, 255);">
+<sly data-sly-test="${!properties.text}" data-sly-include="/apps/enigmatic/edit.html" />
+<section data-sly-test="${properties.text}" class="msgbox-1"
+	data-sly-use.helper="pl.enigmatic.aem.ResourceIDComponent" id="${helper.id}"
+	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8">
-				<h2>BOOTSTRAP ONE PAGE TEMPLATE</h2>
+				<h2>${properties.text}</h2>
 			</div>
-			<div class="col-sm-4"><a class="btn btn-lg btn-default" href="https://mobirise.com/">GET IT NOW</a></div>
+			<div class="col-sm-4" data-sly-use.hasChildren="pl.enigmatic.aem.HasChildren">
+				<div class="group" data-sly-test="${!wcmmode.disabled || hasChildren['links']}"
+					data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"></div>
+			</div>
 		</div>
 	</div>
 </section>
