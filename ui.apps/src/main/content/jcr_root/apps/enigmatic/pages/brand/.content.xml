@@ -3,5 +3,4 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="enigmatic Brand Page"
 	jcr:description="Brand Page to serve as the start of Enigma Solutions brand tree"
-	sling:resourceSuperType="enigmatic/pages/base"
-	componentGroup=".hidden" />
+	sling:resourceSuperType="enigmatic/pages/base" />
