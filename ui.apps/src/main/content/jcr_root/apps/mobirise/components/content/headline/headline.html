@@ -1,8 +1,11 @@
-<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="msg-box3-81" style="background-color: rgb(255, 255, 255);">
+<sly data-sly-test="${!properties.text}" data-sly-include="/apps/enigmatic/edit.html" />
+<section data-sly-test="${properties.text}" class="mbr-section mbr-section--relative mbr-section--fixed-size"
+	data-sly-use.helper="pl.enigmatic.aem.ResourceIDComponent" id="${helper.id}"
+	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
 	<div class="mbr-section__container container mbr-section__container--isolated">
 		<div class="mbr-header mbr-header--wysiwyg row">
-			<div class="col-sm-8 col-sm-offset-2">
-				<h3 class="mbr-header__text">MASONRY IMAGE GALLERY</h3>
+			<div class="col-sm-8 col-sm-offset-2" data-sly-unwrap="${properties.align == 'left'}">
+				<h3 class="mbr-header__text">${properties.text}</h3>
 			</div>
 		</div>
 	</div>

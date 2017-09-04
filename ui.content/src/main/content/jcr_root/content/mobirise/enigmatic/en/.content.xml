@@ -258,10 +258,6 @@
 					</par_3>
 				</items>
 			</features_3>
-			<headline jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/headline" />
-			<gallery jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/gallery" />
 			<msgbox jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/msgbox"
 				text="BOOTSTRAP ONE PAGE TEMPLATE"
