@@ -1,0 +1,12 @@
+<sly data-sly-test="${!properties.reference}" data-sly-include="/apps/enigmatic/edit.html" />
+<a data-sly-test="${properties.reference}"
+	data-sly-use.helper="${'pl.enigmatic.aem.URLNormalizer' @ input=properties.reference}"
+	href="${helper.url}" class="btn btn-${properties.css}">
+	<sly data-sly-use.ref="${'pl.enigmatic.aem.GetPage' @ input=properties.reference}" />
+	<sly data-sly-test.page="${ref.page}" />
+	<sly data-sly-test="${properties.label}">
+		<sly data-sly-test.label="labels/${properties.label}" />
+		<sly data-sly-test.label="${inheritedPageProperties[label]}" />
+	</sly>
+	${properties.text || label || page.navigationTitle || page.pageTitle || page.title || page.name || properties.reference}
+</a>
