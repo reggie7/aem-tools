@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:mixinTypes="[cq:Project,mix:created,mix:lastModified,rep:AccessControllable]"
+	sling:resourceType="cq/gui/components/projects/admin/card/projectcard"
+	role_editor="projects-mobirise-editor"
+	role_observer="projects-mobirise"
+	role_owner="projects-mobirise-owner">
+	<jcr:content jcr:primaryType="nt:unstructured"
+		jcr:title="Mobirise"
+		jcr:description="Mobirise Test Content Project for AEM Tools"
+		sling:resourceType="cq/gui/components/projects/admin/card/projectcontent"
+		cq:template="/libs/cq/core/content/projects/templates/default"
+		active="{Boolean}true"
+		coverUrl="/content/dam/mobirise/discover-mobile-350x350-53.png"
+		damFolderPath="/content/dam/mobirise"
+		detailsHref="/projects/details.html"
+		project.startDate="{Date}2017-06-13T15:42:55.000Z"
+		taskid=""
+		templateorproject="/libs/cq/core/content/projects/templates/default"
+		user="">
+		<links jcr:primaryType="nt:unstructured" />
+		<dashboard jcr:primaryType="nt:unstructured">
+			<gadgets jcr:primaryType="nt:unstructured">
+				<team jcr:primaryType="nt:unstructured"
+					jcr:title="Team"
+					sling:resourceType="cq/gui/components/projects/admin/pod/teampod"
+					cardWeight="60" />
+				<asset jcr:primaryType="nt:unstructured"
+					jcr:title="Assets"
+					sling:resourceType="cq/gui/components/projects/admin/pod/assetpod"
+					cardWeight="90" />
+				<work jcr:primaryType="nt:unstructured"
+					jcr:title="Workflows"
+					sling:resourceType="cq/gui/components/projects/admin/pod/workpod"
+					cardWeight="80" />
+				<experiences jcr:primaryType="nt:unstructured"
+					jcr:title="Experiences"
+					sling:resourceType="cq/gui/components/projects/admin/pod/channelpod"
+					cardWeight="90">
+					<Site jcr:primaryType="nt:unstructured"
+						jcr:title="Site"
+						sling:resourceType="cq/gui/components/projects/admin/card/linkcard"
+						class="card-page"
+						consolePath="/sites.html"
+						name="websites"
+						projectPath="/content/projects/mobirise"
+						suffix="/content/mobirise/enigmatic/en"
+						wizard="/etc/projects/dashboard/gadgets/experiences/site"
+						wizard_x0040_Delete="" />
+				</experiences>
+				<projectinfo jcr:primaryType="nt:unstructured"
+					jcr:title="Project Info"
+					sling:resourceType="cq/gui/components/projects/admin/pod/projectinfopod"
+					cardWeight="100" />
+				<externallinks jcr:primaryType="nt:unstructured"
+					jcr:title="Links"
+					jcr:description="Links Tile"
+					sling:resourceType="cq/gui/components/projects/admin/pod/externallinkspod"
+					cardWeight="90">
+					<one-page jcr:primaryType="nt:unstructured"
+						jcr:title="Mobirise One Page"
+						sling:resourceType="cq/gui/components/projects/admin/card/linkcard"
+						coverUrl="/content/dam/mobirise/discover-mobile-350x350-53.png"
+						class="card-article"
+						consolePath="https://mobirise.com/bootstrap-template/one-page.html"
+						name="External"
+						target="_blank"
+						linkParent="/content/projects/mobirise/jcr:content/dashboard/gadgets/externallinks" />
+					<blog jcr:primaryType="nt:unstructured"
+						jcr:title="Mobirise Blog"
+						coverUrl="/content/dam/mobirise/discover-mobile-350x350-53.png"
+						sling:resourceType="cq/gui/components/projects/admin/card/linkcard"
+						class="card-article"
+						consolePath="https://mobirise.com/bootstrap-template/blog.html"
+						name="External"
+						target="_blank"
+						linkParent="/content/projects/mobirise/jcr:content/dashboard/gadgets/externallinks" />
+				</externallinks>
+			</gadgets>
+		</dashboard>
+	</jcr:content>
+</jcr:root>
