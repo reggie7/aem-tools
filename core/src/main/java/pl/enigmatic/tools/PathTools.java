@@ -1,4 +1,4 @@
-package pl.enigmatic.aem.tools;
+package pl.enigmatic.tools;
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -75,6 +75,11 @@
 							<artifactId>aem-tools.core</artifactId>
 							<target>/apps/enigmatic/install</target>
 						</embedded>
+						<embedded>
+							<groupId>org.apache.commons</groupId>
+							<artifactId>commons-email</artifactId>
+							<target>/apps/mobirise/install</target>
+						</embedded>
 					</embeddeds>
 				</configuration>
 			</plugin>

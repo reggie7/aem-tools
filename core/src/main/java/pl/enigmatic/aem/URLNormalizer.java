@@ -6,7 +6,7 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 
-import pl.enigmatic.aem.tools.PathTools;
+import pl.enigmatic.tools.PathTools;
 
 /**
  * Simple class to include .html extension on URLs.

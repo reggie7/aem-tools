@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Page">
+	<jcr:content jcr:primaryType="cq:PageContent"
+		jcr:title="Message sent"
+		sling:resourceType="mobirise/pages/content"
+		cq:template="/apps/mobirise/templates/content"
+		cq:designPath="/etc/designs/mobirise">
+		<content jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<msgbox jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/msgbox"
+				text="Your message has been sent. We will answer it soon."
+				backgroundColor="rgba(128, 255, 128, 1)">
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<home jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/msgbox/link/homepage"
+						css="info" />
+				</links>
+			</msgbox>
+		</content>
+	</jcr:content>
+</jcr:root>

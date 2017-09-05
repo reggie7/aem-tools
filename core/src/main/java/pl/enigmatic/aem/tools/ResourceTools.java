@@ -13,6 +13,8 @@ import com.day.cq.commons.jcr.JcrConstants;
 import com.day.cq.wcm.api.components.Component;
 import com.day.cq.wcm.api.components.ComponentManager;
 
+import pl.enigmatic.tools.PathTools;
+
 /**
  * Class for exposing common useful methods to process {@link Resource}.
  *

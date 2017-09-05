@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="Contact Form"
+	sling:resourceType="cq/gui/components/authoring/dialog"
+	helpPath="en/cq/current/wcm/default_components.html#Carousel">
+	<content jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/container">
+		<layout jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+			type="nav" />
+		<items jcr:primaryType="nt:unstructured">
+			<editLabels jcr:primaryType="nt:unstructured"
+				jcr:title="Edit Labels"
+				sling:resourceType="granite/ui/components/foundation/section">
+				<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+				<items jcr:primaryType="nt:unstructured">
+					<column jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/container">
+						<items jcr:primaryType="nt:unstructured">
+							<title jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/foundation/form/textfield"
+								fieldDescription="Title (or headline) of the contact form."
+								fieldLabel="Title"
+								name="./title" />
+							<placeholders jcr:primaryType="nt:unstructured"
+								jcr:title="Placeholders"
+								sling:resourceType="granite/ui/components/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<nameLabel jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldDescription="Placeholder for name of the client."
+										fieldLabel="Name"
+										required="{Boolean}true"
+										name="./nameLabel" />
+									<emailLabel jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldDescription="Placeholder for email of the client."
+										fieldLabel="Email"
+										required="{Boolean}true"
+										name="./emailLabel" />
+									<subjectLabel jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldDescription="Placeholder for subject of the message from the client."
+										fieldLabel="Subject"
+										required="{Boolean}true"
+										name="./subjectLabel" />
+									<phoneLabel jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldDescription="Placeholder for phone of the client."
+										fieldLabel="Phone"
+										required="{Boolean}true"
+										name="./phoneLabel" />
+									<messageLabel jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldDescription="Placeholder for message from the client."
+										fieldLabel="Message"
+										required="{Boolean}true"
+										name="./messageLabel" />
+									<buttonLabel jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldDescription="Label for submit button."
+										fieldLabel="Submit Button"
+										required="{Boolean}true"
+										name="./buttonLabel" />
+								</items>
+							</placeholders>
+							<backgroundColor jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/foundation/include"
+								path="mobirise/dialog/colors/backgroundColor" />
+						</items>
+					</column>
+				</items>
+			</editLabels>
+			<submitActions jcr:primaryType="nt:unstructured"
+				jcr:title="Submit Actions"
+				sling:resourceType="granite/ui/components/foundation/section">
+				<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+				<items jcr:primaryType="nt:unstructured">
+					<column jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/container">
+						<items jcr:primaryType="nt:unstructured">
+							<successPage jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+								fieldLabel="Redirect Success Page"
+								fieldDescription="The user will be redirected to this page if the message is sent properly."
+								name="./successPage"
+								required="{Boolean}true"
+								rootPath="/content" />
+							<failPage jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+								fieldLabel="Redirect Fail Page"
+								fieldDescription="The user will be redirected to this page if the system cannot send the message."
+								name="./failPage"
+								required="{Boolean}true"
+								rootPath="/content" />
+						</items>
+					</column>
+				</items>
+			</submitActions>
+			<inquiry jcr:primaryType="nt:unstructured"
+				jcr:title="Inquiry"
+				sling:resourceType="granite/ui/components/foundation/section">
+				<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+				<items jcr:primaryType="nt:unstructured">
+					<column jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/container">
+						<items jcr:primaryType="nt:unstructured">
+							<toAddress jcr:primaryType="nt:unstructured"
+								sling:resourceType="fd/af/authoring/components/granite/form/formsmultifield"
+								autoWidth="{Boolean}true"
+								fieldLabel="To"
+								fieldDescription="The message from user will be sent to all these recipients."
+								typeHint="String[]">
+								<field jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									allowBlank="{Boolean}false"
+									name="./inquiry/to">
+									<granite:data jcr:primaryType="nt:unstructured"
+										blank-value-validation="" />
+								</field>
+							</toAddress>
+							<companyTemplate jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+								fieldLabel="Email Template"
+								fieldDescription="This will be the email template to send to company support."
+								name="./inquiry/template" />
+						</items>
+					</column>
+				</items>
+			</inquiry>
+			<autoreply jcr:primaryType="nt:unstructured"
+				jcr:title="Auto Reply"
+				sling:resourceType="granite/ui/components/foundation/section">
+				<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+				<items jcr:primaryType="nt:unstructured">
+					<column jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/container">
+						<items jcr:primaryType="nt:unstructured">
+							<from jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								fieldLabel="From"
+								fieldDescription="The user will get a confirmation e-mail from this address."
+								name="./autoreply/from"
+								required="{Boolean}true" />
+							<subject jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								fieldLabel="Subject"
+								fieldDescription="This will be the subject of the message to send to the user."
+								name="./autoreply/subject" />
+							<template jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+								fieldLabel="Email Template"
+								fieldDescription="This will be the email template to send to user."
+								name="./autoreply/template" />
+						</items>
+					</column>
+				</items>
+			</autoreply>
+		</items>
+	</content>
+</jcr:root>

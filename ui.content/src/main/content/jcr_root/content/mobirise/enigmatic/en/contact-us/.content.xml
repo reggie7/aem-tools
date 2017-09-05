@@ -4,12 +4,30 @@
 	<jcr:content jcr:primaryType="cq:PageContent"
 		jcr:title="Contact us"
 		sling:resourceType="mobirise/pages/content"
-		cq:designPath="/etc/designs/mobirise"
-		cq:template="/apps/mobirise/templates/content">
+		cq:template="/apps/mobirise/templates/content"
+		cq:designPath="/etc/designs/mobirise">
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<contact-form jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/contact-form" />
+				sling:resourceType="mobirise/components/content/contact-form"
+				title="Tell us how we can help you:"
+				nameLabel="Your Name"
+				emailLabel="Your Email Address"
+				phoneLabel="Your Phone Number"
+				subjectLabel="Topic of your inquiry"
+				messageLabel="Your Inquiry"
+				buttonLabel="SEND"
+				successPage="/content/mobirise/enigmatic/en/contact-us/success"
+				failPage="/content/mobirise/enigmatic/en/contact-us/fail"
+				backgroundColor="rgba(239, 239, 239, 1)">
+				<inquiry jcr:primaryType="nt:unstructured"
+					to="[contact@enigmatic.pl,contact@enigma.edu.pl,contact@reggie-7.pl]"
+					template="User ${name} has sent the following message: '${message}' titled '${subject}' from email address '${email}'. The phone number used was ${phone}." />
+				<autoreply jcr:primaryType="nt:unstructured"
+					from="noreply@enigmatic.pl"
+					subject="Contact Request"
+					template="We've received an inquiry from you possibly. User ${name} has sent the following message to us: '${message}' titled '${subject}' from email address '${email}'." />
+			</contact-form>
 			<contact-info jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/contact-info" />
 		</content>
