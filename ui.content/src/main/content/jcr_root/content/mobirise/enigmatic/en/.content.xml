@@ -12,6 +12,18 @@
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/global/labels"
 			learnMore="LEARN MORE" />
+		<header jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/structure/header">
+			<logo jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/structure/logo"
+				text="MOBIRISE"
+				reference="/content/mobirise/enigmatic/en">
+				<image jcr:primaryType="nt:unstructured"
+					jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+					sling:resourceType="mobirise/structure/logo/image"
+					fileReference="/content/dam/mobirise/discover-mobile-350x350-53.png" />
+			</logo>
+		</header>
 		<footer jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/structure/footer"
 			text="Copyright (c) 2017 Enigma Solutions."
@@ -45,7 +57,7 @@
 									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/google-slides-350x350-16.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -66,7 +78,7 @@
 									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/reminders-350x350-18.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -87,7 +99,7 @@
 									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/photos-350x350-95.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -108,7 +120,7 @@
 									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/kindle-350x350-47.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -139,7 +151,7 @@
 									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/maps-350x350-26.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -160,7 +172,7 @@
 									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/facebook-350x350-71.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -181,7 +193,7 @@
 									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/bytafont-350x350-38.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -202,7 +214,7 @@
 									Integer mauris est, luctus vitae lobortis sed, tristique in eros.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/youtube-350x350-69.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -235,7 +247,7 @@
 									In tincidunt mi eget molestie condimentum.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/phone-350x350-12.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys" />
@@ -250,7 +262,7 @@
 									In tincidunt mi eget molestie condimentum.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/anemone-350x350-67.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys" />
@@ -265,7 +277,7 @@
 									In tincidunt mi eget molestie condimentum.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/clear-350x350-99.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys" />
@@ -303,7 +315,7 @@
 									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/workflow-350x350-59.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -324,7 +336,7 @@
 									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/chrome-remote-desktop-350x350-23.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -345,7 +357,7 @@
 									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/com-350x350-41.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">
@@ -366,7 +378,7 @@
 									Curabitur molestie mi quis mauris convallis aliquet. Cras pretium sapien mi, sed sagittis est ultrices at.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
-								sling:resourceType="wcm/foundation/components/image"
+								sling:resourceType="mobirise/components/foundation/image"
 								fileReference="/content/dam/mobirise/calculator-350x350-78.png" />
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys">

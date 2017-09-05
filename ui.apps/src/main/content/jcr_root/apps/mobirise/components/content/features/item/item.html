@@ -1,12 +1,12 @@
 <div class="thumbnail" data-sly-use.hasChildren="pl.enigmatic.aem.HasChildren">
 	<div data-sly-test="${!wcmmode.disabled || properties['image/fileReference']}"
-		class="image" data-sly-resource="${'image' @ resourceType='wcm/foundation/components/image'}"></div>
+		class="image" data-sly-resource="${'image' @ resourceType='mobirise/components/foundation/image'}"></div>
 	<div class="caption">
 		<div data-sly-test="${properties.title || properties.text}">
 			<h3 data-sly-test="${properties.title}">${properties.title}</h3>
 			<p data-sly-test="${properties.text}">${properties.text}</p>
 		</div>
 		<div data-sly-test="${!wcmmode.disabled || hasChildren['links']}"
-			class="group" data-sly-resource="${'links' @ resourceType='wcm/foundation/components/parsys'}"></div>
+			class="group" data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"></div>
 	</div>
 </div>

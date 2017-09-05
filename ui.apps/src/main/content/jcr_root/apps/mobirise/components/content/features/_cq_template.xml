@@ -9,7 +9,7 @@
 			<item jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/features/item">
 				<image jcr:primaryType="nt:unstructured"
-					sling:resourceType="wcm/foundation/components/image" />
+					sling:resourceType="mobirise/components/foundation/image" />
 				<links jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
 					<link jcr:primaryType="nt:unstructured"
@@ -22,7 +22,7 @@
 			<item jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/features/item">
 				<image jcr:primaryType="nt:unstructured"
-					sling:resourceType="wcm/foundation/components/image" />
+					sling:resourceType="mobirise/components/foundation/image" />
 				<links jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
 					<link jcr:primaryType="nt:unstructured"
@@ -35,7 +35,7 @@
 			<item jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/features/item">
 				<image jcr:primaryType="nt:unstructured"
-					sling:resourceType="wcm/foundation/components/image" />
+					sling:resourceType="mobirise/components/foundation/image" />
 				<links jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
 					<link jcr:primaryType="nt:unstructured"
@@ -48,7 +48,7 @@
 			<item jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/features/item">
 				<image jcr:primaryType="nt:unstructured"
-					sling:resourceType="wcm/foundation/components/image" />
+					sling:resourceType="mobirise/components/foundation/image" />
 				<links jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
 					<link jcr:primaryType="nt:unstructured"
