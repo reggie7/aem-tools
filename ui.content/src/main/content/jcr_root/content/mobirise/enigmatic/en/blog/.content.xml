@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Page">
+	<jcr:content jcr:primaryType="cq:PageContent"
+		jcr:title="Blog"
+		sling:resourceType="mobirise/pages/blog"
+		cq:template="/apps/mobirise/templates/blog"
+		cq:designPath="/etc/designs/mobirise"
+		subtitle="Mobirise">
+		<content jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<stage jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/stage"
+				title="BOOTSTRAP BLOG TEMPLATE"
+				subtitle="Make your own bootstrap blog in minutes!">
+				<image jcr:primaryType="nt:unstructured"
+					fileReference="/content/dam/mobirise/iphone-6-458151-1920-1920x1285-67.jpg" />
+			</stage>
+			<header jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/header"
+				text="DROP-DEAD EASY BOOTSTRAP BLOG"
+				subtext="By John Smith posted July 30, 2016" />
+			<text jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/text"
+				text="Proin id eros arcu. Integer neque urna, malesuada vel iaculis ac, elementum ut mauris.
+					Proin auctor sapien eu lacus congue, tincidunt luctus nisi egestas. Pellentesque venenatis
+					risus id odio ullamcorper commodo. Mauris pellentesque sapien commodo elit condimentum porta
+					a at purus. Nam vitae odio et augue semper ultrices. Vestibulum ut neque vel elit commodo euismod.
+					Morbi viverra sapien eu sapien ultricies egestas. Mauris porta massa vitae euismod iaculis.
+					Sed finibus enim eu eleifend suscipit. Suspendisse molestie rutrum interdum." />
+			<quote jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/quote"
+				text="Nullam at tellus a ante dictum sagittis. Aenean malesuada, turpis non aliquam blandit,
+					nisl dui pellentesque tortor, malesuada consectetur sem lectus sed lacus. Nulla nec turpis mattis
+					dui ornare blandit. Ut leo nisl, tempus ut bibendum in, iaculis quis felis. Aliquam et lorem vel
+					dolor tincidunt vulputate vel sed lacus. Morbi tristique elementum vehicula. Duis sem tellus,
+					porta in leo sed, porttitor aliquet magna. Ut cursus erat sed pulvinar semper.
+					Donec gravida porttitor arcu, sed vulputate libero. Morbi non justo ac tellus tempus ornare.
+					Nam tortor augue, commodo eget lobortis non, consectetur eget eros. In hac habitasse platea dictumst.
+					Nam congue odio neque, in tempus sapien faucibus non." />
+			<image jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/image"
+				fileReference="/content/dam/mobirise/coffee-923094-1920-1920x1280-16.jpg"
+				text="Vestibulum id nisl eu ipsum ultrices sodales. Donec non nibh at diam porta porttitor.
+					Aenean dignissim porttitor aliquam. Etiam a sapien quis velit rhoncus pulvinar. Nunc dictum pretium lacus,
+					nec convallis mauris vestibulum sit amet. Nam pretium tristique mauris in tempor. Phasellus consequat ipsum
+					quis libero tristique ornare. Nulla ante libero, viverra at eros eu, fermentum rutrum lacus." />
+			<header_1 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/header"
+				text="FREE BOOTSTRAP BLOG TEMPLATE"
+				subtext="By John Smith posted July 29, 2016" />
+			<text_1 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/text"
+				text="Vestibulum id nisl eu ipsum ultrices sodales. Donec non nibh at diam porta porttitor.
+					Aenean dignissim porttitor aliquam. Etiam a sapien quis velit rhoncus pulvinar.
+					Nunc dictum pretium lacus, nec convallis mauris vestibulum sit amet.
+					Nam pretium tristique mauris in tempor. Phasellus consequat ipsum quis libero tristique ornare.
+					Nulla ante libero, viverra at eros eu, fermentum rutrum lacus." />
+			<slider jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/slider" />
+			<richtext jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/richtext"
+				text="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget lobortis felis, eu ornare lectus.
+					Maecenas eu enim eget justo sodales porta. Praesent sed accumsan felis. Quisque luctus laoreet nibh, nec pellentesque massa ullamcorper in. &lt;/p&gt;
+					&lt;ul&gt;&lt;li&gt;Proin lobortis convallis ullamcorper.&lt;/li&gt;
+					&lt;li&gt;In egestas ante est, sit amet commodo sapien euismod sit amet. Duis sed elit tortor. Aliquam vitae ipsum id nisi tempor tincidunt. &lt;/li&gt;
+					&lt;li&gt;Nam laoreet odio sed quam posuere lobortis. &lt;/li&gt;
+					&lt;li&gt;Proin luctus tincidunt pellentesque. Praesent ut magna dolor. Nulla venenatis, orci vitae viverra bibendum, odio libero posuere ipsum, at lacinia lacus enim vel elit. &lt;/li&gt;
+					&lt;li&gt;Cras auctor neque lacus, a maximus nibh dignissim volutpat. Maecenas iaculis hendrerit erat quis hendrerit.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" />
+			<video jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/video"
+				fileReference="https://www.youtube.com/embed/vvwnQ7NUWNY?rel=0&amp;autoplay=0&amp;loop=0" />
+			<header_2 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/header"
+				text="BOOTSTRAP BLOG MAKER"
+				subtext="By John Smith posted July 28, 2016" />
+			<richtext_1 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/richtext"
+				text="&lt;p&gt;&amp;nbsp;Sed vel lorem a velit tincidunt tristique. Maecenas pharetra augue sit amet nisl placerat, nec ultricies arcu lacinia.
+					Curabitur eget est libero. Maecenas vehicula orci elit, eget volutpat purus bibendum volutpat. In dignissim dapibus erat, sed lacinia neque feugiat non.
+					Integer dapibus porttitor nunc, nec commodo lorem fringilla eget. Aliquam leo tortor, consequat in feugiat hendrerit, laoreet sit amet urna. Nulla eu pharetra nulla.&lt;/p&gt;
+					&lt;ol&gt;&lt;li&gt;Fusce at felis dolor. Nulla venenatis erat sed pharetra ullamcorper. &lt;/li&gt;
+					&lt;li&gt;Sed nec nisl ut lorem tristique commodo. &lt;/li&gt;
+					&lt;li&gt;Vestibulum eleifend finibus efficitur. Nullam enim orci, elementum quis magna et, porta efficitur ipsum. Nam dolor ex, cursus nec est sit amet, lacinia eleifend tellus.&lt;/li&gt;
+					&lt;li&gt; Cras semper neque nulla. Aliquam eu orci ullamcorper, aliquet enim sed, euismod lacus. &lt;/li&gt;
+					&lt;li&gt;Vivamus dictum lacus id laoreet imperdiet.&amp;nbsp;&lt;br&gt;&lt;/li&gt;&lt;/ol&gt;" />
+			<preformatted jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/blog/text/preformatted"
+				text="Nulla turpis risus, laoreet a tempus et, dapibus non risus. Duis pellentesque posuere est sit amet tincidunt. Vivamus in pulvinar erat, ac eleifend nisi." />
+		</content>
+	</jcr:content>
+</jcr:root>
