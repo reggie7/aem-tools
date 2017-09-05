@@ -1,9 +1,7 @@
-<sly data-sly-test="${component.properties.model}" data-sly-use.model="${component.properties.model}" />
-<sly data-sly-test.reference="${model.path || properties.reference}" />
-<sly data-sly-test="${!reference}" data-sly-include="/apps/enigmatic/edit.html" />
-<a data-sly-test="${reference}" data-sly-use.helper="${'pl.enigmatic.aem.URLNormalizer' @ input=reference}"
+<sly data-sly-test="${!properties.reference}" data-sly-include="/apps/enigmatic/edit.html" />
+<a data-sly-test="${properties.reference}" data-sly-use.helper="${'pl.enigmatic.aem.URLNormalizer' @ input=properties.reference}"
 	href="${helper.url}" class="${component.properties.css}">
-	<sly data-sly-use.ref="${'pl.enigmatic.aem.GetPage' @ input=(properties.reference || model.path)}" />
+	<sly data-sly-use.ref="${'pl.enigmatic.aem.GetPage' @ input=properties.reference}" />
 	<sly data-sly-test.page="${ref.page}" />
 	<sly data-sly-test="${properties.label}">
 		<sly data-sly-test.label="labels/${properties.label}" />

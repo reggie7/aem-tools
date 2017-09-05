@@ -2,6 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
 	jcr:primaryType="cq:Component"
 	jcr:title="Home Page Link"
-	sling:resourceSuperType="mobirise/components/foundation/button"
+	sling:resourceSuperType="mobirise/components/foundation/button/predefined"
+	componentGroup="Mobirise Message Box Links"
 	model="pl.enigmatic.mobirise.aem.comps.HomePage"
 	css="btn btn-lg" />
