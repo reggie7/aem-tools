@@ -1,0 +1,16 @@
+<sly data-sly-test="${!properties.text}" data-sly-include="/apps/enigmatic/edit.html" />
+<footer data-sly-test="${properties.text}" class="mbr-section mbr-section--relative mbr-section--fixed-size"
+	data-sly-use.helper="pl.enigmatic.aem.ResourceIDComponent" id="${helper.id}"
+	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
+	<div class="mbr-section__container container">
+		<div class="mbr-footer mbr-footer--wysiwyg row">
+			<div class="col-sm-12">
+				<p class="mbr-footer__copyright">${properties.text}</p>
+				<div data-sly-use.hasChildren="pl.enigmatic.aem.HasChildren"
+					data-sly-test="${!wcmmode.disabled || hasChildren['links']}"
+					data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"
+					data-sly-unwrap="${wcmmode.disabled}"></div>
+			</div>
+		</div>
+	</div>
+</footer>
