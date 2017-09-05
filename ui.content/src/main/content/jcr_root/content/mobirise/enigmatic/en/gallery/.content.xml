@@ -5,7 +5,8 @@
 		jcr:title="Gallery"
 		sling:resourceType="mobirise/pages/content"
 		cq:template="/apps/mobirise/templates/content"
-		cq:designPath="/etc/designs/mobirise">
+		cq:designPath="/etc/designs/mobirise"
+		navTitle="GALLERY">
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<headline jcr:primaryType="nt:unstructured"

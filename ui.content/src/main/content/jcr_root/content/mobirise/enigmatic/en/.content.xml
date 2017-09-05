@@ -23,6 +23,44 @@
 					sling:resourceType="mobirise/structure/logo/image"
 					fileReference="/content/dam/mobirise/discover-mobile-350x350-53.png" />
 			</logo>
+			<nav jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/structure/topnav">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<column jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/structure/topnav/column"
+						type="decorator">
+						<items jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<link_1 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/structure/topnav/column/link"
+								reference="/content/mobirise/enigmatic/en/contact-us" />
+							<link_2 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/structure/topnav/column/link"
+								reference="https://mobirise.com/bootstrap-template/one-page.html"
+								text="ONE PAGE" />
+							<link_3 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/structure/topnav/column/link"
+								reference="/content/mobirise/enigmatic/en/gallery" />
+							<link_4 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/structure/topnav/column/link"
+								reference="https://mobirise.com/bootstrap-template/video-background.html"
+								text="VIDEO BG" />
+						</items>
+					</column>
+					<column_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/structure/topnav/column"
+						type="inverse">
+						<items jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<button jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/structure/topnav/column/button"
+								reference="/content/mobirise/enigmatic/en/blog"
+								css="default" />
+						</items>
+					</column_1>
+				</items>
+			</nav>
 		</header>
 		<footer jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/structure/footer"

@@ -6,7 +6,8 @@
 		sling:resourceType="mobirise/pages/blog"
 		cq:template="/apps/mobirise/templates/blog"
 		cq:designPath="/etc/designs/mobirise"
-		subtitle="Mobirise">
+		subtitle="Mobirise"
+		navTitle="BLOG">
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<stage jcr:primaryType="nt:unstructured"

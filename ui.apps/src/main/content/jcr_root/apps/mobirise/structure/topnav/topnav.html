@@ -1,9 +1,4 @@
-<div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-decorator mbr-buttons--active">
-	<li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="/content/mobirise/enigmatic/en/contact-us.html">Contact</a></li>
-	<li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="https://mobirise.com/bootstrap-template/one-page.html">ONE PAGE</a></li>
-	<li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="https://mobirise.com/bootstrap-template/slider.html">SLIDER</a></li>
-	<li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="https://mobirise.com/bootstrap-template/video-background.html">VIDEO BG</a></li>
-	<li class="mbr-navbar__item"><a class="mbr-buttons__link btn text-white" href="https://mobirise.com/bootstrap-template/blog.html">BLOG</a></li>
-</ul></div>
-<div class="mbr-navbar__column"><ul class="mbr-navbar__items mbr-navbar__items--right mbr-buttons mbr-buttons--freeze mbr-buttons--right btn-inverse mbr-buttons--active">
-	<li class="mbr-navbar__item"><a class="mbr-buttons__btn btn btn-default" href="https://mobirise.com/bootstrap-template/mobirise-free-template.zip">DOWNLOAD</a></li></ul></div>
+<sly data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}"
+	data-sly-list="${items.listChildren}">
+	<div class="mbr-navbar__column" data-sly-resource="${item.path}"></div>
+</sly>
