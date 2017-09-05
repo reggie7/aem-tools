@@ -3,4 +3,5 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="Rich Text"
 	jcr:description="Rich Text Component: renders a rich text paragraph"
+	sling:resourceSuperType="mobirise/components/content/text"
 	componentGroup="Mobirise" />

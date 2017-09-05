@@ -18,6 +18,9 @@
 						fieldDescription="Text / Label / Message"
 						name="./text"
 						required="{Boolean}true" />
+					<backgroundColor jcr:primaryType="nt:unstructured"
+						path="mobirise/dialog/colors/backgroundColor"
+						sling:resourceType="granite/ui/components/foundation/include" />
 				</items>
 			</column>
 		</items>
