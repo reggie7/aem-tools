@@ -1,0 +1,14 @@
+<sly data-sly-test="${!properties.text}" data-sly-include="/apps/enigmatic/edit.html" />
+<span data-sly-test="${properties.text}" class="mbr-navbar__brand-link mbr-brand mbr-brand--inline"
+	data-sly-use.helper="${'pl.enigmatic.aem.URLNormalizer' @ input=properties.reference}">
+	<span class="mbr-brand__logo">
+		<a href="${helper.url}">
+			<div class="mbr-navbar__brand-img mbr-brand__img"
+				data-sly-resource="${'image' @ resourceType='mobirise/structure/logo/image'}"
+				alt="${properties.text}" data-pin-nopin="true"></div>
+		</a>
+	</span>
+	<span class="mbr-brand__name">
+		<a class="mbr-brand__name text-white" href="${helper.url}">${properties.text}</a>
+	</span>
+</span>
