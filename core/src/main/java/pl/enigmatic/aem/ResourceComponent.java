@@ -6,33 +6,34 @@ import javax.inject.Inject;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceWrapper;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 
 import pl.enigmatic.aem.tools.ResourceTools;
 
 /**
+ * A simple class for easing access to named child resource of the current
+ * resource. Extends the {@link ResourceWrapper}.
+ *
  * @author Radosław Wesołowski
  */
 @Model(adaptables = SlingHttpServletRequest.class)
-public class ResourceIDComponent {
+public class ResourceComponent extends ResourceWrapper {
 
-	/**
-	 * {@link Resource resource}
-	 */
+	/** Path of child resource to be retrieved. */
 	@Inject
-	private Resource resource;
-
-	/** Path of resource to be retrieved. */
 	@Optional
-	@Inject
 	private String path;
+
+	/** The target resource. */
+	private Resource target;
 
 	/**
 	 * Default empty constructor
 	 */
-	public ResourceIDComponent() {
-		super();
+	public ResourceComponent(final SlingHttpServletRequest request) {
+		super(request.getResource());
 	}
 
 	/**
@@ -40,9 +41,18 @@ public class ResourceIDComponent {
 	 */
 	@PostConstruct
 	protected void init() {
+		final Resource resource = super.getResource();
 		if (StringUtils.isNotEmpty(path)) {
-			resource = resource.getChild(path);
+			target = resource.getChild(path);
 		}
+		if (target == null) {
+			target = resource;
+		}
+	}
+
+	@Override
+	public Resource getResource() {
+		return target;
 	}
 
 	/**
@@ -51,7 +61,7 @@ public class ResourceIDComponent {
 	 * @return {@link #id}
 	 */
 	public String getId() {
-		return ResourceTools.createId(resource);
+		return ResourceTools.createId(getResource());
 	}
 
 	/**
@@ -60,6 +70,6 @@ public class ResourceIDComponent {
 	 * @return {@link #shortId}
 	 */
 	public String getShortId() {
-		return ResourceTools.createShortId(resource);
+		return ResourceTools.createShortId(getResource());
 	}
 }
