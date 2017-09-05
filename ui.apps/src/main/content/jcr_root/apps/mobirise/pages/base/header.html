@@ -1,1 +1,2 @@
-<sly data-sly-test="${!component.properties.hideHeader}" data-sly-resource="${'header' @ resourceType='mobirise/structure/header'}" />
+<sly data-sly-test="${!component.properties.hideHeader}" data-sly-use.site="pl.enigmatic.mobirise.aem.core.SiteStructure"
+	data-sly-resource="${'header' @ prependPath=site.home.contentResource.path, resourceType='mobirise/structure/header', wcmmode='disabled'}" />
