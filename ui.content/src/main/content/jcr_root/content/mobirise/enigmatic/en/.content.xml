@@ -7,10 +7,25 @@
 		cq:designreference="/etc/designs/mobirise"
 		cq:template="/apps/mobirise/templates/lang"
 		pageTitle="Enigmatic"
-		subtitle="Mobirise AEM implementation">
+		subtitle="Mobirise AEM implementation"
+		navTitle="Home">
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/global/labels"
 			learnMore="LEARN MORE" />
+		<footer jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/structure/footer"
+			text="Copyright (c) 2017 Enigma Solutions."
+			backgroundColor="rgba(68, 68, 68, 1)">
+			<links jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/foundation/parsys">
+				<license jcr:primaryType="nt:unstructured"
+					sling:resourceType="mobirise/structure/footer/link"
+					reference="/content/mobirise/enigmatic/en/license" />
+				<disclaimer jcr:primaryType="nt:unstructured"
+					sling:resourceType="mobirise/structure/footer/link"
+					reference="/content/mobirise/enigmatic/en/disclaimers" />
+			</links>
+		</footer>
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<!--stage jcr:primaryType="nt:unstructured"

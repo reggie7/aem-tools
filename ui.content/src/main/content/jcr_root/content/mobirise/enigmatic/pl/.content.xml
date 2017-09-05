@@ -7,7 +7,8 @@
 		cq:designPath="/etc/designs/mobirise"
 		cq:template="/apps/mobirise/templates/lang"
 		pageTitle="Enigmatic"
-		subtitle="Mobirise w AEMie">
+		subtitle="Mobirise w AEMie"
+		navTitle="Strona domowa">
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys" />
 	</jcr:content>
