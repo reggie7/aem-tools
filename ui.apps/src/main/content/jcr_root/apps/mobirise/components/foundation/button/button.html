@@ -7,5 +7,5 @@
 		<sly data-sly-test.label="labels/${properties.label}" />
 		<sly data-sly-test.label="${inheritedPageProperties[label]}" />
 	</sly>
-	${properties.text || label || page.navigationTitle || page.pageTitle || page.title || page.name || reference}
+	${properties.text || label || page.navigationTitle || page.pageTitle || page.title || page.name || properties.reference}
 </a>
