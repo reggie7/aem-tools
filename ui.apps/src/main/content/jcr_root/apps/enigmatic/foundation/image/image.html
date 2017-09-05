@@ -1,0 +1,10 @@
+<sly data-sly-test="${!properties.fileReference}" data-sly-include="/apps/enigmatic/edit.html" />
+<img data-sly-use.image="image.js"
+	src="${image.src}"
+	alt="${image.alt}"
+	title="${image.title}"
+	width="${image.width}"
+	height="${image.height}"
+	class="${component.properties.css} ${image.cssClass}"
+	usemap="${image.imageMaps.hash}"
+	data-sly-test="${image.src}" />
