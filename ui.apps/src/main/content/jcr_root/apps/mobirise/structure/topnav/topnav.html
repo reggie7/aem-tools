@@ -1,4 +1,5 @@
-<sly data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}"
+<nav class="mbr-navbar__menu-box mbr-navbar__menu-box--inline-right"
+	data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}"
 	data-sly-list="${items.listChildren}">
 	<div class="mbr-navbar__column" data-sly-resource="${item.path}"></div>
-</sly>
+</nav>
