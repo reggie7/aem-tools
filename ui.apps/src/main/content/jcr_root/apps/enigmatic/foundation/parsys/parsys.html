@@ -1,0 +1,15 @@
+<sly data-sly-use.parsys="${'pl.enigmatic.aem.LimitedParsysComponent' @ max=currentStyle.max, min=currentStyle.min }" />
+<div data-sly-test="${(wcmmode.edit || wcmmode.preview) && parsys.lowerLimited && !parsys.lowerLimitReached}"
+	class="author-msg-narrow author-error">
+	<span>Limit</span> Minimum (<strong>${parsys.lowerLimit}</strong>) not reached.
+</div>
+<div data-sly-test="${(wcmmode.edit || wcmmode.preview) && parsys.upperLimitExceeded}" class="author-msg-narrow author-error">
+	<span>Limit</span> Limit (<strong>${parsys.upperLimit}</strong>) exceeded by <strong>${parsys.extraComponentsCount}</strong>. Please adjust!
+</div>
+<sly data-sly-test.reached="${wcmmode.disabled || wcmmode.preview || (wcmmode.edit && parsys.upperLimitReached)}" data-sly-include="list.html" />
+<sly data-sly-test="${!reached}" data-sly-include="parsys.jsp" />
+<div data-sly-test="${wcmmode.edit && parsys.upperLimited}" class="author-msg-narrow author-notice">
+	<span>Limit</span>
+	<sly data-sly-test="${parsys.upperLimitReached}">Limit (<strong>${parsys.upperLimit}</strong>) reached.</sly>
+	<sly data-sly-test="${!parsys.upperLimitReached}">Limit of <strong>${parsys.upperLimit}</strong> max.</sly>
+</div>
