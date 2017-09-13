@@ -3,8 +3,7 @@
 	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}"
 	data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}">
 
-	<!-- Author Message -->
-	<div data-sly-test="${wcmmode.edit}" class="author-msg-box author-component"><span>${component.title}</span> Please zoom in to edit the images</div>
+	<sly data-sly-include="complex.html" />
 
 	<!-- Gallery -->
 	<div class="container mbr-section__container mbr-gallery-layout-article mbr-section__container--middle">

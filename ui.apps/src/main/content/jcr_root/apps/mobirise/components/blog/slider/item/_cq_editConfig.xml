@@ -7,7 +7,7 @@
 		afterinsert="function() { location.reload(); }" />
 	<cq:actionConfigs jcr:primaryType="nt:unstructured">
 		<zoom jcr:primaryType="nt:unstructured"
-			handler="function() { window.enigmatic.author.Complex.zoom(this); }"
+			handler="function() { window.enigmatic.author.toggleZoom(this); }"
 			text="Zoom In/Out"
 			icon="/apps/enigmatic/foundation/complex/icon.png" />
 	</cq:actionConfigs>

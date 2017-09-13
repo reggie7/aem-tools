@@ -44,6 +44,10 @@ public class ComplexComponent extends ComponentModel {
 	 * is the current component the parent of the destination zoomed component?
 	 */
 	private boolean parent = false;
+	/**
+	 * target resource path
+	 */
+	private String target;
 
 	/** Default empty constructor. */
 	public ComplexComponent(final SlingHttpServletRequest request) {
@@ -53,13 +57,13 @@ public class ComplexComponent extends ComponentModel {
 	/** Initialization of all necessary fields. */
 	@PostConstruct
 	protected void init() {
-		final String suffix = StringUtils.stripToEmpty(request.getParameter(TARGET));
+		target = StringUtils.stripToEmpty(request.getParameter(TARGET));
 		final String path = resource.getPath();
-		expand = StringUtils.isNotBlank(suffix) && path.equals(suffix);
-		inner = !expand && PathTools.isAncestor(path, suffix);
-		outer = !expand && PathTools.isAncestor(suffix, path);
+		expand = StringUtils.isNotBlank(target) && path.equals(target);
+		inner = !expand && PathTools.isAncestor(path, target);
+		outer = !expand && PathTools.isAncestor(target, path);
 		if (this.outer) {
-			child = PathTools.getRelativePath(suffix, path);
+			child = PathTools.getRelativePath(target, path);
 			if (child.contains(PathTools.separator)) {
 				child = StringUtils.substringBefore(child, PathTools.separator);
 			} else {
@@ -111,5 +115,14 @@ public class ComplexComponent extends ComponentModel {
 	 */
 	public boolean isParent() {
 		return parent;
+	}
+
+	/**
+	 * {@link #target} property accessor.
+	 *
+	 * @return {@link #target}
+	 */
+	public String getTarget() {
+		return target;
 	}
 }
