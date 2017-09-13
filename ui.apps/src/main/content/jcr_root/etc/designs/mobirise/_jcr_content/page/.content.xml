@@ -29,6 +29,12 @@
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[group:Mobirise Slider Items]" />
 		</slider>
+		<gallery jcr:primaryType="nt:unstructured"
+			 sling:resourceType="mobirise/components/content/gallery">
+			<items jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/foundation/parsys"
+				components="[group:Mobirise Gallery Items]" />
+		</gallery>
 	</content>
 	<logo jcr:primaryType="nt:unstructured"
 		sling:resourceType="mobirise/structure/logo"

@@ -1,0 +1,17 @@
+<section class="mbr-gallery mbr-section mbr-section--no-padding"
+	style="background-color: ${resource.parent.parent.valueMap.backgroundColor @ context='styleToken'};">
+	<div class="container mbr-section__container mbr-gallery-layout-article mbr-section__container--middle">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="row mbr-gallery-row no-gutter">
+				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mbr-gallery-item">
+					<a href="#" data-slide-to="0" data-toggle="modal">
+						<sly data-sly-include="image.html" />
+						<span class="icon glyphicon glyphicon-zoom-in"></span>
+					</a>
+					<sly data-sly-include="title.html" />
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</section>
