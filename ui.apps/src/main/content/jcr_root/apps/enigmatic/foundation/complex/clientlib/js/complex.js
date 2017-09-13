@@ -3,6 +3,7 @@ window.enigmatic = window.enigmatic || {};
 window.enigmatic.author = window.enigmatic.author || {};
 
 window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode) {
+	const TARGET = "target";
 
 	this.source = new (function(url) {
 		this.url = url;
@@ -13,6 +14,9 @@ window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode
 			this.mode = modes[0];
 		}
 		this.hasMode = function() { return this.mode !== undefined; };
+
+		// we need to identify the special mode modifiers kept within query parameters
+		this.resource = CQ.shared.HTTP.getParameter(url, TARGET);
 	})(sourceURL);
 
 	this.target = new (function(resource, mode) {
@@ -30,6 +34,7 @@ window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode
 			var url = this.page;
 			if (this.mode !== undefined) {
 				url = CQ.shared.HTTP.addSelector(url, this.mode, 0);
+				url = CQ.shared.HTTP.addParameter(url, TARGET, this.resource);
 			}
 			return url;
 		};

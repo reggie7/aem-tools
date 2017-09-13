@@ -84,11 +84,9 @@ public final class PathTools {
 	 * <code>ancestor</code> and the <code>ancestor</code> will be the
 	 * <b>parent</b> of <code>descendant</code>.
 	 *
-	 * @param descendant
-	 *			the path representing descendant object (in a special case -
+	 * @param descendant the path representing descendant object (in a special case -
 	 *			child)
-	 * @param ancestor
-	 *			the path representing ancestor object (in a special case -
+	 * @param ancestor the path representing ancestor object (in a special case -
 	 *			parent)
 	 * @return true if the paths given represent ancestor-descendant
 	 *		 relationship
@@ -96,8 +94,17 @@ public final class PathTools {
 	public static boolean isAncestor(final String descendant, final String ancestor) {
 		// Path separator is added to match whole node names. Otherwise
 		// '/content/cow' would be an ancestor of '/content/cowboy/home'
-		return StringUtils.startsWith(StringUtils.join(descendant, separator),
-				StringUtils.join(ancestor, separator));
+		return StringTools.areAllNonBlank(descendant, ancestor) &&
+				StringUtils.startsWith(StringUtils.join(descendant, separator), StringUtils.join(ancestor, separator));
+	}
+
+	/**
+	 * @param descendant the path representing descendant object (in a special case - child)
+	 * @param ancestor the path representing ancestor object (in a special case - parent)
+	 * @return relative path of descendant in relation to ancestor.
+	 */
+	public static String getRelativePath(final String descendant, final String ancestor) {
+		return isAncestor(descendant, ancestor) ? descendant.substring(1 + ancestor.length()) : null;
 	}
 
 	/**
