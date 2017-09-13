@@ -1,0 +1,15 @@
+<div class="mbr-box__magnet">
+	<sly data-sly-resource="${'image' @ resourceType='mobirise/components/foundation/image'}" />
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="mbr-hero">
+				<h1 data-sly-test="${properties.text}" class="mbr-hero__text">${properties.text}</h1>
+				<p data-sly-test="${properties.subtext}" class="mbr-hero__subtext">${properties.subtext}</p>
+			</div>
+			<div data-sly-use.hasChildren="pl.enigmatic.aem.HasChildren"
+				data-sly-test="${!wcmmode.disabled || hasChildren['links']}"
+				data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"
+				class="mbr-buttons btn-inverse mbr-buttons--center"></div>
+		</div>
+	</div>
+</div>

@@ -7,6 +7,7 @@
 		cq:template="/apps/mobirise/templates/blog"
 		cq:designPath="/etc/designs/mobirise"
 		subtitle="Mobirise"
+		pageTitle="Blog"
 		navTitle="BLOG">
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
@@ -58,7 +59,46 @@
 					Nam pretium tristique mauris in tempor. Phasellus consequat ipsum quis libero tristique ornare.
 					Nulla ante libero, viverra at eros eu, fermentum rutrum lacus." />
 			<slider jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/blog/slider" />
+				sling:resourceType="mobirise/components/blog/slider"
+				wrap="{Boolean}false"
+				interval="{Long}5">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<item_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/blog/slider/item"
+						text="BLOG CAROUSEL">
+						<image jcr:primaryType="nt:unstructured"
+							jcr:lastModified="{Date}2017-06-19T17:19:40.462+02:00"
+							sling:resourceType="mobirise/components/foundation/image"
+							fileReference="/content/dam/mobirise/iphone-1067982-1920-1920x1439-90.jpg" />
+					</item_1>
+					<item_2 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/blog/slider/item">
+						<image jcr:primaryType="nt:unstructured"
+							jcr:lastModified="{Date}2017-06-19T17:19:25.812+02:00"
+							sling:resourceType="mobirise/components/foundation/image"
+							fileReference="/content/dam/mobirise/iphone-1067975-1920-1920x1439-5.jpg" />
+					</item_2>
+					<item_3 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/blog/slider/item"
+						text="BOOTSTRAP BLOG SLIDER"
+						subtext="Choose from the large selection of latest pre-made blocks - jumbotrons, hero images,
+							parallax scrolling, video backgrounds, hamburger menu, sticky header and more.">
+						<image jcr:primaryType="nt:unstructured"
+							jcr:lastModified="{Date}2017-06-19T17:19:52.380+02:00"
+							sling:resourceType="mobirise/components/foundation/image"
+							fileReference="/content/dam/mobirise/iphone-1067991-1920-1920x1440-29.jpg" />
+						<links jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<button jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/blog/slider/item/link"
+								reference="https://mobirise.com/"
+								text="MORE.."
+								css="info" />
+						</links>
+					</item_3>
+				</items>
+			</slider>
 			<richtext jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/richtext"
 				text="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget lobortis felis, eu ornare lectus.

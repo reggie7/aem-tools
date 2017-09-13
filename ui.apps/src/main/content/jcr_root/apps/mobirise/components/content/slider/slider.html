@@ -3,7 +3,7 @@
 	data-ride="carousel" data-wrap="${properties.wrap ? 'true' : 'false'}"
 	data-interval="${properties.interval}${properties.interval ? '000' : ''}"
 	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}">
-	<div class="mbr-section__container container article-slider mbr-section__container--isolated">
+	<div class="mbr-section__container container article-slider mbr-section__container--${component.properties.css}">
 		<div class="col-sm-8 col-sm-offset-2"
 			data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}">
 			<ol class="carousel-indicators" data-sly-list="${items.listChildren}">
@@ -12,7 +12,7 @@
 			</ol>
 			<div class="carousel-inner" data-sly-list="${items.listChildren}">
 				<div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center ${itemList.first ? 'active' : null}"
-					data-sly-resource="${item.path}"></div>
+					data-sly-resource="${item.path @ wcmmode='disabled'}"></div>
 			</div>
 			<a class="left carousel-control" role="button" data-slide="prev" href="#${helper.id}">
 				<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
