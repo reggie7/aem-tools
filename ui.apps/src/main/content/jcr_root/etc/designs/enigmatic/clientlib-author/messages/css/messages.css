@@ -160,6 +160,11 @@ h1.author-msg-line {
 	border: 1px solid #888!important;
 }
 
+.author-zoom {
+	background: #ff9800 url('../images/zoom.png') no-repeat 10px 50%;
+	border: 1px solid #884800!important;
+}
+
 .author-preview-box > span:first-child {
 	background: #ccc url('/libs/cq/ui/widgets/themes/default/widgets/wcm/Sidekick/preview.png') no-repeat 10px 50%;
 	font-weight: bold;
