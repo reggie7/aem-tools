@@ -165,6 +165,11 @@ h1.author-msg-line {
 	border: 1px solid #884800!important;
 }
 
+.author-darken {
+	background-blend-mode: darken;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .author-preview-box > span:first-child {
 	background: #ccc url('/libs/cq/ui/widgets/themes/default/widgets/wcm/Sidekick/preview.png') no-repeat 10px 50%;
 	font-weight: bold;
