@@ -1,4 +1,5 @@
-<section class="mbr-slider mbr-section mbr-section--no-padding carousel slide"
+<sly data-sly-test="${wcmmode.edit}" data-sly-include="author.html" />
+<section data-sly-test="${!wcmmode.edit}" class="mbr-slider mbr-section mbr-section--no-padding carousel slide"
 	data-ride="carousel" data-wrap="${properties.wrap ? 'true' : 'false'}"
 	data-interval="${properties.interval}${properties.interval ? '000' : ''}"
 	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}">
@@ -7,10 +8,10 @@
 			data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}">
 			<ol class="carousel-indicators" data-sly-list="${items.listChildren}">
 				<li data-app-prevent-settings="" data-target="#${helper.id}" data-slide-to="${itemList.index}"
-					data-sly-attribute.class="${itemList.last ? 'active' : null}"></li>
+					data-sly-attribute.class="${itemList.first ? 'active' : null}"></li>
 			</ol>
 			<div class="carousel-inner" data-sly-list="${items.listChildren}">
-				<div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center ${itemList.last ? 'active' : null}"
+				<div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center ${itemList.first ? 'active' : null}"
 					data-sly-resource="${item.path}"></div>
 			</div>
 			<a class="left carousel-control" role="button" data-slide="prev" href="#${helper.id}">
