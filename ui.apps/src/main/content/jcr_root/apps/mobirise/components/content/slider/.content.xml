@@ -3,4 +3,5 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="Slider"
 	jcr:description="Slider Component: allows a series of images with sliding behaviour"
+	sling:resourceSuperType="enigmatic/foundation/complex"
 	componentGroup="Mobirise" />
