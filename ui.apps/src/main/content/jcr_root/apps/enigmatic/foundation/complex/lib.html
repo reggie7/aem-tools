@@ -1,11 +1,12 @@
 <sly data-sly-template.complex="${@ selector, name}">
+	<sly data-sly-test.displayName="${name || selector}" />
 	<sly data-sly-use.model="pl.enigmatic.aem.ComplexComponent" />
+	<sly data-sly-test="${model.inner}" data-sly-include="inner.html" />
 	<sly data-sly-test="${model.expand}">
-		<sly data-sly-test.displayName="${name || selector}" />
 		<sly data-sly-test="${wcmmode.disabled || wcmmode.preview}">
 			<sly data-sly-use.clientLib="granite/sightly/templates/clientlib.html"
 				data-sly-call="${clientLib.css @ categories='enigmatic.author.messages'}" />
-			<div class="author-msg-box author-${selector}">
+			<div class="author-msg-box author-warning">
 				<span>${displayName} mode</span>
 				Page preview might be severely distorted. <strong>For correct preview</strong> please: go out of preview mode,
 				toggle ${displayName} mode back to the original page and then perform preview. Or just click <a href="${currentPage.path}.html">here</a>.
@@ -20,5 +21,12 @@
 			</div>
 			<sly data-sly-include="${selector}ed.html" />
 		</sly>
+	</sly>
+	<sly data-sly-test="${model.outer}">
+		<div class="author-msg-line author-notice">
+			<span>${displayName} mode</span>
+			You are in ${displayName} mode for a sub-component of <strong>${component.title}</strong>.
+		</div>
+		<sly data-sly-include="outer.html" />
 	</sly>
 </sly>

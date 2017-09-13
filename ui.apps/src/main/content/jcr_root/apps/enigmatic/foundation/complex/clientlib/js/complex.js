@@ -4,6 +4,7 @@ window.enigmatic.author = window.enigmatic.author || {};
 
 window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode) {
 	const TARGET = "target";
+	const BACK_INDEX = "backIndex";
 
 	this.source = new (function(url) {
 		this.url = url;
@@ -17,6 +18,7 @@ window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode
 
 		// we need to identify the special mode modifiers kept within query parameters
 		this.resource = CQ.shared.HTTP.getParameter(url, TARGET);
+		this.backIndex = CQ.shared.HTTP.getParameter(url, BACK_INDEX);
 	})(sourceURL);
 
 	this.target = new (function(resource, mode) {
@@ -35,6 +37,9 @@ window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode
 			if (this.mode !== undefined) {
 				url = CQ.shared.HTTP.addSelector(url, this.mode, 0);
 				url = CQ.shared.HTTP.addParameter(url, TARGET, this.resource);
+				if (this.backIndex !== undefined) {
+					url = CQ.shared.HTTP.addParameter(url, BACK_INDEX, this.backIndex);
+				}
 			}
 			return url;
 		};
@@ -43,6 +48,23 @@ window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode
 	if (!this.source.hasMode()) {
 		this.reload.mode = this.target.mode;
 		this.reload.resource = this.target.resource;
+	} else { // we are already in one of the special modes
+		if (this.source.resource === this.target.resource) { // we are in a special mode regarding the component of the given path
+			if (this.source.backIndex != null) { // we are in a nested special mode
+				this.reload.mode = this.target.mode;
+				this.reload.resource = this.target.resource.substring(0, this.source.backIndex);
+			}
+		} else {
+			if (this.source.resource.indexOf(this.target.resource) > -1) {
+			} else if (this.target.resource.indexOf(this.source.resource) > -1) {
+				this.reload.mode = this.target.mode;
+				this.reload.resource = this.target.resource;
+				this.reload.backIndex = this.source.resource.length;
+			} else {
+				this.reload.mode = this.target.mode;
+				this.reload.resource = this.target.resource;
+			}
+		}
 	}
 };
 
