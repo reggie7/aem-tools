@@ -267,7 +267,45 @@
 				</items>
 			</features_2>
 			<slider jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/slider" />
+				sling:resourceType="mobirise/components/content/slider"
+				wrap="{Boolean}true"
+				interval="{Long}3">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<item_1 jcr:primaryType="nt:unstructured"
+						jcr:title="Second Image"
+						sling:resourceType="mobirise/components/content/slider/item">
+						<image jcr:primaryType="nt:unstructured"
+							jcr:lastModified="{Date}2017-06-19T17:19:40.462+02:00"
+							sling:resourceType="mobirise/components/foundation/image"
+							fileReference="/content/dam/mobirise/iphone-6-458151-1920-1920x1285-18.jpg" />
+					</item_1>
+					<item_2 jcr:primaryType="nt:unstructured"
+						jcr:title="First Image"
+						sling:resourceType="mobirise/components/content/slider/item">
+						<image jcr:primaryType="nt:unstructured"
+							jcr:lastModified="{Date}2017-06-19T17:19:25.812+02:00"
+							sling:resourceType="mobirise/components/foundation/image"
+							fileReference="/content/dam/mobirise/iphone-6-458150-1920-1920x1285-95.jpg" />
+					</item_2>
+					<item_3 jcr:primaryType="nt:unstructured"
+						jcr:title="Third Image"
+						sling:resourceType="mobirise/components/content/slider/item">
+						<image jcr:primaryType="nt:unstructured"
+							jcr:lastModified="{Date}2017-06-19T17:19:52.380+02:00"
+							sling:resourceType="mobirise/components/foundation/image"
+							fileReference="/content/dam/mobirise/iphone-6-458151-1920-1920x1285-67.jpg" />
+					</item_3>
+					<item_4 jcr:primaryType="nt:unstructured"
+						jcr:title="Fourth Image"
+						sling:resourceType="mobirise/components/content/slider/item">
+						<image jcr:primaryType="nt:unstructured"
+							jcr:lastModified="{Date}2017-06-19T17:19:52.380+02:00"
+							sling:resourceType="mobirise/components/foundation/image"
+							fileReference="/content/dam/mobirise/iphone-6-458153-1920-1920x1285-16.jpg" />
+					</item_4>
+				</items>
+			</slider>
 			<imagebox jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/imagebox" />
 			<features_3 jcr:primaryType="nt:unstructured"

@@ -1,48 +1,23 @@
-<section class="mbr-slider mbr-section mbr-section--no-padding carousel slide" data-ride="carousel" data-wrap="true" data-interval="5000" id="slider2-78">
+<section class="mbr-slider mbr-section mbr-section--no-padding carousel slide"
+	data-ride="carousel" data-wrap="${properties.wrap ? 'true' : 'false'}"
+	data-interval="${properties.interval}${properties.interval ? '000' : ''}"
+	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}">
 	<div class="mbr-section__container container article-slider mbr-section__container--isolated">
-		<div class=" col-sm-8 col-sm-offset-2">
-			<ol class="carousel-indicators">
-				<li data-app-prevent-settings="" data-target="#slider2-78" class="" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#slider2-78" data-slide-to="1" class=""></li><li data-app-prevent-settings="" data-target="#slider2-78" data-slide-to="2" class="active"></li>
+		<div class="col-sm-8 col-sm-offset-2"
+			data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}">
+			<ol class="carousel-indicators" data-sly-list="${items.listChildren}">
+				<li data-app-prevent-settings="" data-target="#${helper.id}" data-slide-to="${itemList.index}"
+					data-sly-attribute.class="${itemList.last ? 'active' : null}"></li>
 			</ol>
-			<div class="carousel-inner" role="listbox">
-				<div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center">
-					<div class="mbr-box__magnet">
-						<div>
-							<img src="/content/dam/mobirise/iphone-6-458153-1920-1920x1285-16.jpg">
-							<div class="row"><div class="col-sm-8 col-sm-offset-2">
-								<div class="mbr-hero">
-								</div>
-							</div></div>
-						</div>
-					</div>
-				</div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center">
-					<div class="mbr-box__magnet">
-						<div>
-							<img src="/content/dam/mobirise/iphone-6-458151-1920-1920x1285-18.jpg">
-							<div class="row"><div class="col-sm-8 col-sm-offset-2">
-								<div class="mbr-hero">
-								</div>
-							</div></div>
-						</div>
-					</div>
-				</div><div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center active">
-					<div class="mbr-box__magnet">
-						<div>
-							<img src="/content/dam/mobirise/iphone-6-458150-1920-1920x1285-95.jpg">
-							<div class="row"><div class="col-sm-8 col-sm-offset-2">
-								<div class="mbr-hero">
-								</div>
-							</div></div>
-						</div>
-					</div>
-				</div>
+			<div class="carousel-inner" data-sly-list="${items.listChildren}">
+				<div class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--bg-adapted item dark center ${itemList.last ? 'active' : null}"
+					data-sly-resource="${item.path}"></div>
 			</div>
-			
-			<a data-app-prevent-settings="" class="left carousel-control" role="button" data-slide="prev" href="https://mobirise.com/bootstrap-template/one-page.html#slider2-78">
+			<a class="left carousel-control" role="button" data-slide="prev" href="#${helper.id}">
 				<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
-			<a data-app-prevent-settings="" class="right carousel-control" role="button" data-slide="next" href="https://mobirise.com/bootstrap-template/one-page.html#slider2-78">
+			<a class="right carousel-control" role="button" data-slide="next" href="#${helper.id}">
 				<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>

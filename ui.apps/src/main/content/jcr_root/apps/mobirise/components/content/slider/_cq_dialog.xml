@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="Slider"
+	sling:resourceType="cq/gui/components/authoring/dialog">
+	<content jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/container">
+		<layout jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+		<items jcr:primaryType="nt:unstructured">
+			<column jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/container">
+				<items jcr:primaryType="nt:unstructured">
+					<wrap jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/form/checkbox"
+						text="Wrap the carousel?"
+						fieldDescription="Should the last image in the carousel move to the first and start a new cycle?"
+						name="./wrap"
+						value="{Boolean}true" />
+					<wrap_TypeHint jcr:primaryType="cq:Widget"
+						sling:resourceType="granite/ui/components/foundation/form/hidden"
+						name="./wrap@TypeHint"
+						value="Boolean"
+						ignoreData="{Boolean}true" />
+					<interval jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/form/numberfield"
+						fieldLabel="Carousel Interval Time"
+						fieldDescription="This number will say how many seconds it takes to shift from one image to another."
+						name="./interval"
+						value="{Long}5"
+						defaultValue="{Long}5" />
+					<interval_TypeHint jcr:primaryType="cq:Widget"
+						sling:resourceType="granite/ui/components/foundation/form/hidden"
+						name="./interval@TypeHint"
+						value="Long"
+						ignoreData="{Boolean}true" />
+				</items>
+			</column>
+		</items>
+	</content>
+</jcr:root>
