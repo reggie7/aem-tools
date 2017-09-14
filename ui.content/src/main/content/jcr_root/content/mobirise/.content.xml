@@ -35,6 +35,23 @@
 				value="REVERT" />
 		</labels>
 		<content jcr:primaryType="nt:unstructured"
-			sling:resourceType="enigmatic/foundation/parsys" />
+			sling:resourceType="enigmatic/foundation/parsys">
+			<domain-selector jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/brand/domain-selector"
+				backgroundColor="rgba(28, 73, 110, 1)"
+				title="Please Select Our Service:">
+				<image jcr:primaryType="nt:unstructured"
+					jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+					sling:resourceType="mobirise/components/content/imagebox/image"
+					fileReference="/content/dam/mobirise/iphone-1032784-1920-1920x1440-16.jpg" />
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/imagebox/link"
+						reference="/content/mobirise/enigmatic"
+						css="default" />
+				</links>
+			</domain-selector>
+		</content>
 	</jcr:content>
 </jcr:root>
