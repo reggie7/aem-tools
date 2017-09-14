@@ -58,11 +58,15 @@
 					Nam congue odio neque, in tempus sapien faucibus non." />
 			<image jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/image"
-				fileReference="/content/dam/mobirise/coffee-923094-1920-1920x1280-16.jpg"
 				text="Vestibulum id nisl eu ipsum ultrices sodales. Donec non nibh at diam porta porttitor.
 					Aenean dignissim porttitor aliquam. Etiam a sapien quis velit rhoncus pulvinar. Nunc dictum pretium lacus,
 					nec convallis mauris vestibulum sit amet. Nam pretium tristique mauris in tempor. Phasellus consequat ipsum
-					quis libero tristique ornare. Nulla ante libero, viverra at eros eu, fermentum rutrum lacus." />
+					quis libero tristique ornare. Nulla ante libero, viverra at eros eu, fermentum rutrum lacus.">
+					<image jcr:primaryType="nt:unstructured"
+						jcr:lastModified="{Date}2017-06-19T17:19:40.462+02:00"
+						sling:resourceType="mobirise/components/blog/image/image"
+						fileReference="/content/dam/mobirise/coffee-923094-1920-1920x1280-16.jpg" />
+			</image>
 			<header_1 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/header"
 				text="FREE BOOTSTRAP BLOG TEMPLATE"
