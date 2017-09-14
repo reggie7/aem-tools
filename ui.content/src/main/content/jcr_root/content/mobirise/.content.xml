@@ -6,6 +6,31 @@
 		sling:resourceType="mobirise/pages/brand"
 		cq:designPath="/etc/designs/mobirise"
 		cq:template="/apps/mobirise/templates/brand">
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels"
+			definitions="[Request,Revert]">
+			<learnMore jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="LEARN MORE" />
+			<previous jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="PREVIOUS" />
+			<next jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="NEXT" />
+			<open jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="OPEN" />
+			<close jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="CLOSE" />
+			<request jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="REQUEST" />
+			<revert jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="REVERT" />
+		</labels>
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys" />
 	</jcr:content>
