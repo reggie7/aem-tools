@@ -18,7 +18,7 @@ public class GlobalLabels extends ConfigurationMap {
 	 * Default constructor
 	 */
 	public GlobalLabels(final SlingHttpServletRequest request) {
-		super("labels", GlobalLabelsDefinitions.create(request.getResource()).toDefaults(), request, "value");
+		super(GlobalLabelsDefinitions.LABELS, GlobalLabelsDefinitions.create(request.getResource()).toDefaults(), request, "value");
 	}
 
 }

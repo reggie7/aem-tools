@@ -155,4 +155,22 @@ public final class ResourceTools {
 		final PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
 		return pageManager.getContainingPage(resource);
 	}
+
+	/**
+	 * @param descendant descendant object (in a special case - child)
+	 * @param ancestor ancestor object (in a special case - parent)
+	 * @return relative path of descendant in relation to ancestor.
+	 */
+	public static String getRelativePath(final Resource descendant, final Resource ancestor) {
+		return PathTools.getRelativePath(descendant.getPath(), ancestor.getPath());
+	}
+
+	/**
+	 * @param descendant descendant object (in a special case - child)
+	 * @param ancestor ancestor object (in a special case - parent)
+	 * @return relative path of descendant in relation to ancestor.
+	 */
+	public static String getRelativePath(final Resource descendant, final Page ancestor) {
+		return getRelativePath(descendant, ancestor.getContentResource());
+	}
 }

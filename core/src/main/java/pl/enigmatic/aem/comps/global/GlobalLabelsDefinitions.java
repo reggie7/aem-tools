@@ -18,7 +18,6 @@ import com.day.cq.wcm.api.components.Component;
 import com.day.cq.wcm.api.components.ComponentManager;
 
 import pl.enigmatic.aem.tools.ResourceTools;
-import pl.enigmatic.tools.PathTools;
 
 /**
  * @author Radosław Wesołowski
@@ -30,7 +29,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 	 * default serial version UID
 	 */
 	private static final long serialVersionUID = 1L;
-	private static final String LABELS = "labels";
+	public static final String LABELS = "labels";
 	private static final String DEFINITIONS = "definitions";
 	private final transient Page currentPage;
 	private final String relPath;
@@ -38,7 +37,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 
 	private GlobalLabelsDefinitions(final Resource resource, final Page currentPage) {
 		this.currentPage = currentPage;
-		relPath = PathTools.getRelativePath(resource.getPath(), currentPage.getPath());
+		relPath = ResourceTools.getRelativePath(resource, currentPage);
 		final ComponentManager componentManager = resource.getResourceResolver().adaptTo(ComponentManager.class);
 		component = componentManager.getComponentOfResource(resource);
 		for (final Label l : getDefinitions(getPages())) {
