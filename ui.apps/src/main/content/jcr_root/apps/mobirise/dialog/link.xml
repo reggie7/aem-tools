@@ -23,13 +23,8 @@
 		fieldDescription="You can set the label to simply reference some of the global labels that you can configure for a whole page tree.
 			It will be used in case you left the above 'Text' field empty."
 		name="./label">
-		<items jcr:primaryType="nt:unstructured">
-			<none jcr:primaryType="nt:unstructured"
-				text=""
-				value="" />
-			<learnMore jcr:primaryType="nt:unstructured"
-				text="Learn More"
-				value="learnMore" />
-		</items>
+		<datasource jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/dialog/datasource"
+			provider="pl.enigmatic.aem.dialog.GlobalLabelsOptions" />
 	</label>
 </jcr:root>
