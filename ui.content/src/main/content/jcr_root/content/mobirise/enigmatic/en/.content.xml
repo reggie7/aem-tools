@@ -176,7 +176,7 @@
 								sling:resourceType="enigmatic/foundation/parsys">
 								<link jcr:primaryType="nt:unstructured"
 									sling:resourceType="mobirise/components/content/features/item/link"
-									label="learnMore"
+									label="previous"
 									reference="http://enigmatic.pl/"
 									css="default" />
 							</links>
@@ -197,7 +197,7 @@
 								sling:resourceType="enigmatic/foundation/parsys">
 								<link jcr:primaryType="nt:unstructured"
 									sling:resourceType="mobirise/components/content/features/item/link"
-									label="learnMore"
+									label="next"
 									reference="http://enigmatic.pl/"
 									css="default" />
 							</links>
@@ -228,7 +228,7 @@
 								sling:resourceType="enigmatic/foundation/parsys">
 								<link jcr:primaryType="nt:unstructured"
 									sling:resourceType="mobirise/components/content/features/item/link"
-									label="learnMore"
+									label="open"
 									reference="http://enigmatic.pl/"
 									css="info" />
 							</links>
@@ -249,7 +249,7 @@
 								sling:resourceType="enigmatic/foundation/parsys">
 								<link jcr:primaryType="nt:unstructured"
 									sling:resourceType="mobirise/components/content/features/item/link"
-									label="learnMore"
+									label="close"
 									reference="http://enigmatic.pl/"
 									css="info" />
 							</links>
@@ -270,7 +270,7 @@
 								sling:resourceType="enigmatic/foundation/parsys">
 								<link jcr:primaryType="nt:unstructured"
 									sling:resourceType="mobirise/components/content/features/item/link"
-									label="learnMore"
+									label="request"
 									reference="http://enigmatic.pl/"
 									css="info" />
 							</links>
@@ -291,7 +291,7 @@
 								sling:resourceType="enigmatic/foundation/parsys">
 								<link jcr:primaryType="nt:unstructured"
 									sling:resourceType="mobirise/components/content/features/item/link"
-									label="learnMore"
+									label="revert"
 									reference="http://enigmatic.pl/"
 									css="info" />
 							</links>
@@ -350,7 +350,7 @@
 					sling:resourceType="enigmatic/foundation/parsys">
 					<link jcr:primaryType="nt:unstructured"
 						sling:resourceType="mobirise/components/content/imagebox/link"
-						label="learnMore"
+						label="post"
 						reference="https://mobirise.com/bootstrap-template/"
 						css="default" />
 				</links>
@@ -444,7 +444,7 @@
 								sling:resourceType="enigmatic/foundation/parsys">
 								<link jcr:primaryType="nt:unstructured"
 									sling:resourceType="mobirise/components/content/features/item/link"
-									label="learnMore"
+									label="send"
 									reference="http://enigmatic.pl/"
 									css="default" />
 							</links>
