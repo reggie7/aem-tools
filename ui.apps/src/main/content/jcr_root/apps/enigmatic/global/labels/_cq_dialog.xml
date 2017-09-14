@@ -2,43 +2,34 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
 	jcr:primaryType="nt:unstructured"
 	jcr:title="Global Labels"
-	sling:resourceType="cq/gui/components/authoring/dialog"
-	helpPath="en/cq/current/wcm/default_components.html#Carousel">
+	sling:resourceType="cq/gui/components/authoring/dialog">
 	<content jcr:primaryType="nt:unstructured"
 		sling:resourceType="granite/ui/components/foundation/container">
 		<layout jcr:primaryType="nt:unstructured"
-			sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+			sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+			type="nav" />
 		<items jcr:primaryType="nt:unstructured">
-			<column jcr:primaryType="nt:unstructured"
-				sling:resourceType="granite/ui/components/foundation/container">
+			<custom jcr:primaryType="nt:unstructured"
+				jcr:title="Custom Labels"
+				sling:resourceType="granite/ui/components/foundation/section">
+				<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
 				<items jcr:primaryType="nt:unstructured">
-					<learnMore jcr:primaryType="nt:unstructured"
-						sling:resourceType="granite/ui/components/foundation/form/textfield"
-						fieldLabel="'Learn more'"
-						fieldDescription="'Learn more' label translation for all the pages below."
-						name="./learnMore" />
-					<previous jcr:primaryType="nt:unstructured"
-						sling:resourceType="granite/ui/components/foundation/form/textfield"
-						fieldLabel="'previous'"
-						fieldDescription="'previous' label translation for all the pages below."
-						name="./previous" />
-					<next jcr:primaryType="nt:unstructured"
-						sling:resourceType="granite/ui/components/foundation/form/textfield"
-						fieldLabel="'Next'"
-						fieldDescription="'Next' label translation for all the pages below."
-						name="./next" />
-					<open jcr:primaryType="nt:unstructured"
-						sling:resourceType="granite/ui/components/foundation/form/textfield"
-						fieldLabel="'Open'"
-						fieldDescription="'Open' label translation for all the pages below."
-						name="./open" />
-					<close jcr:primaryType="nt:unstructured"
-						sling:resourceType="granite/ui/components/foundation/form/textfield"
-						fieldLabel="'Close'"
-						fieldDescription="'Close' label translation for all the pages below."
-						name="./close" />
+					<column jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/container">
+						<items jcr:primaryType="nt:unstructured">
+							<definitions jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+								fieldLabel="Definitions"
+								fieldDescription="">
+								<field jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									name="./definitions" />
+							</definitions>
+						</items>
+					</column>
 				</items>
-			</column>
+			</custom>
 		</items>
 	</content>
 </jcr:root>

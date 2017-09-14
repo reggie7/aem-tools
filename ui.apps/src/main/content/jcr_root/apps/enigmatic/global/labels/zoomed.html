@@ -1,0 +1,77 @@
+<p class="author-msg-box author-notice">
+	This is where you can override the global labels for the current page and all the pages below.
+	Otherwise values (if set there) will come from ascendant (parent, grandparent, etc.) pages.
+	Obviously the values set here can be overriden in descendant (child, grandchild, etc.) pages.
+	You can then use the labels throughout the whole application in different components, e.g. to
+	reuse a common label inside links.
+</p>
+<table data-sly-use.definitions="pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions"
+	data-sly-test="${!definitions.empty}" class="author-table author-margin">
+	<thead class="blue">
+		<tr>
+			<th>Label ID</th>
+			<th>Placeholder</th>
+			<th>Definition Source</th>
+			<th>Label Value</th>
+			<th>Final Value Source</th>
+			<th>Final Value</th>
+		</tr>
+	</thead>
+	<tbody data-sly-use.values="pl.enigmatic.aem.comps.global.GlobalLabels"
+		data-sly-list="${definitions.entrySet}">
+		<tr data-sly-test.value="${item.value}">
+			<td><strong>${value.text}</strong></td>
+			<td>${value.name}</td>
+			<td>
+				<sly data-sly-test="${value.source}" data-sly-resource="${value.source.path @ resourceType='enigmatic/author/link'}" />
+				<sly data-sly-test="${!value.source}">Predefined</sly>
+			</td>
+			<td><div data-sly-resource="${item.key @ resourceType='enigmatic/global/labels/value'}"></div></td>
+			<td data-sly-test.label="${item.key}/value"
+				data-sly-use.ivs="${'pl.enigmatic.aem.InheritedValueSource' @ propertyPath=label}">
+				<sly data-sly-test="${ivs.source}" data-sly-resource="${ivs.source.path @ resourceType='enigmatic/author/link'}" />
+				<em data-sly-test="${!ivs.source}">Default</em>
+			</td>
+			<td>${values[item.key]}</td>
+		</tr>
+	</tbody>
+</table>
+<p class="author-msg-line author-notice">
+	The table below describes the terms from above.
+</p>
+<table class="author-table author-margin">
+	<thead class="blue">
+		<tr>
+			<th>Term</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>Label ID</strong></td>
+			<td>The identification string that was defined by the author in one of the ancestor pages to create this entry.</td>
+		</tr>
+		<tr>
+			<td><strong>Placeholder</strong></td>
+			<td>We take the label ID and create a proper programmatic name for the property to store the label translations.
+			The same value will be used as a placeholder in templating system we offer in text components.</td>
+		</tr>
+		<tr>
+			<td><strong>Definition Source</strong></td>
+			<td>The page where this label ID was initially introduced for its subpages.</td>
+		</tr>
+		<tr>
+			<td><strong>Label Value</strong></td>
+			<td>Value of the label translation in the current page.</td>
+		</tr>
+		<tr>
+			<td><strong>Final Value</strong></td>
+			<td>Final inherited value that this label ID resolves to in this page, taking into account the value here and translations
+			that come from ancestors.</td>
+		</tr>
+		<tr>
+			<td><strong>Final Value Source</strong></td>
+			<td>Where the final value was originally defined - the source page the translation comes from directly.</td>
+		</tr>
+	</tbody>
+</table>
