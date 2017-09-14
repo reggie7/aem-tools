@@ -11,7 +11,11 @@
 		navTitle="Home">
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/global/labels"
-			learnMore="LEARN MORE" />
+			learnMore="LEARN MORE"
+			previous="Previous"
+			next="Next"
+			close="Close"
+			open="Open" />
 		<header jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/structure/header">
 			<logo jcr:primaryType="nt:unstructured"

@@ -19,8 +19,8 @@
 						name="./text"
 						required="{Boolean}true" />
 					<backgroundColor jcr:primaryType="nt:unstructured"
-						path="mobirise/dialog/colors/backgroundColor"
-						sling:resourceType="granite/ui/components/foundation/include" />
+						sling:resourceType="granite/ui/components/foundation/include"
+						path="mobirise/dialog/colors/backgroundColor" />
 				</items>
 			</column>
 		</items>
