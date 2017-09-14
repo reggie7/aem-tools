@@ -31,6 +31,8 @@
 				title="BOOTSTRAP BLOG TEMPLATE"
 				subtitle="Make your own bootstrap blog in minutes!">
 				<image jcr:primaryType="nt:unstructured"
+					jcr:lastModified="{Date}2017-06-19T17:19:40.462+02:00"
+					sling:resourceType="mobirise/components/foundation/image"
 					fileReference="/content/dam/mobirise/iphone-6-458151-1920-1920x1285-67.jpg" />
 			</stage>
 			<header jcr:primaryType="nt:unstructured"
