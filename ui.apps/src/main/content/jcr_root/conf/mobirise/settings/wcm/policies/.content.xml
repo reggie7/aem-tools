@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Page"
+	jcr:mixinTypes="[rep:AccessControllable]">
+	<wcm jcr:primaryType="nt:unstructured">
+		<foundation jcr:primaryType="nt:unstructured">
+			<components jcr:primaryType="nt:unstructured">
+				<structure jcr:primaryType="nt:unstructured"
+					jcr:title="Mobirise Structure"
+					jcr:description="Default policy for editable layout containers"
+					sling:resourceType="wcm/core/components/policy/policy"
+					components="[/libs/wcm/foundation/components/responsivegrid]" />
+				<mobirise jcr:primaryType="nt:unstructured"
+					jcr:title="Mobirise"
+					jcr:description="Default policy"
+					sling:resourceType="wcm/core/components/policy/policy"
+					components="[group:Mobirise]" />
+				<blog jcr:primaryType="nt:unstructured"
+					jcr:title="Mobirise Blog"
+					sling:resourceType="wcm/core/components/policy/policy"
+					components="[group:Mobirise Blog]" />
+			</components>
+		</foundation>
+	</wcm>
+	<mobirise jcr:primaryType="nt:unstructured">
+		<foundation jcr:primaryType="nt:unstructured">
+			<parsys jcr:primaryType="nt:unstructured">
+				<content jcr:primaryType="nt:unstructured"
+					jcr:title="Mobirise Content"
+					jcr:description="Default policy for Content Pages"
+					sling:resourceType="wcm/core/components/policy/policy"
+					components="[group:Mobirise]" />
+			</parsys>
+		</foundation>
+	</mobirise>
+</jcr:root>

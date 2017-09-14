@@ -6,4 +6,5 @@
 
 	<filter root="/apps/mobirise" />
 	<filter root="/etc/designs/mobirise" />
+	<filter root="/conf/mobirise" />
 </workspaceFilter>

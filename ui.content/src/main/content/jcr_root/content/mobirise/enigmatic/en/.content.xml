@@ -4,8 +4,9 @@
 	<jcr:content jcr:primaryType="cq:PageContent"
 		jcr:title="English"
 		sling:resourceType="mobirise/pages/lang"
-		cq:designreference="/etc/designs/mobirise"
+		cq:design="/etc/designs/mobirise"
 		cq:template="/apps/mobirise/templates/lang"
+		cq:allowedTemplates="[/apps/mobirise/templates/.*,/conf/mobirise/settings/wcm/templates/my-content]"
 		pageTitle="Enigmatic"
 		subtitle="Mobirise AEM implementation"
 		navTitle="Home">
