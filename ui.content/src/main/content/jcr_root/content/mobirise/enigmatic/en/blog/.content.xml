@@ -9,8 +9,21 @@
 		subtitle="Mobirise"
 		pageTitle="Blog"
 		navTitle="BLOG">
+		<configs jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/configs">
+			<date jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/global/date"
+				format="MMMMM dd, yyyy" />
+		</configs>
 		<labels jcr:primaryType="nt:unstructured"
-			sling:resourceType="mobirise/global/labels" />
+			sling:resourceType="mobirise/global/labels">
+			<by jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/global/labels/value"
+				value="By" />
+			<posted jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/global/labels/value"
+				value="posted" />
+		</labels>
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<stage jcr:primaryType="nt:unstructured"
@@ -23,7 +36,8 @@
 			<header jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/header"
 				text="DROP-DEAD EASY BOOTSTRAP BLOG"
-				subtext="By John Smith posted July 30, 2016" />
+				author="imccoy"
+				date="{Date}2016-07-30T15:45:17.235+02:00" />
 			<text jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/text"
 				text="Proin id eros arcu. Integer neque urna, malesuada vel iaculis ac, elementum ut mauris.
@@ -52,7 +66,8 @@
 			<header_1 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/header"
 				text="FREE BOOTSTRAP BLOG TEMPLATE"
-				subtext="By John Smith posted July 29, 2016" />
+				author="cavery"
+				date="{Date}2016-07-29T15:45:17.235+02:00" />
 			<text_1 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/text"
 				text="Vestibulum id nisl eu ipsum ultrices sodales. Donec non nibh at diam porta porttitor.
@@ -116,7 +131,8 @@
 			<header_2 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/header"
 				text="BOOTSTRAP BLOG MAKER"
-				subtext="By John Smith posted July 28, 2016" />
+				author="ksaner"
+				date="{Date}2016-07-28T15:45:17.235+02:00" />
 			<richtext_1 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/richtext"
 				text="&lt;p&gt;&amp;nbsp;Sed vel lorem a velit tincidunt tristique. Maecenas pharetra augue sit amet nisl placerat, nec ultricies arcu lacinia.

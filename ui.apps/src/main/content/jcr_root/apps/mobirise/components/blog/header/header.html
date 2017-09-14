@@ -1,9 +1,24 @@
-<section class="mbr-section" id="header3-78">
+<sly data-sly-test="${!properties.text}" data-sly-include="/apps/enigmatic/edit.html" />
+<section data-sly-test="${properties.text}" class="mbr-section"
+	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}"
+	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
 	<div class="mbr-section__container container mbr-section__container--first">
 		<div class="mbr-header mbr-header--wysiwyg row">
 			<div class="col-sm-8 col-sm-offset-2">
 				<h3 class="mbr-header__text">${properties.text}</h3>
-				<p class="mbr-header__subtext">${properties.subtext}</p>
+				<span data-sly-test="${wcmmode.edit && (properties.author || properties.date)}"
+					class="author-msg-line author-notice">This component uses global labels.</span>
+				<p data-sly-test="${properties.author || properties.date}" class="mbr-header__subtext"
+					data-sly-use.labels="pl.enigmatic.aem.comps.global.GlobalLabels">
+					<sly data-sly-test="${properties.author}" data-sly-use.helper="${'pl.enigmatic.mobirise.aem.core.GetUser' @ id=properties.author}">
+						${labels['by']} ${helper.givenName} ${helper.familyName}
+					</sly>
+					<sly data-sly-test="${properties.date}"
+						data-sly-use.configs="pl.enigmatic.mobirise.aem.comps.global.GlobalConfig"
+						data-sly-use.helper="${'pl.enigmatic.aem.FormatDate' @ format=configs['date/format'], calendar=properties.date}">
+						${properties.date ? labels['posted'] : null} ${helper.toString}
+					</sly>
+				</p>
 			</div>
 		</div>
 	</div>
