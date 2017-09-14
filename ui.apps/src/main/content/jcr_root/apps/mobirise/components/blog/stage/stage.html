@@ -1,12 +1,12 @@
 <section class="content-2 simple col-1 col-undefined mbr-parallax-background mbr-after-navbar" id="content5-77"
 	style="background-image: url(${properties['image/fileReference'] @ context='unsafe'});">
 	<div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(0, 0, 0);"></div>
-	<div class="container">
+	<div data-sly-test="${properties.title || properties.subtitle}" class="container">
 		<div class="row">
 			<div class="thumbnail">
 				<div class="caption">
-					<h3>${properties.title}</h3>
-					<p>${properties.subtitle}<br /></p>
+					<h3 data-sly-test="${properties.title}">${properties.title}</h3>
+					<p data-sly-test="${properties.subtitle}">${properties.subtitle}<br /></p>
 				</div>
 			</div>
 		</div>
