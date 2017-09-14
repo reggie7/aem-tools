@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Page">
+	<jcr:content jcr:primaryType="cq:PageContent"
+		jcr:title="Placeholders Example"
+		sling:resourceType="mobirise/pages/content"
+		cq:template="/apps/mobirise/templates/content"
+		cq:designPath="/etc/designs/mobirise"
+		subtitle="How an author can use global labels.">
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels"
+			definitions="[Lorem Ipsum]">
+			<loremIpsum jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+		</labels>
+		<content jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<loremIpsum jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/text"
+				text="The following text comes from global labels: ${loremIpsum}"
+				backgroundColor="rgba(155, 205, 205, 1)" />
+			<info jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/text"
+				text="The above text shows how you can use a global label to simply re-use the same simple content via a placeholder:
+					$ + { + [placeholder ID] + }. Check the above text's dialog and notice how the global labels zoomed in mode shows
+					the placeholder's value loremIpsum that we used. Below you see other texts with loremIpsum variable. Change the text
+					in global labels and notice how all of them change in this page. At the end you'll find some global labels links usage."
+				backgroundColor="rgba(205, 155, 205, 1)" />
+			<loremIpsum_1 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/text"
+				text="${loremIpsum}"
+				backgroundColor="rgba(205, 205, 155, 1)" />
+			<loremIpsum_2 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/text"
+				text="${loremIpsum}"
+				backgroundColor="rgba(205, 155, 155, 1)" />
+			<loremIpsum_3 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/text"
+				text="${loremIpsum}"
+				backgroundColor="rgba(155, 205, 155, 1)" />
+			<loremIpsum_4 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/text"
+				text="${loremIpsum}"
+				backgroundColor="rgba(155, 155, 205, 1)" />
+			<msgbox jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/msgbox"
+				text="Labels used in the links"
+				backgroundColor="rgba(155, 155, 155, 1)">
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/msgbox/link"
+						reference="/content/enigmatic"
+						label="learnMore"
+						css="default" />
+				</links>
+			</msgbox>
+		</content>
+	</jcr:content>
+</jcr:root>
