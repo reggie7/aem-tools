@@ -2,7 +2,7 @@
 	<sly data-sly-resource="${'image' @ resourceType='mobirise/components/foundation/image'}" />
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<div class="mbr-hero">
+			<div class="mbr-hero" data-sly-test="${properties.text || properties.subtext}">
 				<h1 data-sly-test="${properties.text}" class="mbr-hero__text">${properties.text}</h1>
 				<p data-sly-test="${properties.subtext}" class="mbr-hero__subtext">${properties.subtext}</p>
 			</div>
