@@ -3,4 +3,4 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="Video"
 	jcr:description="Video Component: renders a video"
-	componentGroup="Kyocera Blog" />
+	componentGroup="Mobirise Blog" />
