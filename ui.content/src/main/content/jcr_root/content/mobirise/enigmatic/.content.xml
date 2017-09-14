@@ -6,6 +6,8 @@
 		sling:resourceType="mobirise/pages/domain"
 		cq:designPath="/etc/designs/mobirise"
 		cq:template="/apps/mobirise/templates/domain">
+		<configs jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/configs" />
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/global/labels"
 			definitions="[Post,Send]">

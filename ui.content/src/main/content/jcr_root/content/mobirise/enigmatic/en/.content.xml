@@ -9,6 +9,8 @@
 		pageTitle="Enigmatic"
 		subtitle="Mobirise AEM implementation"
 		navTitle="Home">
+		<configs jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/configs" />
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/global/labels"
 			definitions="[Submit,Clear,Company,Year]">
