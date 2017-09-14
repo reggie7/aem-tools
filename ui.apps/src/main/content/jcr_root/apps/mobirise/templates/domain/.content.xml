@@ -10,6 +10,8 @@
 		sling:resourceType="mobirise/pages/domain"
 		cq:allowedTemplates="[/apps/mobirise/templates/.*]"
 		cq:designPath="/etc/designs/mobirise">
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels" />
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys" />
 	</jcr:content>
