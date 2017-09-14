@@ -336,7 +336,25 @@
 				</items>
 			</slider>
 			<imagebox jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/imagebox" />
+				sling:resourceType="mobirise/components/content/imagebox"
+				backgroundColor="rgba(0, 168, 133, 1)"
+				title="BASIC BOOTSTRAP TEMPLATE"
+				text="Etiam euismod, elit non efficitur commodo, est nisl dictum lacus, a congue felis ex ut nibh. Sed cursus accumsan justo,
+					luctus malesuada lectus feugiat vitae. Duis quis malesuada lectus, vitae mollis urna. Maecenas sit amet ipsum ipsum.
+					Etiam varius sapien ac odio eleifend pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.">
+				<image jcr:primaryType="nt:unstructured"
+					jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"
+					sling:resourceType="mobirise/components/content/imagebox/image"
+					fileReference="/content/dam/mobirise/iphone-1032784-1920-1920x1440-16.jpg" />
+				<links jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<link jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/imagebox/link"
+						label="learnMore"
+						reference="https://mobirise.com/bootstrap-template/"
+						css="default" />
+				</links>
+			</imagebox>
 			<features_3 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/features"
 				columnsNumber="{Long}3"
