@@ -521,7 +521,32 @@
 			<!--social-buttons jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/social-buttons" /-->
 			<testimonials jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/testimonials" />
+				sling:resourceType="mobirise/components/content/testimonials"
+				backgroundColor="rgba(255, 255, 255, 1)"
+				text="WHAT OUR FANTASTIC USERS SAY">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<item_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/testimonials/item"
+						text="Nullam cursus sed nibh nec commodo. Ut mattis mi at magna vestibulum, vel mattis dolor vulputate.
+							Vestibulum egestas libero sit amet nisi feugiat, id molestie quam cursus."
+						name="NANCY"
+						bio="User" />
+					<item_2 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/testimonials/item"
+						text="Curabitur dignissim tempus libero at aliquam. Sed arcu nisi, maximus sit amet nulla quis,
+							faucibus sollicitudin lacus. Quisque sed nulla at leo cursus finibus sed hendrerit risus.
+							Maecenas euismod faucibus ornare. Sed tellus elit, fringilla in malesuada nec, volutpat vel ligula."
+						name="JOHN"
+						bio="User" />
+					<item_3 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/testimonials/item"
+						text="In tempus arcu a urna maximus, at porta felis laoreet. Vestibulum dui ipsum, varius ac ante sed,
+							volutpat faucibus mauris. Morbi viverra ipsum ut lacinia pretium. Vivamus sit amet quam sed lorem rhoncus gravida."
+						name="MARK"
+						bio="User" />
+				</items>
+			</testimonials>
 		</content>
 	</jcr:content>
 </jcr:root>

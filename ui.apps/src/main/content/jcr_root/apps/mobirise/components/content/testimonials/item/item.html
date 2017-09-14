@@ -1,0 +1,11 @@
+<sly data-sly-test="${!properties.text}" data-sly-include="/apps/enigmatic/edit.html" />
+<sly data-sly-test="${properties.text}">
+	<div class="mbr-reviews__text">
+		<p class="mbr-reviews__p">&ldquo;${properties.text}&rdquo;</p>
+	</div>
+	<div data-sly-test="${properties.name || properties.bio}"
+		class="mbr-reviews__author mbr-reviews__author--short">
+		<div data-sly-test="${properties.name}" class="mbr-reviews__author-name">${properties.name}</div>
+		<div data-sly-test="${properties.bio}" class="mbr-reviews__author-bio">${properties.bio}</div>
+	</div>
+</sly>

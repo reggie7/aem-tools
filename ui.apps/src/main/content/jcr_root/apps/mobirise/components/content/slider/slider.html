@@ -2,7 +2,8 @@
 <section class="mbr-slider mbr-section mbr-section--no-padding carousel slide"
 	data-ride="carousel" data-wrap="${properties.wrap ? 'true' : 'false'}"
 	data-interval="${properties.interval}${properties.interval ? '000' : ''}"
-	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}">
+	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}"
+	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
 	<div class="mbr-section__container container article-slider mbr-section__container--${component.properties.css}">
 		<div class="col-sm-8 col-sm-offset-2"
 			data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}">
