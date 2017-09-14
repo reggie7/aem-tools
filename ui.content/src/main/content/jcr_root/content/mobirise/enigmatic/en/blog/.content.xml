@@ -127,7 +127,10 @@
 					&lt;li&gt;Cras auctor neque lacus, a maximus nibh dignissim volutpat. Maecenas iaculis hendrerit erat quis hendrerit.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;" />
 			<video jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/video"
-				fileReference="https://www.youtube.com/embed/vvwnQ7NUWNY?rel=0&amp;autoplay=0&amp;loop=0" />
+				fileReference="https://www.youtube.com/embed/vvwnQ7NUWNY?rel=0&amp;autoplay=0&amp;loop=0"
+				frameBorder="{Long}0"
+				width="{Long}1280"
+				height="{Long}720" />
 			<header_2 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/blog/header"
 				text="BOOTSTRAP BLOG MAKER"
