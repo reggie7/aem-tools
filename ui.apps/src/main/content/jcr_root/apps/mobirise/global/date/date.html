@@ -1,0 +1,35 @@
+<table class="author-table author-margin">
+	<thead class="green">
+		<tr>
+			<th>Local Value</th>
+			<th>Final Value Source</th>
+			<th>Final Value</th>
+			<th>Example</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td data-sly-test="${!properties.format}" data-sly-include="/apps/enigmatic/foundation/config/blank.html"></td>
+			<td data-sly-test="${properties.format}" data-sly-use.validator="${'pl.enigmatic.aem.DateFormatValidator' @ pattern=properties.format}">
+				<sly data-sly-test="${validator.valid}"><strong>${properties.format}</strong></sly>
+				<span data-sly-test="${!validator.valid}" class="author-msg-line author-error">
+					The format provided (<strong>${properties.format}</strong>) is invalid. Please consult
+					<a href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">Date and Time Patterns</a>
+					section of documentation. See the examples as well to get a good overview of how to define the pattern.
+				</span>
+			</td>
+			<td data-sly-use.ivs="${'pl.enigmatic.aem.InheritedValueSource' @ propertyPath='format'}">
+				<sly data-sly-test="${ivs.source}" data-sly-resource="${ivs.source.path @ resourceType='enigmatic/author/link'}" />
+				<em data-sly-test="${!ivs.source}">Defaults</em>
+			</td>
+			<td data-sly-use.configs="pl.enigmatic.mobirise.aem.comps.global.GlobalConfig"
+				data-sly-test.path="${resource.name}/format">${configs[path]}</td>
+			<td data-sly-use.validator="${'pl.enigmatic.aem.DateFormatValidator' @ pattern=configs[path]}">
+				<sly data-sly-test="${validator.valid}" data-sly-use.date="java.util.Date"
+					data-sly-use.example="${'pl.enigmatic.aem.FormatDate' @ format=configs[path], date=date}">
+					${example.toString}
+				</sly>
+			</td>
+		</tr>
+	</tbody>
+</table>

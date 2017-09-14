@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="Dates Formatting"
+	sling:resourceType="cq/gui/components/authoring/dialog"
+	helpPath="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html">
+	<content jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/container">
+		<layout jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+		<items jcr:primaryType="nt:unstructured">
+			<column jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/container">
+				<items jcr:primaryType="nt:unstructured">
+					<format jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/form/textfield"
+						fieldLabel="Format"
+						fieldDescription="The pattern used to format date. Please refer to the help documentation to check
+							Java programming language dates patterns creation rules as we copy them here for your convenience."
+						name="./format" />
+				</items>
+			</column>
+		</items>
+	</content>
+</jcr:root>
