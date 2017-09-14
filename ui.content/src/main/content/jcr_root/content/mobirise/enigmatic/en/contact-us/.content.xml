@@ -7,6 +7,8 @@
 		cq:template="/apps/mobirise/templates/content"
 		cq:designPath="/etc/designs/mobirise"
 		navTitle="Contact">
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels" />
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<contact-form jcr:primaryType="nt:unstructured"

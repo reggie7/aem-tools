@@ -8,6 +8,16 @@
 		cq:designPath="/etc/designs/mobirise"
 		pageTitle="Gallery"
 		navTitle="GALLERY">
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels"
+			definitions="[Submit,Clear,Company,Year]">
+			<company jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="Reggie #7" />
+			<year jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="2018" />
+		</labels>
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<headline jcr:primaryType="nt:unstructured"

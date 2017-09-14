@@ -9,6 +9,8 @@
 		subtitle="Mobirise"
 		pageTitle="Blog"
 		navTitle="BLOG">
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels" />
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<stage jcr:primaryType="nt:unstructured"

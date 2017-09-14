@@ -11,7 +11,7 @@
 		navTitle="Home">
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/global/labels"
-			definitions="[Submit,Clear]">
+			definitions="[Submit,Clear,Company,Year]">
 			<next jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/global/labels/value"
 				value="Next" />
@@ -36,6 +36,12 @@
 			<clear jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/global/labels/value"
 				value="Clear" />
+			<company jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="Enigma Solutions" />
+			<year jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/global/labels/value"
+				value="2017" />
 		</labels>
 		<header jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/structure/header">
@@ -89,7 +95,7 @@
 		</header>
 		<footer jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/structure/footer"
-			text="Copyright (c) 2017 Enigma Solutions."
+			text="Copyright (c) ${year} ${company}."
 			backgroundColor="rgba(68, 68, 68, 1)">
 			<links jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys">
@@ -116,7 +122,7 @@
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
 							title="IMAGE/CONTENT SLIDER"
-							text="Sed egestas urna quam, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in.
+							text="Sed egestas urna quam ${learnMore}, sit amet euismod ligula commodo vitae. Cras hendrerit quam est, non dapibus turpis porta in.
 									Fusce viverra, lectus vitae dignissim interdum, erat leo egestas velit, eu tincidunt tellus eros a mauris.">
 							<image jcr:primaryType="nt:unstructured"
 								jcr:lastModified="{Date}2017-05-29T15:45:17.235+02:00"

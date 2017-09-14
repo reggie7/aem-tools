@@ -9,6 +9,8 @@
 		pageTitle="Enigmatic"
 		subtitle="Mobirise w AEMie"
 		navTitle="Strona domowa">
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels" />
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys" />
 	</jcr:content>
