@@ -5,7 +5,8 @@
 		jcr:title="Mobirise"
 		sling:resourceType="mobirise/pages/brand"
 		cq:designPath="/etc/designs/mobirise"
-		cq:template="/apps/mobirise/templates/brand">
+		cq:template="/apps/mobirise/templates/brand"
+		cq:deviceGroups="[/etc/mobile/groups/responsive]">
 		<configs jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/global/configs" />
 		<labels jcr:primaryType="nt:unstructured"

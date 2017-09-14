@@ -6,7 +6,8 @@
 		sling:resourceType="enigmatic/pages/brand"
 		cq:template="/apps/enigmatic/templates/brand"
 		cq:allowedTemplates="[/apps/enigmatic/templates/.*]"
-		cq:designPath="/etc/designs/enigmatic">
+		cq:designPath="/etc/designs/enigmatic"
+		cq:deviceGroups="[/etc/mobile/groups/responsive]">
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
 			<messages jcr:primaryType="nt:unstructured"

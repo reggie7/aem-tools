@@ -119,7 +119,7 @@
 				backgroundColor="rgba(255, 255, 255, 1)">
 				<items jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
-					<par_1 jcr:primaryType="nt:unstructured"
+					<set_1 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -139,8 +139,8 @@
 									css="default" />
 							</links>
 						</item>
-					</par_1>
-					<par_2 jcr:primaryType="nt:unstructured"
+					</set_1>
+					<set_2 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -160,8 +160,8 @@
 									css="default" />
 							</links>
 						</item>
-					</par_2>
-					<par_3 jcr:primaryType="nt:unstructured"
+					</set_2>
+					<set_3 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -181,8 +181,8 @@
 									css="default" />
 							</links>
 						</item>
-					</par_3>
-					<par_4 jcr:primaryType="nt:unstructured"
+					</set_3>
+					<set_4 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -202,7 +202,7 @@
 									css="default" />
 							</links>
 						</item>
-					</par_4>
+					</set_4>
 				</items>
 			</features_1>
 			<!--header jcr:primaryType="nt:unstructured"
@@ -213,7 +213,7 @@
 				backgroundColor="rgba(28, 73, 110, 1)">
 				<items jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
-					<par_1 jcr:primaryType="nt:unstructured"
+					<set_1 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -233,8 +233,8 @@
 									css="info" />
 							</links>
 						</item>
-					</par_1>
-					<par_2 jcr:primaryType="nt:unstructured"
+					</set_1>
+					<set_2 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -254,8 +254,8 @@
 									css="info" />
 							</links>
 						</item>
-					</par_2>
-					<par_3 jcr:primaryType="nt:unstructured"
+					</set_2>
+					<set_3 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -275,8 +275,8 @@
 									css="info" />
 							</links>
 						</item>
-					</par_3>
-					<par_4 jcr:primaryType="nt:unstructured"
+					</set_3>
+					<set_4 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -296,7 +296,7 @@
 									css="info" />
 							</links>
 						</item>
-					</par_4>
+					</set_4>
 				</items>
 			</features_2>
 			<slider jcr:primaryType="nt:unstructured"
@@ -343,7 +343,7 @@
 				backgroundColor="rgba(239, 239, 239, 1)">
 				<items jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
-					<par_1 jcr:primaryType="nt:unstructured"
+					<set_1 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -357,8 +357,8 @@
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys" />
 						</item>
-					</par_1>
-					<par_2 jcr:primaryType="nt:unstructured"
+					</set_1>
+					<set_2 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -372,8 +372,8 @@
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys" />
 						</item>
-					</par_2>
-					<par_3 jcr:primaryType="nt:unstructured"
+					</set_2>
+					<set_3 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -387,7 +387,7 @@
 							<links jcr:primaryType="nt:unstructured"
 								sling:resourceType="enigmatic/foundation/parsys" />
 						</item>
-					</par_3>
+					</set_3>
 				</items>
 			</features_3>
 			<msgbox jcr:primaryType="nt:unstructured"
@@ -411,7 +411,7 @@
 				backgroundColor="rgba(255, 255, 255, 1)">
 				<items jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
-					<par_1 jcr:primaryType="nt:unstructured"
+					<set_1 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -431,8 +431,8 @@
 									css="default" />
 							</links>
 						</item>
-					</par_1>
-					<par_2 jcr:primaryType="nt:unstructured"
+					</set_1>
+					<set_2 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -452,8 +452,8 @@
 									css="info" />
 							</links>
 						</item>
-					</par_2>
-					<par_3 jcr:primaryType="nt:unstructured"
+					</set_2>
+					<set_3 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -473,8 +473,8 @@
 									css="default" />
 							</links>
 						</item>
-					</par_3>
-					<par_4 jcr:primaryType="nt:unstructured"
+					</set_3>
+					<set_4 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys">
 						<item jcr:primaryType="nt:unstructured"
 							sling:resourceType="mobirise/components/content/features/item"
@@ -494,7 +494,7 @@
 									css="info" />
 							</links>
 						</item>
-					</par_4>
+					</set_4>
 				</items>
 			</features_4>
 			<pricing-table jcr:primaryType="nt:unstructured"
