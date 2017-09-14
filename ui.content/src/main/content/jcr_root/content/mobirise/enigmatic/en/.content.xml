@@ -422,8 +422,8 @@
 						css="default" />
 				</links>
 			</msgbox>
-			<social-buttons-v2 jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/social-buttons/v2" />
+			<!--social-buttons-v2 jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/social-buttons/v2" /-->
 			<features_4 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/features"
 				columnsNumber="{Long}4"
@@ -518,8 +518,8 @@
 			</features_4>
 			<pricing-table jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/pricing-table" />
-			<social-buttons jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/social-buttons" />
+			<!--social-buttons jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/social-buttons" /-->
 			<testimonials jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/testimonials" />
 		</content>
