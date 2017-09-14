@@ -1,5 +1,4 @@
 #base=js
-jquery.min.js
 bootstrap.min.js
 jarallax.js
 bootstrap-carousel-swipe.js
