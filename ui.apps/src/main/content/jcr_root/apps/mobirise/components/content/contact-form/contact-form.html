@@ -3,7 +3,7 @@
 	class="mbr-section mbr-section--relative mbr-section--fixed-size"
 	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}"
 	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
-	<p data-sly-test="${!wcmmode.disabled}" class="author-msg-box author-notice">
+	<p data-sly-test="${!(wcmmode.disabled || wcmmode.preview)}" class="author-msg-box author-notice">
 		Please keep in mind that to make this component work you will need to cooperate with someone in your organization who has proper privilege to
 		edit configuration of <a href="/system/console/configMgr/com.day.cq.mailer.DefaultMailService" target="_blank" x-cq-linkchecker="valid">DefaultMailService</a>.
 		Otherwise the mails might not be sent properly.
