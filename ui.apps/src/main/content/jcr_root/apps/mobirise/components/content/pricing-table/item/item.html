@@ -1,0 +1,14 @@
+<div>
+	<div class="plan ${properties.style}">
+		<h3>${properties.title}</h3>
+		<p class="price">
+			<strong><sup>${properties.currency}</sup><span>${properties.price}</span></strong>
+			<small>${properties.paymentInterval}</small>
+		</p>
+		<div><ul data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='features'}"
+			data-sly-list="${items.listChildren}">
+			<li data-sly-resource="${item.path}"></li>
+		</ul></div>
+		<p data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"></p>
+	</div>
+</div>

@@ -1,50 +1,8 @@
-<section class="pricing-table-1 col-4" id="pricing-table1-86" style="background-color: rgb(240, 240, 240);">
+<section class="pricing-table-1 col-4"
+	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}"
+	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
 	<div class="container">
-		<div class="row">
-			<div>
-				<div class="plan green">
-					<h3>STANDARD</h3>
-					<p class="price">
-						<strong><sup>$</sup><span>0</span></strong>
-						<small>per month</small>
-					</p>
-					<div><ul><li><strong>32 GB</strong> Storage</li><li><strong>Unlimited</strong> Users</li><li><strong>15 GB</strong> Bandwidth</li></ul></div>
-					<p><a href="https://mobirise.com/" class="btn btn-success">DEMO LINK</a></p>
-				</div>
-			</div>
-			<div>
-				<div class="plan orange">
-					<h3>BUSINESS</h3>
-					<p class="price">
-						<strong><sup>$</sup><span>0</span></strong>
-						<small>per month</small>
-					</p>
-					<div><ul><li><strong>80 GB</strong> Storage</li><li><strong>Unlimited</strong> Users</li><li><strong>20 GB</strong> Bandwidth</li></ul></div>
-					<p><a href="https://mobirise.com/" class="btn btn-success">DEMO LINK</a></p>
-				</div>
-			</div>
-			<div>
-				<div class="plan favorite">
-					<h3>PREMIUM</h3>
-					<p class="price">
-						<strong><sup>$</sup><span>0</span></strong>
-						<small>per month</small>
-					</p>
-					<div><ul><li><strong>100 GB</strong> Storage</li><li><strong>Unlimited</strong> Users</li><li><strong>50 GB</strong> Bandwidth</li></ul></div>
-					<p><a href="https://mobirise.com/" class="btn btn-success">DEMO LINK</a></p>
-				</div>
-			</div>
-			<div>
-				<div class="plan blue">
-					<h3>ULTIMATE</h3>
-					<p class="price">
-						<strong><sup>$</sup><span>0</span></strong>
-						<small>per month</small>
-					</p>
-					<div><ul><li><strong>Unlimited</strong> Storage</li><li><strong>Unlimited</strong> Users</li><li><strong>1TB GB</strong> Bandwidth</li></ul></div>
-					<p><a href="https://mobirise.com/" class="btn btn-success">DEMO LINK</a></p>
-				</div>
-			</div>
-		</div>
+		<div data-sly-resource="${'items' @ resourceType='enigmatic/foundation/parsys'}"
+			class="row"></div>
 	</div>
 </section>

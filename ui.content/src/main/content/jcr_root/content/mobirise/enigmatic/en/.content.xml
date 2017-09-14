@@ -517,7 +517,132 @@
 				</items>
 			</features_4>
 			<pricing-table jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/pricing-table" />
+				sling:resourceType="mobirise/components/content/pricing-table"
+				backgroundColor="rgba(240, 240, 240, 1)">
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<item_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/pricing-table/item"
+						title="STANDARD"
+						style="green"
+						price="0"
+						currency="$"
+						paymentInterval="per month">
+						<features jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<feature_1 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="32 GB"
+								name="Storage" />
+							<feature_2 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="Unlimited"
+								name="Users" />
+							<feature_3 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="15 GB"
+								name="Bandwidth" />
+						</features>
+						<links jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<link jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/button"
+								text="DEMO LINK"
+								reference="https://mobirise.com/" />
+						</links>
+					</item_1>
+					<item_2 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/pricing-table/item"
+						title="BUSINESS"
+						style="orange"
+						price="0"
+						currency="$"
+						paymentInterval="per month">
+						<features jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<feature_1 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="80 GB"
+								name="Storage" />
+							<feature_2 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="Unlimited"
+								name="Users" />
+							<feature_3 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="20 GB"
+								name="Bandwidth" />
+						</features>
+						<links jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<link jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/button"
+								text="DEMO LINK"
+								reference="https://mobirise.com/" />
+						</links>
+					</item_2>
+					<item_3 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/pricing-table/item"
+						title="PREMIUM"
+						style="favorite"
+						price="0"
+						currency="$"
+						paymentInterval="per month">
+						<features jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<feature_1 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="100 GB"
+								name="Storage" />
+							<feature_2 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="Unlimited"
+								name="Users" />
+							<feature_3 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="50 GB"
+								name="Bandwidth" />
+						</features>
+						<links jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<link jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/button"
+								text="DEMO LINK"
+								reference="https://mobirise.com/" />
+						</links>
+					</item_3>
+					<item_4 jcr:primaryType="nt:unstructured"
+						sling:resourceType="mobirise/components/content/pricing-table/item"
+						title="ULTIMATE"
+						style="blue"
+						price="0"
+						currency="$"
+						paymentInterval="per month">
+						<features jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<feature_1 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="Unlimited"
+								name="Storage" />
+							<feature_2 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="Unlimited"
+								name="Users" />
+							<feature_3 jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/item/feature"
+								amount="1 TB"
+								name="Bandwidth" />
+						</features>
+						<links jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<link jcr:primaryType="nt:unstructured"
+								sling:resourceType="mobirise/components/content/pricing-table/button"
+								text="DEMO LINK"
+								reference="https://mobirise.com/" />
+						</links>
+					</item_4>
+				</items>
+			</pricing-table>
 			<!--social-buttons jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/social-buttons" /-->
 			<testimonials jcr:primaryType="nt:unstructured"
