@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="row" data-sly-use.range="${'pl.enigmatic.aem.Range' @ to=properties.columnsNumber}"
 			data-sly-list="${range.iterator}">
-			<div data-sly-test.path="items/par_${item}"
+			<div data-sly-test.path="items/set_${item}"
 				data-sly-resource="${path @ resourceType='enigmatic/foundation/parsys'}"></div>
 		</div>
 	</div>
