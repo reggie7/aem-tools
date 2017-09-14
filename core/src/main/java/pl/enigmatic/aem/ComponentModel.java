@@ -13,6 +13,8 @@ import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 import com.day.cq.wcm.api.components.Component;
 
+import pl.enigmatic.tools.PathTools;
+
 /**
  * Base for component model classes. Exposes fundamental objects used to perform
  * further calculations.
@@ -91,5 +93,9 @@ public class ComponentModel extends ResourceWrapper {
 	 */
 	public ComponentModel(final Resource resource) {
 		this(null, resource);
+	}
+
+	public String getRelativePath() {
+		return PathTools.getRelativePath(getPath(), currentPage.getContentResource().getPath());
 	}
 }

@@ -5,11 +5,14 @@ import java.util.Iterator;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.NonExistingResource;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceUtil;
 import org.apache.sling.api.resource.ResourceWrapper;
 import org.apache.sling.api.resource.SyntheticResource;
 
 import com.day.cq.commons.jcr.JcrConstants;
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.PageManager;
 import com.day.cq.wcm.api.components.Component;
 import com.day.cq.wcm.api.components.ComponentManager;
 
@@ -145,5 +148,11 @@ public final class ResourceTools {
 			}
 		}
 		return null;
+	}
+
+	public static Page getContainingPage(final Resource resource) {
+		final ResourceResolver resourceResolver = resource.getResourceResolver();
+		final PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
+		return pageManager.getContainingPage(resource);
 	}
 }

@@ -29,7 +29,7 @@ public class HTMLValidator extends XMLValidator {
 	}
 
 	/** transforms html to some kind of xml that we can easily check
-	 * @see com.kyocera.aem.apps.core.bmw.aems2.digitals2.apps.XMLValidator#transform(java.lang.String)
+	 * @see pl.enigmatic.aem.apps.core.XMLValidator#transform(java.lang.String)
 	 */
 	protected String transform(final String content) {
 		String result = content;
