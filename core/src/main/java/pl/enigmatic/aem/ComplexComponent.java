@@ -100,6 +100,13 @@ public class ComplexComponent extends ComponentModel {
 	}
 
 	/**
+	 * Is the current resource none of {@link #expand} {@link #outer} {@link #inner}
+	 */
+	public boolean isUnrelated() {
+		return !expand && !outer && !inner;
+	}
+
+	/**
 	 * {@link #child} property accessor.
 	 *
 	 * @return {@link #child}
