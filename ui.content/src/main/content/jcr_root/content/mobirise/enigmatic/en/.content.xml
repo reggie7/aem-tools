@@ -30,7 +30,7 @@
 					<column jcr:primaryType="nt:unstructured"
 						sling:resourceType="mobirise/structure/topnav/column"
 						type="decorator">
-						<items jcr:primaryType="nt:unstructured"
+						<links jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/foundation/parsys">
 							<link_1 jcr:primaryType="nt:unstructured"
 								sling:resourceType="mobirise/structure/topnav/column/link"
@@ -46,18 +46,18 @@
 								sling:resourceType="mobirise/structure/topnav/column/link"
 								reference="https://mobirise.com/bootstrap-template/video-background.html"
 								text="VIDEO BG" />
-						</items>
+						</links>
 					</column>
 					<column_1 jcr:primaryType="nt:unstructured"
 						sling:resourceType="mobirise/structure/topnav/column"
 						type="inverse">
-						<items jcr:primaryType="nt:unstructured"
+						<links jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/foundation/parsys">
 							<button jcr:primaryType="nt:unstructured"
 								sling:resourceType="mobirise/structure/topnav/column/button"
 								reference="/content/mobirise/enigmatic/en/blog"
 								css="default" />
-						</items>
+						</links>
 					</column_1>
 				</items>
 			</nav>
