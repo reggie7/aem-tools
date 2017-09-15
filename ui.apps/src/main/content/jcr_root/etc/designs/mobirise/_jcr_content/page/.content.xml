@@ -35,6 +35,12 @@
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[group:Mobirise Gallery Items]" />
 		</gallery>
+		<testimonials jcr:primaryType="nt:unstructured"
+			 sling:resourceType="mobirise/components/content/testimonials">
+			<items jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/foundation/parsys"
+				components="[mobirise/components/content/testimonials/item]" />
+		</testimonials>
 	</content>
 	<logo jcr:primaryType="nt:unstructured"
 		sling:resourceType="mobirise/structure/logo"
