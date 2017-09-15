@@ -1,14 +1,21 @@
-<div>
+<sly data-sly-test="${!properties.title}" data-sly-include="/apps/enigmatic/edit.html" />
+<div data-sly-test="${properties.title}" data-sly-use.hasChildren="pl.enigmatic.aem.HasChildren">
 	<div class="plan ${properties.style}">
 		<h3>${properties.title}</h3>
-		<p class="price">
-			<strong><sup>${properties.currency}</sup><span>${properties.price}</span></strong>
-			<small>${properties.paymentInterval}</small>
+		<p data-sly-test="${properties.currency || properties.price || properties.paymentInterval}" class="price">
+			<strong data-sly-test="${properties.currency || properties.price}">
+				<sup data-sly-test="${properties.currency}">${properties.currency}</sup>
+				<span data-sly-test="${properties.price}">${properties.price}</span>
+			</strong>
+			<small data-sly-test="${properties.paymentInterval}">${properties.paymentInterval}</small>
 		</p>
-		<div><ul data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='features'}"
-			data-sly-list="${items.listChildren}">
-			<li data-sly-resource="${item.path}"></li>
-		</ul></div>
-		<p data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"></p>
+		<div data-sly-test="${!wcmmode.disabled || hasChildren['items']}">
+			<ul data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}"
+				data-sly-list="${items.listChildren}">
+				<li data-sly-resource="${item.path @ wcmmode='disabled'}"></li>
+			</ul>
+		</div>
+		<p data-sly-test="${!wcmmode.disabled || hasChildren['items']}"
+			data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys', wcmmode='disabled'}"></p>
 	</div>
 </div>

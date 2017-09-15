@@ -1,8 +1,9 @@
+<sly data-sly-include="complex.html" />
 <section class="pricing-table-1 col-4"
 	data-sly-use.helper="pl.enigmatic.aem.ResourceComponent" id="${helper.id}"
 	style="background-color: ${properties.backgroundColor @ context='styleToken'};">
 	<div class="container">
-		<div data-sly-resource="${'items' @ resourceType='enigmatic/foundation/parsys'}"
+		<div data-sly-resource="${'items' @ resourceType='enigmatic/foundation/parsys', wcmmode='disabled'}"
 			class="row"></div>
 	</div>
 </section>

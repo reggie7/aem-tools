@@ -49,6 +49,22 @@
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[mobirise/components/content/testimonials/item]" />
 		</testimonials>
+		<pricing-table jcr:primaryType="nt:unstructured"
+			 sling:resourceType="mobirise/components/content/pricing-table">
+			<items jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/foundation/parsys"
+				components="[mobirise/components/content/pricing-table/item]">
+				<item jcr:primaryType="nt:unstructured"
+					sling:resourceType="mobirise/components/content/pricing-table/item">
+					<items jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys"
+						components="[mobirise/components/content/testimonials/item/feature]" />
+					<links jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys"
+						components="[mobirise/components/content/testimonials/item/button]" />
+				</item>
+			</items>
+		</pricing-table>
 	</content>
 	<logo jcr:primaryType="nt:unstructured"
 		sling:resourceType="mobirise/structure/logo"
