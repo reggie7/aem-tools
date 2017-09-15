@@ -1,6 +1,18 @@
-<section class="pricing-table-1 col-4"
+<sly data-sly-test="${!properties.title}" data-sly-include="/apps/enigmatic/edit.html" />
+<section data-sly-test="${properties.title}" class="pricing-table-1 col-4"
 	style="background-color: ${resource.parent.parent.valueMap.backgroundColor @ context='styleToken'};">
-	<div class="container">
-		<div class="row" data-sly-include="item.html"></div>
-	</div>
+	<div class="container"><div class="row"><div>
+		<div class="plan ${properties.style}">
+			<h3>${properties.title}</h3>
+			<p class="price">
+				<strong>
+					<sup>${properties.currency}</sup>
+					<span>${properties.price}</span>
+				</strong>
+				<small>${properties.paymentInterval}</small>
+			</p>
+			<div data-sly-resource="${'features' @ resourceType='enigmatic/foundation/parsys'}"></div>
+			<div data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"></div>
+		</div>
+	</div></div></div>
 </section>

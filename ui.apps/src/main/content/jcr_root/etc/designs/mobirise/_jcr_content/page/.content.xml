@@ -56,12 +56,12 @@
 				components="[mobirise/components/content/pricing-table/item]">
 				<item jcr:primaryType="nt:unstructured"
 					sling:resourceType="mobirise/components/content/pricing-table/item">
-					<items jcr:primaryType="nt:unstructured"
+					<features jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[mobirise/components/content/testimonials/item/feature]" />
+						components="[mobirise/components/content/pricing-table/item/feature]" />
 					<links jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[mobirise/components/content/testimonials/item/button]" />
+						components="[mobirise/components/content/pricing-table/item/button]" />
 				</item>
 			</items>
 		</pricing-table>
