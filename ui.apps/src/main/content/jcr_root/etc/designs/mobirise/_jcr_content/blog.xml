@@ -10,11 +10,11 @@
 			sling:resourceType="mobirise/components/blog/slider">
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[group:Mobirise Blog Slider Items]">
+				components="[mobirise/components/blog/slider/item]">
 				<item jcr:primaryType="nt:unstructured">
 					<links jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[group:Mobirise Blog Slider Links]" />
+						components="[mobirise/components/blog/slider/item/link]" />
 				</item>
 			</items>
 		</slider>

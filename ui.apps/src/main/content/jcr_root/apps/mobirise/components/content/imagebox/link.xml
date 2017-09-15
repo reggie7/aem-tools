@@ -3,5 +3,4 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="Link"
 	sling:resourceSuperType="mobirise/components/foundation/button"
-	componentGroup="Mobirise Image Box Links"
 	css="btn btn-lg" />

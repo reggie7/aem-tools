@@ -8,12 +8,12 @@
 			sling:resourceType="mobirise/components/features">
 			<parsys jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[group:Mobirise Features Items]">
+				components="[mobirise/components/content/features/item]">
 				<item jcr:primaryType="nt:unstructured"
 					sling:resourceType="mobirise/components/features/item">
 					<links jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[group:Mobirise Feature Item Links]" />
+						components="[mobirise/components/content/features/item/link]" />
 				</item>
 			</parsys>
 		</features>
@@ -21,19 +21,27 @@
 			sling:resourceType="mobirise/components/content/msgbox">
 			<links jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[group:Mobirise Message Box Links]" />
+				components="[mobirise/components/content/msgbox/link,
+					,mobirise/components/content/msgbox/link/homepage,
+					,mobirise/components/content/msgbox/link/parentpage]" />
 		</msgbox>
+		<imagebox jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/components/content/imagebox">
+			<links jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/foundation/parsys"
+				components="[mobirise/components/content/imagebox/link]" />
+		</imagebox>
 		<slider jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/components/content/slider">
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[group:Mobirise Slider Items]" />
+				components="[mobirise/components/content/slider/item]" />
 		</slider>
 		<gallery jcr:primaryType="nt:unstructured"
 			 sling:resourceType="mobirise/components/content/gallery">
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[group:Mobirise Gallery Items]" />
+				components="[mobirise/components/content/gallery/item]" />
 		</gallery>
 		<testimonials jcr:primaryType="nt:unstructured"
 			 sling:resourceType="mobirise/components/content/testimonials">
