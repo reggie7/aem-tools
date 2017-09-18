@@ -12,11 +12,6 @@
 			<column jcr:primaryType="nt:unstructured"
 				sling:resourceType="granite/ui/components/foundation/container">
 				<items jcr:primaryType="nt:unstructured">
-					<learnMore jcr:primaryType="nt:unstructured"
-						sling:resourceType="granite/ui/components/foundation/form/textfield"
-						fieldLabel="'Learn more'"
-						fieldDescription="'Learn more' label translation for all the pages below."
-						name="./learnMore" />
 				</items>
 			</column>
 		</items>

@@ -55,7 +55,7 @@ public final class PathTools {
 	}
 
 	/**
-	 * Joins the passed parameters using {@link #separator} as separator
+	 * Joins the passed parameters using {@link #extensionSeparator} as separator
 	 * @param first
 	 * @param second
 	 * @param rest
