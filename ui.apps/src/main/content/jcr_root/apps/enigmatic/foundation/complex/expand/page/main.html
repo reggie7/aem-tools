@@ -1,0 +1,4 @@
+<sly data-sly-use.pfu="pl.enigmatic.aem.PathFromURI" />
+<sly data-sly-use.target="${'pl.enigmatic.aem.ResourceComponent' @ path=pfu.path}" />
+<div data-sly-test.type="${target.resourceType}/expand/author"
+	data-sly-resource="${pfu.path @ resourceType=type}"></div>
