@@ -6,6 +6,6 @@
 		<zoom jcr:primaryType="nt:unstructured"
 			handler="function() { window.enigmatic.author.toggleZoom(this); }"
 			text="Zoom In/Out"
-			icon="/apps/enigmatic/foundation/complex/icon.png" />
+			icon="/apps/enigmatic/foundation/complex/zoom.png" />
 	</cq:actionConfigs>
 </jcr:root>
