@@ -7,5 +7,5 @@ window.enigmatic.author.expand = function(comp) {
 };
 
 window.enigmatic.author.collapse = function(comp) {
-	CQ.shared.Util.reload(window, "/editor.html" + comp.path + ".html");
+	CQ.shared.Util.reload(window, comp.path + ".html");
 };
