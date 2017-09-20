@@ -170,6 +170,11 @@ h1.author-msg-line {
 	border: 1px solid #884800!important;
 }
 
+.author-focus {
+	background: #ff9800 url('../images/focus.png') no-repeat 10px 50%;
+	border: 1px solid #884800!important;
+}
+
 .author-darken {
 	background-blend-mode: darken;
 	background-color: rgba(0, 0, 0, 0.5);
