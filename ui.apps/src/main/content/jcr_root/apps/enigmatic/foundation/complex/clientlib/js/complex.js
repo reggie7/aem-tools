@@ -115,3 +115,7 @@ window.enigmatic.author.toggleMode = function(comp, targetMode) {
 window.enigmatic.author.toggleZoom = function(comp) {
 	window.enigmatic.author.toggleMode(comp, "zoom");
 };
+
+window.enigmatic.author.toggleFocus = function(comp) {
+	window.enigmatic.author.toggleMode(comp, "focus");
+};
