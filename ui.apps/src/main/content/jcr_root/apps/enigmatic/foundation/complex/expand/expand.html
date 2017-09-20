@@ -1,1 +1,9 @@
-<sly data-sly-test="${wcmmode.edit}" data-sly-resource="${currentPage.path @ resourceType='enigmatic/foundation/complex/expand/page'}" />
+<sly data-sly-test="${wcmmode.edit}">
+	<p class="author-msg-box author-expand">
+		<span>Expand mode</span>
+		You are now in expand mode of the component <strong>${component.title}</strong>.
+		Once you are done editing, to configure other components or in order to switch to the preview mode - <strong>please <em>collapse</em>
+		to go back to <a href="${currentPage.path}.html">the original page</a></strong>.
+	</p>
+	<sly data-sly-resource="${currentPage.path @ resourceType='enigmatic/foundation/complex/expand/page'}" />
+</sly>
