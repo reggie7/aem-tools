@@ -9,5 +9,9 @@
 			handler="function() { window.enigmatic.author.toggleZoom(this); }"
 			text="Zoom In/Out"
 			icon="/apps/enigmatic/foundation/complex/zoom.png" />
+		<focus jcr:primaryType="nt:unstructured"
+			handler="function() { window.enigmatic.author.toggleFocus(this); }"
+			text="Focus In/Out"
+			icon="/apps/enigmatic/foundation/complex/focus.png" />
 	</cq:actionConfigs>
 </jcr:root>
