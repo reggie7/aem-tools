@@ -23,7 +23,7 @@
 							text="Header 2" />
 					</items>
 				</header>
-				<items jcr:primaryType="nt:unstructured"
+				<rows jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/parsys">
 					<row_1 jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/test/table/row">
@@ -37,7 +37,7 @@
 								text="Cell 2" />
 						</items>
 					</row_1>
-				</items>
+				</rows>
 			</table>
 		</content>
 	</jcr:content>

@@ -18,7 +18,7 @@
 					</author>
 				</page>
 			</header>
-			<items jcr:primaryType="nt:unstructured"
+			<rows jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[enigmatic/test/table/row]">
 				<new jcr:primaryType="nt:unstructured"
@@ -35,7 +35,7 @@
 						</author>
 					</page>
 				</row>
-			</items>
+			</rows>
 		</table>
 	</content>
 </jcr:root>
