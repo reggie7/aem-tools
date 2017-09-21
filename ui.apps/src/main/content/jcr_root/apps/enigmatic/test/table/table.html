@@ -1,9 +1,7 @@
 <table class="author-table author-margin">
 	<sly data-sly-resource="${'header' @ resourceType='enigmatic/test/table/header', wcmmode='disabled'}" />
-	<tbody>
-		<tr>
-			<td>Cell 1</td>
-			<td>Cell 2</td>
-		</tr>
+	<tbody data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}"
+		data-sly-list="${items.listChildren}">
+		<tr data-sly-resource="${item.path @ wcmmode='disabled'}"></tr>
 	</tbody>
 </table>
