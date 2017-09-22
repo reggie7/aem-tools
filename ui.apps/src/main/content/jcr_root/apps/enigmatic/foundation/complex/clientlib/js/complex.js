@@ -33,10 +33,9 @@ A.Mode.parseURL = function(url) {
 
 	// let's find the current mode
 	var modes = CQ.shared.HTTP.getSelectors(url);
-	if (modes != null && modes.length > 0) {
+	if (modes && modes.length > 0) {
 		result.mode = A.Mode.get(modes[0]);
 	}
-	result.hasMode = function() { return this.mode !== undefined; };
 
 	// we need to identify the special mode modifiers kept within query parameters
 	result.resource = CQ.shared.HTTP.getParameter(url, A.TARGET);
@@ -65,16 +64,16 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 	// the clean page url without any selectors and other additions
 	this.page = this.source.url.substring(0, this.source.url.indexOf(this.target.page)) + this.target.page + ".html";
 
-	if (!this.source.hasMode()) {
+	if (!this.source.mode) {
 		// normal mode - we enter the first level of special mode
 		this.description = "normal -> special level 1";
 		this.mode = this.target.mode;
 		this.resource = this.target.resource;
 	} else {
 		// we are already in one of the special modes
-		if (this.source.resource === this.target.resource) {
+		if (this.source.resource == this.target.resource) {
 			// we are in a special mode regarding the component of the given path
-			if (this.target.mode.name === this.source.mode.name) {
+			if (this.target.mode == this.source.mode) {
 				// the current special mode is the same as the one that was given
 				if (this.source.backIndex) {
 					// we are in a nested special mode
@@ -96,9 +95,9 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 				this.resource = this.target.resource;
 				if (this.source.backIndex) {
 					this.backIndex = this.source.backIndex;
-					if (this.source.previousMode && this.source.previousMode.name != this.target.mode.name) {
+					if (this.source.previousMode && this.source.previousMode != this.target.mode) {
 						this.savedMode = this.source.previousMode;
-					} else if (this.target.mode.name != this.source.mode.name && !this.source.previousMode) {
+					} else if (this.target.mode != this.source.mode && !this.source.previousMode) {
 						this.savedMode = this.source.mode;
 					}
 				}
@@ -110,7 +109,7 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 				this.mode = this.target.mode;
 				this.resource = this.target.resource;
 				this.backIndex = this.source.resource.length;
-				if (this.source.mode.name == this.target.mode.name) {
+				if (this.source.mode == this.target.mode) {
 					this.description = "outer -> inner";
 				} else {
 					this.description = "outer -> inner:changed-mode";
