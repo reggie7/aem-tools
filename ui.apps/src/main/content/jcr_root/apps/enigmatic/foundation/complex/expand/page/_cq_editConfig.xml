@@ -6,7 +6,7 @@
 	cq:disableTargeting="{Boolean}true">
 	<cq:actionConfigs jcr:primaryType="nt:unstructured">
 		<collapse jcr:primaryType="nt:unstructured"
-			handler="function() { window.enigmatic.author.collapse(this); }"
+			handler="function() { window.enigmatic.author.collapse(); }"
 			text="Collapse" />
 	</cq:actionConfigs>
 </jcr:root>
