@@ -1,0 +1,14 @@
+<html data-sly-test="${!wcmmode.disabled}">
+	<head data-sly-use.clientLib="granite/sightly/templates/clientlib.html">
+		<sly data-sly-call="${clientLib.all @ categories='enigmatic.author.messages'}" />
+		<title>Search Paths for ${resource.path}</title>
+	</head>
+	<body>
+		<h1>Search Paths for ${resource.path}</h1>
+		<table class="author-table author-margin">
+			<tbody data-sly-list="${currentStyle.cell.searchPaths}">
+				<tr><td>${item}</td></tr>
+			</tbody>
+		</table>
+	</body>
+</html>

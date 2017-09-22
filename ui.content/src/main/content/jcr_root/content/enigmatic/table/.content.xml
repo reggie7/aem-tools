@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Page">
+	<jcr:content jcr:primaryType="cq:PageContent"
+		jcr:title="Table Example"
+		sling:resourceType="enigmatic/pages/content"
+		cq:template="/apps/enigmatic/templates/content"
+		cq:designPath="/etc/designs/enigmatic">
+		<content jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<table jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/table">
+				<header jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/test/table/header"
+					style="blue">
+					<items jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<text_1 jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/test/table/header/text"
+							text="Header 1" />
+						<text_2 jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/test/table/header/text"
+							text="Header 2" />
+					</items>
+				</header>
+				<rows jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<row_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/test/table/row">
+						<items jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys">
+							<text_1 jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/test/table/row/text"
+								text="Cell 1" />
+							<text_2 jcr:primaryType="nt:unstructured"
+								sling:resourceType="enigmatic/test/table/row/text"
+								text="Cell 2" />
+						</items>
+					</row_1>
+				</rows>
+			</table>
+		</content>
+	</jcr:content>
+</jcr:root>

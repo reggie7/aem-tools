@@ -1,0 +1,6 @@
+<thead class="${properties.style}">
+	<tr data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}"
+		data-sly-list="${items.listChildren}">
+		<th data-sly-resource="${item.path @ wcmmode='disabled'}"></th>
+	</tr>
+</thead>

@@ -1,11 +1,12 @@
-window.enigmatic = window.enigmatic || {};
-
-window.enigmatic.author = window.enigmatic.author || {};
-
-window.enigmatic.author.expand = function(comp) {
-	CQ.shared.Util.reload(window, comp.path + ".expand.html");
+A.Mode.add("expand", A.Mode.RESOURCE);
+A.toggleExpand = function(comp) {
+	A.toggleMode(comp, "expand");
 };
 
-window.enigmatic.author.collapse = function(comp) {
-	CQ.shared.Util.reload(window, comp.path + ".html");
+A.expand = function(comp) {
+	A.toggleExpand(comp);
+};
+
+A.collapse = function() {
+	A.toggleExpand({ path: CQ.shared.HTTP.getPath(window.location.pathname) });
 };
