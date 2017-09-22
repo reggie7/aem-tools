@@ -1,3 +1,9 @@
+<p class="author-msg-box author-expand">
+	<span>Expand mode</span>
+	You are now in expand mode of the component below.
+	Once you are done editing, to configure other components or in order to switch to the preview mode - <strong>please <em>collapse</em>
+	to go back to <a href="${currentPage.path}.html">the original page</a></strong>.
+</p>
 <sly data-sly-use.pfu="pl.enigmatic.aem.PathFromURI" />
 <sly data-sly-use.target="${'pl.enigmatic.aem.ResourceComponent' @ path=pfu.path}" />
 <div data-sly-test.type="${target.resourceType}/expand/author"

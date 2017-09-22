@@ -4,6 +4,17 @@ var A = E.author = E.author || {};
 A.Mode = function(name, location=A.Mode.PARAM) {
 	this.name = name;
 	this.location = location;
+
+	this.parseResource = function(url) {
+		if (this.location === A.Mode.RESOURCE) {
+			return CQ.shared.HTTP.getPath(new URL(url).pathname);
+		}
+		return A.Mode.parseDefaultResource(url);
+	}
+};
+
+A.Mode.parseDefaultResource = function(url) {
+	return CQ.shared.HTTP.getParameter(url, A.TARGET);
 };
 
 A.Mode.RESOURCE = "resource";
@@ -13,7 +24,7 @@ A.Mode.A = A;
 A.Mode.All = {};
 
 A.Mode.add = function(name, location=A.Mode.PARAM) {
-	A.Mode.All[name] = new A.Mode(name, location);
+	return A.Mode.All[name] = new A.Mode(name, location);
 };
 
 A.Mode.get = function(name) {
@@ -35,10 +46,12 @@ A.Mode.parseURL = function(url) {
 	var modes = CQ.shared.HTTP.getSelectors(url);
 	if (modes && modes.length > 0) {
 		result.mode = A.Mode.get(modes[0]);
+		result.resource = result.mode.parseResource(url);
+	} else {
+		result.resource = A.Mode.parseDefaultResource(url);
 	}
 
 	// we need to identify the special mode modifiers kept within query parameters
-	result.resource = CQ.shared.HTTP.getParameter(url, A.TARGET);
 	result.previousMode = A.Mode.get(CQ.shared.HTTP.getParameter(url, A.MODE));
 	result.backIndex = CQ.shared.HTTP.getParameter(url, A.BACK_INDEX);
 
@@ -61,9 +74,6 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 	this.source = A.Mode.parseURL(sourceURL);
 	this.target = A.Mode.parseTarget(targetResource, targetMode);
 
-	// the clean page url without any selectors and other additions
-	this.page = this.source.url.substring(0, this.source.url.indexOf(this.target.page)) + this.target.page + ".html";
-
 	if (!this.source.mode) {
 		// normal mode - we enter the first level of special mode
 		this.description = "normal -> special level 1";
@@ -71,9 +81,9 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 		this.resource = this.target.resource;
 	} else {
 		// we are already in one of the special modes
-		if (this.source.resource == this.target.resource) {
+		if (this.source.resource === this.target.resource) {
 			// we are in a special mode regarding the component of the given path
-			if (this.target.mode == this.source.mode) {
+			if (this.target.mode === this.source.mode) {
 				// the current special mode is the same as the one that was given
 				if (this.source.backIndex) {
 					// we are in a nested special mode
@@ -95,9 +105,9 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 				this.resource = this.target.resource;
 				if (this.source.backIndex) {
 					this.backIndex = this.source.backIndex;
-					if (this.source.previousMode && this.source.previousMode != this.target.mode) {
+					if (this.source.previousMode && this.source.previousMode !== this.target.mode) {
 						this.savedMode = this.source.previousMode;
-					} else if (this.target.mode != this.source.mode && !this.source.previousMode) {
+					} else if (this.target.mode !== this.source.mode && !this.source.previousMode) {
 						this.savedMode = this.source.mode;
 					}
 				}
@@ -109,7 +119,7 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 				this.mode = this.target.mode;
 				this.resource = this.target.resource;
 				this.backIndex = this.source.resource.length;
-				if (this.source.mode == this.target.mode) {
+				if (this.source.mode === this.target.mode) {
 					this.description = "outer -> inner";
 				} else {
 					this.description = "outer -> inner:changed-mode";
@@ -124,10 +134,18 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 	}
 
 	this.getURL = function() {
-		var url = this.page;
+		var url = this.source.url.substring(0, this.source.url.indexOf(this.target.page));
+		if (this.mode && this.mode.location === A.Mode.RESOURCE) {
+			url += this.resource;
+		} else {
+			url += this.target.page;
+		}
+		url += "." + CQ.shared.HTTP.getExtension(this.source.url);
 		if (this.mode) {
 			url = CQ.shared.HTTP.addSelector(url, this.mode.name, 0);
-			url = CQ.shared.HTTP.addParameter(url, A.TARGET, this.resource);
+			if (this.mode.location !== A.Mode.RESOURCE) {
+				url = CQ.shared.HTTP.addParameter(url, A.TARGET, this.resource);
+			}
 			if (this.backIndex) {
 				url = CQ.shared.HTTP.addParameter(url, A.BACK_INDEX, this.backIndex);
 			}
@@ -142,8 +160,8 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 A.toggleMode = function(comp, targetMode) {
 	var sourceURL = window.document.URL;
 	var targetResource = comp.path;
-	var transition = new A.Transition(sourceURL, targetResource, targetMode);
-	CQ.shared.Util.reload(window, transition.getURL());
+	var t = new A.Transition(sourceURL, targetResource, targetMode);
+	CQ.shared.Util.reload(window, t.getURL());
 };
 
 A.Mode.add("zoom");

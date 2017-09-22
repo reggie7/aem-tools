@@ -1,9 +1,12 @@
 A.Mode.add("expand", A.Mode.RESOURCE);
+A.toggleExpand = function(comp) {
+	A.toggleMode(comp, "expand");
+};
 
 A.expand = function(comp) {
-	CQ.shared.Util.reload(window, comp.path + ".expand.html");
+	A.toggleExpand(comp);
 };
 
 A.collapse = function(comp) {
-	CQ.shared.Util.reload(window, comp.path + ".html");
+	A.toggleExpand(comp);
 };
