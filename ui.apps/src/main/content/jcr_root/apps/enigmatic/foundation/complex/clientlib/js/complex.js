@@ -1,121 +1,158 @@
-window.enigmatic = window.enigmatic || {};
+var E = window.enigmatic = window.enigmatic || {};
+var A = E.author = E.author || {};
 
-window.enigmatic.author = window.enigmatic.author || {};
+A.Mode = function(name, location=A.Mode.PARAM) {
+	this.name = name;
+	this.location = location;
+};
 
-window.enigmatic.author.Complex = function(sourceURL, targetResource, targetMode) {
-	const TARGET = "target";
-	const MODE = "mode";
-	const BACK_INDEX = "backIndex";
+A.Mode.RESOURCE = "resource";
+A.Mode.PARAM = "parameter";
 
-	this.source = new (function(url) {
-		this.url = url;
+A.Mode.A = A;
+A.Mode.All = {};
 
-		// let's find the current mode
-		var modes = CQ.shared.HTTP.getSelectors(url);
-		if (modes != null) {
-			this.mode = modes[0];
-		}
-		this.hasMode = function() { return this.mode !== undefined; };
+A.Mode.add = function(name, location=A.Mode.PARAM) {
+	A.Mode.All[name] = new A.Mode(name, location);
+};
 
-		// we need to identify the special mode modifiers kept within query parameters
-		this.resource = CQ.shared.HTTP.getParameter(url, TARGET);
-		this.previousMode = CQ.shared.HTTP.getParameter(url, MODE);
-		this.backIndex = CQ.shared.HTTP.getParameter(url, BACK_INDEX);
-	})(sourceURL);
+A.Mode.get = function(name) {
+	var mode = A.Mode.All[name];
+	if (name && !mode) {
+		mode = new A.Mode(name);
+	}
+	return mode;
+};
 
-	this.target = new (function(resource, mode) {
-		this.resource = resource;
-		this.mode = mode;
+A.TARGET = "target";
+A.MODE = "mode";
+A.BACK_INDEX = "backIndex";
+
+A.Mode.parseURL = function(url) {
+	var result = { url: url };
+
+	// let's find the current mode
+	var modes = CQ.shared.HTTP.getSelectors(url);
+	if (modes != null && modes.length > 0) {
+		result.mode = A.Mode.get(modes[0]);
+	}
+	result.hasMode = function() { return this.mode !== undefined; };
+
+	// we need to identify the special mode modifiers kept within query parameters
+	result.resource = CQ.shared.HTTP.getParameter(url, A.TARGET);
+	result.previousMode = A.Mode.get(CQ.shared.HTTP.getParameter(url, A.MODE));
+	result.backIndex = CQ.shared.HTTP.getParameter(url, A.BACK_INDEX);
+
+	return result;
+};
+
+A.Mode.parseTarget = function(resource, modeName) {
+	return {
+		resource: resource,
+		mode: A.Mode.get(modeName),
 		// since the resource to be presented in the special mode within its page - we can find the page path from the resource path
-		this.page = resource.substring(0, resource.indexOf("/jcr:content/"));
-	})(targetResource, targetMode);
+		page: resource.substring(0, resource.indexOf("/jcr:content/"))
+	};
+};
 
-	this.reload = new (function(source, target) {
-		// the clean page url without any selectors and other additions
-		this.page = source.url.substring(0, source.url.indexOf(target.page)) + target.page + ".html";
+A.Transition = function(sourceURL, targetResource, targetMode) {
 
-		this.getURL = function() {
-			var url = this.page;
-			if (this.mode !== undefined) {
-				url = CQ.shared.HTTP.addSelector(url, this.mode, 0);
-				url = CQ.shared.HTTP.addParameter(url, TARGET, this.resource);
-				if (this.backIndex !== undefined) {
-					url = CQ.shared.HTTP.addParameter(url, BACK_INDEX, this.backIndex);
-				}
-				if (this.savedMode !== undefined) {
-					url = CQ.shared.HTTP.addParameter(url, MODE, this.savedMode);
-				}
-			}
-			return url;
-		};
-	})(this.source, this.target);
+	const A = enigmatic.author;
+
+	this.source = A.Mode.parseURL(sourceURL);
+	this.target = A.Mode.parseTarget(targetResource, targetMode);
+
+	// the clean page url without any selectors and other additions
+	this.page = this.source.url.substring(0, this.source.url.indexOf(this.target.page)) + this.target.page + ".html";
 
 	if (!this.source.hasMode()) {
 		// normal mode - we enter the first level of special mode
-		// this.transition = "normal -> special level 1";
-		this.reload.mode = this.target.mode;
-		this.reload.resource = this.target.resource;
-	} else { // we are already in one of the special modes
-		if (this.source.resource === this.target.resource) { // we are in a special mode regarding the component of the given path
-			if (this.target.mode === this.source.mode) { // the current special mode is the same as the one that was given
-				if (this.source.backIndex == null) { // we are in the first level of special mode, no nesting applies
-					// this.transition = "special level 1 -> normal";
-				} else { // we are in a nested special mode
-					if (this.source.previousMode == null) {
-						// this.transition = "special level X -> special level Y";
-						this.reload.mode = this.target.mode;
+		this.description = "normal -> special level 1";
+		this.mode = this.target.mode;
+		this.resource = this.target.resource;
+	} else {
+		// we are already in one of the special modes
+		if (this.source.resource === this.target.resource) {
+			// we are in a special mode regarding the component of the given path
+			if (this.target.mode.name === this.source.mode.name) {
+				// the current special mode is the same as the one that was given
+				if (this.source.backIndex) {
+					// we are in a nested special mode
+					if (this.source.previousMode) {
+						this.description = "special level X -> special level Y:changed-mode";
+						this.mode = this.source.previousMode;
 					} else {
-						// this.transition = "special level X -> special level Y:changed-mode";
-						this.reload.mode = this.source.previousMode;
+						this.description = "special level X -> special level Y";
+						this.mode = this.target.mode;
 					}
-					this.reload.resource = this.target.resource.substring(0, this.source.backIndex);
+					this.resource = this.target.resource.substring(0, this.source.backIndex);
+				} else {
+					// we are in the first level of special mode, no nesting applies
+					this.description = "special level 1 -> normal";
 				}
 			} else {
-				// this.transition = "special mode A -> special mode B";
-				this.reload.mode = this.target.mode;
-				this.reload.resource = this.target.resource;
-				if (this.source.backIndex != null) {
-					this.reload.backIndex = this.source.backIndex;
-					if (this.source.previousMode != null && this.source.previousMode != this.target.mode) {
-						this.reload.savedMode = this.source.previousMode;
-					} else if (this.target.mode != this.source.mode && this.source.previousMode == null) {
-						this.reload.savedMode = this.source.mode;
+				this.description = "special mode A -> special mode B";
+				this.mode = this.target.mode;
+				this.resource = this.target.resource;
+				if (this.source.backIndex) {
+					this.backIndex = this.source.backIndex;
+					if (this.source.previousMode && this.source.previousMode.name != this.target.mode.name) {
+						this.savedMode = this.source.previousMode;
+					} else if (this.target.mode.name != this.source.mode.name && !this.source.previousMode) {
+						this.savedMode = this.source.mode;
 					}
 				}
 			}
 		} else {
 			if (this.source.resource.indexOf(this.target.resource) > -1) {
-				// this.transition = "inner -> (outer) -> normal";
+				this.description = "inner -> (outer) -> normal";
 			} else if (this.target.resource.indexOf(this.source.resource) > -1) {
-				this.reload.mode = this.target.mode;
-				this.reload.resource = this.target.resource;
-				this.reload.backIndex = this.source.resource.length;
-				if (this.source.mode == this.target.mode) {
-					// this.transition = "outer -> inner";
+				this.mode = this.target.mode;
+				this.resource = this.target.resource;
+				this.backIndex = this.source.resource.length;
+				if (this.source.mode.name == this.target.mode.name) {
+					this.description = "outer -> inner";
 				} else {
-					// this.transition = "outer -> inner:changed-mode";
-					this.reload.savedMode = this.source.mode;
+					this.description = "outer -> inner:changed-mode";
+					this.savedMode = this.source.mode;
 				}
 			} else {
-				// this.transition = "siblings";
-				this.reload.mode = this.target.mode;
-				this.reload.resource = this.target.resource;
+				this.description = "siblings";
+				this.mode = this.target.mode;
+				this.resource = this.target.resource;
 			}
 		}
 	}
+
+	this.getURL = function() {
+		var url = this.page;
+		if (this.mode) {
+			url = CQ.shared.HTTP.addSelector(url, this.mode.name, 0);
+			url = CQ.shared.HTTP.addParameter(url, A.TARGET, this.resource);
+			if (this.backIndex) {
+				url = CQ.shared.HTTP.addParameter(url, A.BACK_INDEX, this.backIndex);
+			}
+			if (this.savedMode) {
+				url = CQ.shared.HTTP.addParameter(url, A.MODE, this.savedMode.name);
+			}
+		}
+		return url;
+	};
 };
 
-window.enigmatic.author.toggleMode = function(comp, targetMode) {
+A.toggleMode = function(comp, targetMode) {
 	var sourceURL = window.document.URL;
 	var targetResource = comp.path;
-	var complex = new window.enigmatic.author.Complex(sourceURL, targetResource, targetMode);
-	CQ.shared.Util.reload(window, complex.reload.getURL());
+	var transition = new A.Transition(sourceURL, targetResource, targetMode);
+	CQ.shared.Util.reload(window, transition.getURL());
 };
 
-window.enigmatic.author.toggleZoom = function(comp) {
-	window.enigmatic.author.toggleMode(comp, "zoom");
+A.Mode.add("zoom");
+A.toggleZoom = function(comp) {
+	A.toggleMode(comp, "zoom");
 };
 
-window.enigmatic.author.toggleFocus = function(comp) {
-	window.enigmatic.author.toggleMode(comp, "focus");
+A.Mode.add("focus");
+A.toggleFocus = function(comp) {
+	A.toggleMode(comp, "focus");
 };

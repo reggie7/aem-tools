@@ -1,11 +1,9 @@
-window.enigmatic = window.enigmatic || {};
+A.Mode.add("expand", A.Mode.RESOURCE);
 
-window.enigmatic.author = window.enigmatic.author || {};
-
-window.enigmatic.author.expand = function(comp) {
+A.expand = function(comp) {
 	CQ.shared.Util.reload(window, comp.path + ".expand.html");
 };
 
-window.enigmatic.author.collapse = function(comp) {
+A.collapse = function(comp) {
 	CQ.shared.Util.reload(window, comp.path + ".html");
 };
