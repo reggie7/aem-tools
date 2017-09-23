@@ -74,12 +74,7 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 	this.source = A.Mode.parseURL(sourceURL);
 	this.target = A.Mode.parseTarget(targetResource, targetMode);
 
-	if (!this.source.mode) {
-		// normal mode - we enter the first level of special mode
-		this.description = "normal -> special level 1";
-		this.mode = this.target.mode;
-		this.resource = this.target.resource;
-	} else {
+	if (this.source.mode) {
 		// we are already in one of the special modes
 		if (this.source.resource === this.target.resource) {
 			// we are in a special mode regarding the component of the given path
@@ -115,6 +110,10 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 		} else {
 			if (this.source.resource.indexOf(this.target.resource) > -1) {
 				this.description = "inner -> (outer) -> normal";
+				if (this.source.mode !== this.target.mode) {
+					this.mode = this.target.mode;
+					this.resource = this.target.resource;
+				}
 			} else if (this.target.resource.indexOf(this.source.resource) > -1) {
 				this.mode = this.target.mode;
 				this.resource = this.target.resource;
@@ -131,6 +130,11 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 				this.resource = this.target.resource;
 			}
 		}
+	} else {
+		// normal mode - we enter the first level of special mode
+		this.description = "normal -> special level 1";
+		this.mode = this.target.mode;
+		this.resource = this.target.resource;
 	}
 
 	this.getURL = function() {
