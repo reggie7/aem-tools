@@ -19,10 +19,10 @@
 	<img src="${properties['image/fileReference']}" />
 	<sly data-sly-use.image="${'pl.enigmatic.aem.ResourceComponent' @ path='image'}" />
 	<sly data-sly-use.size="${'pl.enigmatic.aem.ImageSize' @ image=image}" />
-	<sly data-sly-use.model="${'pl.enigmatic.aem.test.HotspotsComponent' @ size=size.dimension, map=image['imageMap']}" />
-	<sly data-sly-list="${model.items}">
+	<sly data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}" />
+	<sly data-sly-use.model="${'pl.enigmatic.aem.test.HotspotsComponent' @ size=size.dimension, map=image['imageMap'], items=items}" />
+	<sly data-sly-list="${model.sorted}">
 		<div class="hotspot" style="left:${item.x @ context='styleToken'}%; top:${item.y @ context='styleToken'}%;"
-			data-sly-test.path="items/item_${itemList.index}"
-			data-sly-resource="${path @ resourceType='enigmatic/foundation/parsys'}"></div>
+			data-sly-resource="${item.path @ resourceType='enigmatic/foundation/parsys'}"></div>
 	</sly>
 </div>
