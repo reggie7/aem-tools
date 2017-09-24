@@ -12,7 +12,25 @@
 				sling:resourceType="enigmatic/test/hotspots">
 				<image jcr:primaryType="nt:unstructured"
 					sling:resourceType="enigmatic/foundation/image"
-					fileReference="/content/dam/enigmatic/michael_jordan.jpg" />
+					fileReference="/content/dam/enigmatic/michael_jordan.jpg"
+					imageMap="\[circle(185,165,38)||][circle(480,595,45)||\]" />
+				<items jcr:primaryType="nt:unstructured"
+					sling:resourceType="enigmatic/foundation/parsys">
+					<item_0 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<layer jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/test/hotspots/layer"
+							text="FIRST LAYER"
+							color="green" />
+					</item_0>
+					<item_1 jcr:primaryType="nt:unstructured"
+						sling:resourceType="enigmatic/foundation/parsys">
+						<layer jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/test/hotspots/layer"
+							text="SECOND LAYER"
+							color="red" />
+					</item_1>
+				</items>
 			</hotspots>
 		</content>
 	</jcr:content>

@@ -1,16 +1,28 @@
 <style>
 	.hotspotted {
 		position: relative;
-		width: fit-content;
+		width: 100%;
 	}
-	.hotspot {
-		display: block;
-		position: absolute;
-		color: white;
+	.hotspotted img {
+		width: 100%;
+	}
+	@media only screen and (min-width: 600px) {
+		.hotspot {
+			display: block;
+			position: absolute;
+			color: white;
+			<sly data-sly-test="${!wcmmode.disabled}">min-width: 250px;</sly>
+		}
 	}
 </style>
 <div class="hotspotted">
 	<img src="${properties['image/fileReference']}" />
-	<div class="hotspot" style="left:9%; top:16%;">Michael</div>
-	<div class="hotspot" style="left:49%; top:50%;">Jordan</div>
+	<sly data-sly-use.image="${'pl.enigmatic.aem.ResourceComponent' @ path='image'}" />
+	<sly data-sly-use.size="${'pl.enigmatic.aem.ImageSize' @ image=image}" />
+	<sly data-sly-use.model="${'pl.enigmatic.aem.test.HotspotsComponent' @ size=size.dimension, map=image['imageMap']}" />
+	<sly data-sly-list="${model.items}">
+		<div class="hotspot" style="left:${item.x @ context='styleToken'}%; top:${item.y @ context='styleToken'}%;"
+			data-sly-test.path="items/item_${itemList.index}"
+			data-sly-resource="${path @ resourceType='enigmatic/foundation/parsys'}"></div>
+	</sly>
 </div>
