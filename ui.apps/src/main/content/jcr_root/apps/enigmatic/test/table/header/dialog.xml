@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Header">
+	<items jcr:primaryType="cq:WidgetCollection">
+		<content jcr:primaryType="cq:Panel">
+			<items jcr:primaryType="cq:WidgetCollection">
+				<style jcr:primaryType="cq:Widget"
+					fieldLabel="Style"
+					name="./style"
+					allowBlank="{Boolean}false"
+					type="select"
+					xtype="selection"
+					defaultValue="blue">
+					<options jcr:primaryType="cq:WidgetCollection">
+						<blue jcr:primaryType="nt:unstructured"
+							text="Blue"
+							value="blue" />
+						<green jcr:primaryType="nt:unstructured"
+							text="Green"
+							value="green" />
+					</options>
+				</style>
+			</items>
+		</content>
+	</items>
+</jcr:root>
