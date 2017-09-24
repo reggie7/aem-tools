@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Hotspots Component">
+	<items jcr:primaryType="cq:WidgetCollection">
+		<image jcr:primaryType="cq:Widget"
+			height="500"
+			allowUpload="{Boolean}false"
+			ddGroups="[media]"
+			cropParameter=""
+			rotateParameter=""
+			mapParameter="./image/imageMap"
+			name="./image/file"
+			fileNameParameter="./image/fileName"
+			fileReferenceParameter="./image/fileReference"
+			requestSuffix="/image.img.png"
+			xtype="html5smartimage" />
+	</items>
+</jcr:root>
