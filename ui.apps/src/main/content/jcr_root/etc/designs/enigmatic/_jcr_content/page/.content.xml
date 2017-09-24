@@ -43,6 +43,8 @@
 				<new jcr:primaryType="nt:unstructured"
 					cq:emptyText="Drag a hotspot here" />
 			</parsys>
+			<items jcr:primaryType="nt:unstructured"
+				components="[enigmatic/test/hotspots/item]" />
 		</hotspots>
 	</content>
 </jcr:root>

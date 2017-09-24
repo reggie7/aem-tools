@@ -3,4 +3,10 @@
 	jcr:primaryType="cq:EditConfig"
 	cq:layout="editbar"
 	cq:actions="[text:Hotspots,-,edit]"
-	cq:disableTargeting="{Boolean}true" />
+	cq:disableTargeting="{Boolean}true">
+	<cq:actionConfigs jcr:primaryType="nt:unstructured">
+		<zoom jcr:primaryType="nt:unstructured"
+			handler="function() { enigmatic.author.toggleZoom(this); }"
+			text="Zoom In/Out" />
+	</cq:actionConfigs>
+</jcr:root>
