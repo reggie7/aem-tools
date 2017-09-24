@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="1e41b7ca-a658-4171-a0b2-5b76b60a2985">
+    <jcr:content
+        dam:assetState="processed"
+        dam:relativePath="enigmatic/michael_jordan.jpg"
+        jcr:lastModified="{Date}2017-09-24T13:45:41.134+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2017-09-24T13:45:40.483+02:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}200"
+            dam:Physicalheightininches="{Decimal}6.0"
+            dam:Physicalwidthindpi="{Long}200"
+            dam:Physicalwidthininches="{Decimal}8.0"
+            dam:Progressive="yes"
+            dam:sha1="47b3f39c49eb1047a6f855aea7dac7b120b15ce1"
+            dam:size="{Long}454547"
+            dc:format="image/jpeg"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}1200"
+            tiff:ImageWidth="{Long}1600"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

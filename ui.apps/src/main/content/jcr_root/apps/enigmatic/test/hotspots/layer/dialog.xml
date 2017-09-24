@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:primaryType="cq:Dialog"
+	title="Layer">
+	<items jcr:primaryType="cq:WidgetCollection">
+		<content jcr:primaryType="cq:Panel">
+			<items jcr:primaryType="cq:WidgetCollection">
+				<text jcr:primaryType="cq:Widget"
+					fieldLabel="Text"
+					name="./text"
+					allowBlank="{Boolean}false"
+					xtype="textfield" />
+				<color jcr:primaryType="cq:Widget"
+					fieldLabel="Color"
+					name="./color"
+					type="select"
+					xtype="selection"
+					defaultValue="blue">
+					<options jcr:primaryType="cq:WidgetCollection">
+						<blue jcr:primaryType="nt:unstructured"
+							text="Blue"
+							value="blue" />
+						<green jcr:primaryType="nt:unstructured"
+							text="Green"
+							value="green" />
+						<red jcr:primaryType="nt:unstructured"
+							text="Red"
+							value="red" />
+						<yellow jcr:primaryType="nt:unstructured"
+							text="Yellow"
+							value="yellow" />
+						<white jcr:primaryType="nt:unstructured"
+							text="White"
+							value="white" />
+						<black jcr:primaryType="nt:unstructured"
+							text="Black"
+							value="black" />
+					</options>
+				</color>
+			</items>
+		</content>
+	</items>
+</jcr:root>

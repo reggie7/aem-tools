@@ -37,5 +37,14 @@
 				</row>
 			</rows>
 		</table>
+		<hotspots jcr:primaryType="nt:unstructured">
+			<parsys jcr:primaryType="nt:unstructured"
+				components="[enigmatic/test/hotspots/layer]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag a hotspot here" />
+			</parsys>
+			<items jcr:primaryType="nt:unstructured"
+				components="[enigmatic/test/hotspots/item]" />
+		</hotspots>
 	</content>
 </jcr:root>

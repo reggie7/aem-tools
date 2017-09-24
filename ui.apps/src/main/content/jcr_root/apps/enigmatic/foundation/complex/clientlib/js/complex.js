@@ -1,5 +1,5 @@
 var E = window.enigmatic = window.enigmatic || {};
-var A = E.author = E.author || {};
+var A = E.A = E.author = E.author || {};
 
 A.Mode = function(name, location=A.Mode.PARAM) {
 	this.name = name;
