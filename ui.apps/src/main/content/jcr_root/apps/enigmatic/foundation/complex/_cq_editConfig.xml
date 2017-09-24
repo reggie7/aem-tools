@@ -3,7 +3,7 @@
 	jcr:primaryType="cq:EditConfig">
 	<cq:actionConfigs jcr:primaryType="nt:unstructured">
 		<zoom jcr:primaryType="nt:unstructured"
-			handler="function() { window.enigmatic.author.toggleZoom(this); }"
+			handler="function() { enigmatic.author.toggleZoom(this); }"
 			text="Zoom In/Out"
 			icon="/apps/enigmatic/foundation/complex/zoom.png" />
 	</cq:actionConfigs>
