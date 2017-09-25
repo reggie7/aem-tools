@@ -49,5 +49,7 @@ http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
 
 ## Author
 
-http://reggie-7.pl/
-http://enigmatic.pl/
+Radosław Wesołowski:
+* https://www.linkedin.com/in/wesolowskiradoslaw/
+* http://reggie-7.pl/
+* http://enigmatic.pl/
