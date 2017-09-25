@@ -55,4 +55,5 @@ Radosław Wesołowski:
 * https://www.linkedin.com/in/wesolowskiradoslaw/
 * http://reggie-7.pl/
 * https://github.com/reggie7
+* https://stackoverflow.com/users/4773331/rados%C5%82aw-weso%C5%82owski
 * http://enigmatic.pl/
