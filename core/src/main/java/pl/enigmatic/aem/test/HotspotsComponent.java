@@ -73,7 +73,7 @@ public class HotspotsComponent extends ComponentModel {
 		for (int i = 0; i < taken.length; i++) {
 			if (!taken[i]) {
 				final Hotspot h = hotspots.get(i);
-				h.setPath(String.format("item_%d", i));
+				h.setPath(String.format("%s/item_%d", items.getPath(), i));
 				result.add(h);
 			}
 		}
