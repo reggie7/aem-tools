@@ -11,10 +11,15 @@
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[mobirise/components/blog/slider/item]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag slides here" />
 				<item jcr:primaryType="nt:unstructured">
 					<links jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[mobirise/components/blog/slider/item/link]" />
+						components="[mobirise/components/blog/slider/item/link]">
+						<new jcr:primaryType="nt:unstructured"
+							cq:emptyText="Drag links here" />
+					</links>
 				</item>
 			</items>
 		</slider>

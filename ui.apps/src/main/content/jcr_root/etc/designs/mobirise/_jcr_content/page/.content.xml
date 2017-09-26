@@ -8,18 +8,34 @@
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[mobirise/structure/topnav/column]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag mobile columns here" />
 				<column jcr:primaryType="nt:unstructured"
 					sling:resourceType="mobirise/structure/topnav/column">
 					<links jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[mobirise/structure/topnav/column/link,mobirise/structure/topnav/column/button]" />
+						components="[mobirise/structure/topnav/column/link,mobirise/structure/topnav/column/button]">
+						<new jcr:primaryType="nt:unstructured"
+							cq:emptyText="Drag navigation links here" />
+					</links>
 				</column>
 			</items>
 		</nav>
 	</header>
+	<footer jcr:primaryType="nt:unstructured"
+		sling:resourceType="mobirise/structure/footer">
+		<links jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys"
+			components="[mobirise/structure/footer/link]">
+			<new jcr:primaryType="nt:unstructured"
+				cq:emptyText="Drag footer links here" />
+		</links>
+	</footer>
 	<content jcr:primaryType="nt:unstructured"
 		sling:resourceType="enigmatic/foundation/parsys"
 		components="[group:Mobirise]">
+		<new jcr:primaryType="nt:unstructured"
+			cq:emptyText="Drag main content components here" />
 		<features jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/components/features">
 			<parsys jcr:primaryType="nt:unstructured"
@@ -32,6 +48,18 @@
 						components="[mobirise/components/content/features/item/link]" />
 				</item>
 			</parsys>
+			<items jcr:primaryType="nt:unstructured">
+				<parsys jcr:primaryType="nt:unstructured">
+					<new jcr:primaryType="nt:unstructured"
+						cq:emptyText="Drag feature item here" />
+					<item jcr:primaryType="nt:unstructured">
+						<links jcr:primaryType="nt:unstructured">
+							<new jcr:primaryType="nt:unstructured"
+								cq:emptyText="Drag links here" />
+						</links>
+					</item>
+				</parsys>
+			</items>
 		</features>
 		<msgbox jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/components/content/msgbox">
@@ -39,45 +67,68 @@
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[mobirise/components/content/msgbox/link,
 					,mobirise/components/content/msgbox/link/homepage,
-					,mobirise/components/content/msgbox/link/parentpage]" />
+					,mobirise/components/content/msgbox/link/parentpage]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag links here" />
+			</links>
 		</msgbox>
 		<imagebox jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/components/content/imagebox">
 			<links jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[mobirise/components/content/imagebox/link]" />
+				components="[mobirise/components/content/imagebox/link]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag links here" />
+			</links>
 		</imagebox>
 		<slider jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/components/content/slider">
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[mobirise/components/content/slider/item]" />
+				components="[mobirise/components/content/slider/item]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag slider items here" />
+			</items>
 		</slider>
 		<gallery jcr:primaryType="nt:unstructured"
-			 sling:resourceType="mobirise/components/content/gallery">
+			sling:resourceType="mobirise/components/content/gallery">
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[mobirise/components/content/gallery/item]" />
+				components="[mobirise/components/content/gallery/item]">
+				<new jcr:primaryType="nt:unstructured"
+				cq:emptyText="Drag gallery items here" />
+			</items>
 		</gallery>
 		<testimonials jcr:primaryType="nt:unstructured"
-			 sling:resourceType="mobirise/components/content/testimonials">
+			sling:resourceType="mobirise/components/content/testimonials">
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
-				components="[mobirise/components/content/testimonials/item]" />
+				components="[mobirise/components/content/testimonials/item]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag testimonials here" />
+			</items>
 		</testimonials>
 		<pricing-table jcr:primaryType="nt:unstructured"
-			 sling:resourceType="mobirise/components/content/pricing-table">
+			sling:resourceType="mobirise/components/content/pricing-table">
 			<items jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/foundation/parsys"
 				components="[mobirise/components/content/pricing-table/item]">
+				<new jcr:primaryType="nt:unstructured"
+					cq:emptyText="Drag pricing items here" />
 				<item jcr:primaryType="nt:unstructured"
 					sling:resourceType="mobirise/components/content/pricing-table/item">
 					<features jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[mobirise/components/content/pricing-table/item/feature]" />
+						components="[mobirise/components/content/pricing-table/item/feature]">
+						<new jcr:primaryType="nt:unstructured"
+							cq:emptyText="Drag feature lines here" />
+					</features>
 					<links jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
-						components="[mobirise/components/content/pricing-table/item/button]" />
+						components="[mobirise/components/content/pricing-table/item/button]">
+						<new jcr:primaryType="nt:unstructured"
+							cq:emptyText="Drag buttons here" />
+					</links>
 				</item>
 			</items>
 		</pricing-table>

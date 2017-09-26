@@ -6,5 +6,7 @@
 		components="[group:Mobirise Brand]"
 		min="{Long}1"
 		max="{Long}1">
+		<new jcr:primaryType="nt:unstructured"
+			cq:emptyText="Drag brand components here" />
 	</content>
 </jcr:root>
