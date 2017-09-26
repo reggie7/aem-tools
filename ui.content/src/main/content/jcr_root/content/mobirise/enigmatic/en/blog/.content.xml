@@ -94,6 +94,8 @@
 							jcr:lastModified="{Date}2017-06-19T17:19:40.462+02:00"
 							sling:resourceType="mobirise/components/foundation/image"
 							fileReference="/content/dam/mobirise/iphone-1067982-1920-1920x1439-90.jpg" />
+						<links jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys" />
 					</item_1>
 					<item_2 jcr:primaryType="nt:unstructured"
 						sling:resourceType="mobirise/components/blog/slider/item">
@@ -101,6 +103,8 @@
 							jcr:lastModified="{Date}2017-06-19T17:19:25.812+02:00"
 							sling:resourceType="mobirise/components/foundation/image"
 							fileReference="/content/dam/mobirise/iphone-1067975-1920-1920x1439-5.jpg" />
+						<links jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/foundation/parsys" />
 					</item_2>
 					<item_3 jcr:primaryType="nt:unstructured"
 						sling:resourceType="mobirise/components/blog/slider/item"
