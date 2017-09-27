@@ -1,8 +1,2 @@
 <h1>Simple recursion in HTL example:</h1>
-<ul data-sly-list="${resourcePage.listChildren}">
-	<li>
-		<sly data-sly-resource="${item.contentResource.path @ resourceType='enigmatic/test/recursion/link', wcmmode='disabled'}" />
-		<sly data-sly-test="${item.listChildren}"
-			data-sly-resource="${item.contentResource.path @ resourceType='enigmatic/test/recursion', wcmmode='disabled'}" />
-	</li>
-</ul>
+<sly data-sly-include="content.html" />

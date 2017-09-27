@@ -1,0 +1,7 @@
+<ul data-sly-list="${resourcePage.listChildren}">
+	<li>
+		<sly data-sly-resource="${item.contentResource.path @ resourceType='enigmatic/test/recursion/link', wcmmode='disabled'}" />
+		<sly data-sly-test="${item.listChildren}"
+			data-sly-resource="${item.contentResource.path @ resourceType='enigmatic/test/recursion', wcmmode='disabled', selectors='content'}" />
+	</li>
+</ul>
