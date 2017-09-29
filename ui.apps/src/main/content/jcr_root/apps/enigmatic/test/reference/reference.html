@@ -1,0 +1,8 @@
+<sly data-sly-test="${!properties.reference}" data-sly-include="/apps/enigmatic/edit.html" />
+<sly data-sly-test="${properties.reference}">
+	<p data-sly-test="${!wcmmode.disabled}" class="author-msg-box author-reference">
+		<span>${component.title}</span> The component below is referenced from the pool
+		<sly data-sly-resource="${properties.reference @ resourceType='enigmatic/author/focus', selectors='cf'}" />.
+	</p>
+	<sly data-sly-resource="${properties.reference @ wcmmode='disabled'}" />
+</sly>
