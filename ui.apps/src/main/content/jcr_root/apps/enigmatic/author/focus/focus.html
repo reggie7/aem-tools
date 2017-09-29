@@ -1,1 +1,1 @@
-<a href="/editor.html/${resourcePage.path}.focus.html?target=${resource.path}" target="_blank">focus</a>
+<a href="/editor.html${resourcePage.path}.focus.html?target=${resource.path @ context='unsafe'}" target="_blank">${resourcePage.navigationTitle || resourcePage.pageTitle || resourcePage.title || resourcePage.name}</a>
