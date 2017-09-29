@@ -13,4 +13,6 @@
 	</sly>
 </sly>
 <sly data-sly-include="customheaderlibs.html" />
-<title>${currentPage.pageTitle || currentPage.navigationTitle || currentPage.title || currentPage.name}${properties.subtitle ? ':' : null} ${properties.subtitle}</title>
+<title data-sly-use.lib="enigmatic/libs/page.html">
+	<sly data-sly-call="${lib.title @ page=currentPage}" />
+</title>
