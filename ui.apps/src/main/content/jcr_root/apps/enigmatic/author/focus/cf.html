@@ -1,1 +1,3 @@
-<a href="/cf#${resourcePage.path}.focus.html?target=${resource.path @ context='unsafe'}" target="_blank">${resourcePage.navigationTitle || resourcePage.pageTitle || resourcePage.title || resourcePage.name}</a>
+<a href="/cf#${resourcePage.path}.focus.html?target=${resource.path @ context='unsafe'}" target="_blank">
+	<sly data-sly-use.lib="enigmatic/libs/link.html" data-sly-call="${lib.text @ page=resourcePage}" />
+</a>
