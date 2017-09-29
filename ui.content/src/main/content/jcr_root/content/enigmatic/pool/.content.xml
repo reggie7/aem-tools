@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Page">
+	<jcr:content jcr:primaryType="cq:PageContent"
+		jcr:title="Pool Page Example"
+		sling:resourceType="enigmatic/pages/pool"
+		cq:template="/apps/enigmatic/templates/pool"
+		cq:designPath="/etc/designs/enigmatic">
+		<content jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys">
+			<poolable_0 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 0" />
+			<poolable_1 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 1" />
+			<poolable_2 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 2" />
+			<poolable_3 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 3" />
+			<poolable_4 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 4" />
+			<poolable_5 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 5" />
+			<poolable_6 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 6" />
+			<poolable_7 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 7" />
+			<poolable_8 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 8" />
+			<poolable_9 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 9" />
+			<poolable_10 jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/test/poolable"
+				text="This is a simple poolable component version 10" />
+		</content>
+	</jcr:content>
+</jcr:root>
