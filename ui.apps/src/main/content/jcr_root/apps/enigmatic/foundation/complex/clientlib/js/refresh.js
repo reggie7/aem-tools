@@ -4,7 +4,9 @@
  */
 A.refresh = function(component) {
 	var scrollTop = $(document).scrollTop();
-	component.refresh(url=CQ.WCM.getContentUrl().replace(CQ.WCM.getPagePath(), component.path));
+	var url = CQ.WCM.getContentUrl();
+	var path = CQ.shared.HTTP.getPath(url);
+	component.refresh(url.replace(path, component.path));
 	setTimeout(function(){$(document).scrollTop(scrollTop);}, 50);
 };
 
