@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:EditConfig"
+	cq:actions="[editannotate,copymove,insert,delete]">
+	<cq:actionConfigs jcr:primaryType="nt:unstructured">
+		<zoom jcr:primaryType="nt:unstructured"
+			handler="function() { enigmatic.author.toggleZoom(this); }"
+			text="Zoom In/Out"
+			icon="/apps/enigmatic/foundation/complex/zoom.png" />
+		<focus jcr:primaryType="nt:unstructured"
+			handler="function() { enigmatic.author.toggleFocus(this); }"
+			text="Focus In/Out"
+			icon="/apps/enigmatic/foundation/complex/focus.png" />
+	</cq:actionConfigs>
+	<cq:listeners jcr:primaryType="cq:EditListenersConfig"
+		afteredit="function() { location.reload(); }" />
+</jcr:root>
