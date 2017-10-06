@@ -2,5 +2,4 @@
 <p data-sly-test="${complex.parent}" class="author-msg-box author-focus">
 	<span>Focus mode</span> You are now in focus mode of the component below. To go back click <a href="${currentPage.path}.html">here</a>.
 </p>
-<sly data-sly-test="${wcmmode.edit && complex.outer}" data-sly-resource="${complex.child}" />
-<sly data-sly-test="${!wcmmode.edit || complex.inner}" data-sly-include="inner.html" />
+<sly data-sly-include="zoom.html" />
