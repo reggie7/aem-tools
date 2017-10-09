@@ -1,5 +1,6 @@
 #base=js
 complex.js
 expand.js
+aspect.js
 #test.js
 refresh.js

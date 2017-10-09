@@ -1,0 +1,7 @@
+<sly data-sly-use.complex="pl.enigmatic.aem.ComplexComponent" data-sly-test="${complex.expand}">
+	<div class="author-msg-box author-edit" data-sly-use.get="pl.enigmatic.aem.GetParameter">
+		<span>Aspect</span>
+		You are now in <strong>${get['aspect']}</strong> aspect of the component <strong>${component.title}</strong>.
+	</div>
+	<sly data-sly-include="${get['aspect']}.html" />
+</sly>

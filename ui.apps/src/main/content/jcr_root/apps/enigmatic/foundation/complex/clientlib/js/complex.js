@@ -137,7 +137,7 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 		this.resource = this.target.resource;
 	}
 
-	this.getURL = function() {
+	this.getURL = function(params={}) {
 		var url = this.source.url.substring(0, this.source.url.indexOf(this.target.page));
 		if (this.mode && this.mode.location === A.Mode.RESOURCE) {
 			url += this.resource;
@@ -157,15 +157,18 @@ A.Transition = function(sourceURL, targetResource, targetMode) {
 				url = CQ.shared.HTTP.addParameter(url, A.MODE, this.savedMode.name);
 			}
 		}
+		for (var name in params) {
+			url = CQ.shared.HTTP.addParameter(url, name, params[name]);
+		}
 		return url;
 	};
 };
 
-A.toggleMode = function(comp, targetMode) {
+A.toggleMode = function(comp, targetMode, params={}) {
 	var sourceURL = window.document.URL;
 	var targetResource = comp.path;
 	var t = new A.Transition(sourceURL, targetResource, targetMode);
-	CQ.shared.Util.reload(window, t.getURL());
+	CQ.shared.Util.reload(window, t.getURL(params));
 };
 
 A.Mode.add("zoom");
