@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:EditConfig">
+	<cq:actionConfigs jcr:primaryType="nt:unstructured">
+		<alpha jcr:primaryType="nt:unstructured"
+			handler="function() { window.enigmatic.author.toggleAspect(this, 'alpha'); }"
+			text="Alpha" />
+		<beta jcr:primaryType="nt:unstructured"
+			handler="function() { window.enigmatic.author.toggleAspect(this, 'beta'); }"
+			text="Beta" />
+		<gamma jcr:primaryType="nt:unstructured"
+			handler="function() { window.enigmatic.author.toggleAspect(this, 'gamma'); }"
+			text="Gamma" />
+	</cq:actionConfigs>
+</jcr:root>
