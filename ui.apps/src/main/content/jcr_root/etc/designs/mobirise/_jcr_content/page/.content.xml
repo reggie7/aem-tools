@@ -117,12 +117,12 @@
 					cq:emptyText="Drag pricing items here" />
 				<item jcr:primaryType="nt:unstructured"
 					sling:resourceType="mobirise/components/content/pricing-table/item">
-					<features jcr:primaryType="nt:unstructured"
+					<items jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
 						components="[mobirise/components/content/pricing-table/item/feature]">
 						<new jcr:primaryType="nt:unstructured"
 							cq:emptyText="Drag feature lines here" />
-					</features>
+					</items>
 					<links jcr:primaryType="nt:unstructured"
 						sling:resourceType="enigmatic/foundation/parsys"
 						components="[mobirise/components/content/pricing-table/item/button]">

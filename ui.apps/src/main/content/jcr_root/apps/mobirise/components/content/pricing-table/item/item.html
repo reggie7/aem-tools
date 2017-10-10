@@ -8,8 +8,8 @@
 			</strong>
 			<small data-sly-test="${properties.paymentInterval}">${properties.paymentInterval}</small>
 		</p>
-		<div data-sly-test="${hasChildren['features']}">
-			<ul data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='features'}"
+		<div data-sly-test="${hasChildren['items']}">
+			<ul data-sly-use.items="${'pl.enigmatic.aem.ResourceComponent' @ path='items'}"
 				data-sly-list="${items.listChildren}">
 				<li data-sly-resource="${item.path}"></li>
 			</ul>
