@@ -3,7 +3,7 @@
 
 	var newComponentClass = 'new';
 
-	ns.Inspectable.prototype.hasPlaceholderSuper = ns.Inspectable.prototype.hasPlaceholder;
+	ns.Inspectable.prototype.hasPlaceholder_Super = ns.Inspectable.prototype.hasPlaceholder;
 
 	ns.Inspectable.prototype.hasPlaceholder = function() {
 		if (this.onPage() && this.dom.hasClass(newComponentClass)) {
@@ -12,10 +12,10 @@
 			request.send(null);
 			try {
 				var config = JSON.parse(request.responseText);
-				if (config.emptyText) { return config.emptyText; }
+				if (config.emptyText) { return Granite.I18n.get(config.emptyText); }
 			} catch(e) { }
 		}
-		return this.hasPlaceholderSuper();
+		return this.hasPlaceholder_Super();
 	};
 
 }(jQuery, Granite.author, jQuery(document), this));
