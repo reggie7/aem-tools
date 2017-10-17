@@ -3,8 +3,7 @@ package pl.enigmatic.tools;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Utility class for exposing common useful
- * methods to process {@link String strings}.
+ * Utility class with common useful methods to process {@link String strings}.
  * Only those not found in {@link StringUtils}
  *
  * @author Radosław Wesołowski
@@ -12,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 public final class StringTools {
 
 	/**
-	 * The default constructor - not supported for a utility class.
+	 * The default constructor
 	 * @throws UnsupportedOperationException
 	 */
 	private StringTools() {

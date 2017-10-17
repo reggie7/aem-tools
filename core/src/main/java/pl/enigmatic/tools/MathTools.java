@@ -1,7 +1,7 @@
 package pl.enigmatic.tools;
 
 /**
- * Class for exposing common useful mathematical methods.
+ * Utility with common useful mathematical methods.
  * 
  * @author Radosław Wesołowski
  */

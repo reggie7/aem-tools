@@ -7,7 +7,7 @@ import org.apache.sling.models.annotations.Model;
 
 import com.day.cq.wcm.api.Page;
 
-import pl.enigmatic.aem.GetPath;
+import pl.enigmatic.GetPath;
 
 /**
  *

@@ -3,7 +3,7 @@ package pl.enigmatic.mobirise.aem.comps;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 
-import pl.enigmatic.aem.GetPath;
+import pl.enigmatic.GetPath;
 import pl.enigmatic.mobirise.aem.core.SiteStructure;
 
 /**

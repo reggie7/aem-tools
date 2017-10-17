@@ -9,8 +9,7 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 
 /**
- * A simple class for setting a request attribute
- * to pass along
+ * A simple class setting a request attribute
  * 
  * @author Radoslaw Wesolowski
  */
@@ -28,7 +27,7 @@ public class GetRequestAttribute extends ComponentModel {
 	}
 
 	/**
-	 * Get the map
+	 * Gets the map
 	 */
 	@SuppressWarnings({ "unchecked" })
 	public static <T> T get(final SlingHttpServletRequest request, final String key) {
@@ -43,6 +42,6 @@ public class GetRequestAttribute extends ComponentModel {
 	 * get value
 	 */
 	public Object getValue() {
-		return get(this.request, this.key);
+		return get(request, key);
 	}
 }

@@ -5,6 +5,7 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.request.RequestPathInfo;
 import org.apache.sling.models.annotations.Model;
 
+import pl.enigmatic.GetPath;
 import pl.enigmatic.tools.PathTools;
 
 /**

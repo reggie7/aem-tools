@@ -1,4 +1,4 @@
-<sly data-sly-use.parsys="${'pl.enigmatic.aem.LimitedParsysComponent' @ max=currentStyle.max, min=currentStyle.min }" />
+<sly data-sly-use.parsys="${'pl.enigmatic.aem.ParsysLimits' @ max=currentStyle.max, min=currentStyle.min }" />
 <div data-sly-test="${(wcmmode.edit || wcmmode.preview) && parsys.lowerLimited && !parsys.lowerLimitReached}"
 	class="author-msg-narrow author-error">
 	<span>Limit</span> Minimum (<strong>${parsys.lowerLimit}</strong>) not reached.

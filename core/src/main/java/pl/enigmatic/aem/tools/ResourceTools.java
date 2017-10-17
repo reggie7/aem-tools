@@ -5,27 +5,22 @@ import java.util.Iterator;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.NonExistingResource;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceUtil;
 import org.apache.sling.api.resource.ResourceWrapper;
 import org.apache.sling.api.resource.SyntheticResource;
 
 import com.day.cq.commons.jcr.JcrConstants;
-import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.PageManager;
-import com.day.cq.wcm.api.components.Component;
-import com.day.cq.wcm.api.components.ComponentManager;
 
 import pl.enigmatic.tools.PathTools;
 
 /**
- * Class for exposing common useful methods to process {@link Resource}.
+ * Utility with common useful methods to process {@link Resource}.
  *
  * @author Radosław Wesołowski
  */
 public final class ResourceTools {
 
-	/** the default constructor */
+	/** default constructor */
 	private ResourceTools() {
 		throw new UnsupportedOperationException();
 	}
@@ -75,23 +70,6 @@ public final class ResourceTools {
 	 */
 	public static String createShortId(final Resource resource) {
 		return PathTools.createId(StringUtils.substringAfter(resource.getPath(), JcrConstants.JCR_CONTENT + PathTools.separator));
-	}
-
-	/**
-	 * Shortcut for retrieving {@link Component} type of the given
-	 * <code>resource</code>
-	 *
-	 * @param resource
-	 *			the resource to get component for
-	 * @return the component of the given resource
-	 */
-	public static Component getComponentOfResource(final Resource resource) {
-		final ComponentManager mgr = resource.getResourceResolver().adaptTo(ComponentManager.class);
-		if (mgr == null) {
-			return null;
-		}
-		final Component c = mgr.getComponent(resource.getResourceType());
-		return c != null ? c : mgr.getComponentOfResource(resource);
 	}
 
 	/**
@@ -150,12 +128,6 @@ public final class ResourceTools {
 		return null;
 	}
 
-	public static Page getContainingPage(final Resource resource) {
-		final ResourceResolver resourceResolver = resource.getResourceResolver();
-		final PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
-		return pageManager.getContainingPage(resource);
-	}
-
 	/**
 	 * @param descendant descendant object (in a special case - child)
 	 * @param ancestor ancestor object (in a special case - parent)
@@ -163,14 +135,5 @@ public final class ResourceTools {
 	 */
 	public static String getRelativePath(final Resource descendant, final Resource ancestor) {
 		return PathTools.getRelativePath(descendant.getPath(), ancestor.getPath());
-	}
-
-	/**
-	 * @param descendant descendant object (in a special case - child)
-	 * @param ancestor ancestor object (in a special case - parent)
-	 * @return relative path of descendant in relation to ancestor.
-	 */
-	public static String getRelativePath(final Resource descendant, final Page ancestor) {
-		return getRelativePath(descendant, ancestor.getContentResource());
 	}
 }

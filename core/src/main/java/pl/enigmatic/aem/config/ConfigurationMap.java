@@ -12,7 +12,7 @@ import com.day.cq.commons.inherit.HierarchyNodeInheritanceValueMap;
 import com.day.cq.commons.inherit.InheritanceValueMap;
 import com.day.cq.wcm.api.Page;
 
-import pl.enigmatic.aem.tools.ResourceTools;
+import pl.enigmatic.aem.tools.PageTools;
 import pl.enigmatic.tools.PathTools;
 
 /**
@@ -41,7 +41,7 @@ public class ConfigurationMap extends HashMap<String, Object> implements ValueMa
 	}
 
 	public ConfigurationMap(final String path, final Map<String, ?> defaults, final Resource resource, final String suffix) {
-		this(path, defaults, ResourceTools.getContainingPage(resource), suffix);
+		this(path, defaults, PageTools.getContainingPage(resource), suffix);
 	}
 
 	public ConfigurationMap(final String path, final Map<String, ?> defaults, final Resource resource) {

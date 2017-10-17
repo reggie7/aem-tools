@@ -17,7 +17,7 @@ import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.components.Component;
 import com.day.cq.wcm.api.components.ComponentManager;
 
-import pl.enigmatic.aem.tools.ResourceTools;
+import pl.enigmatic.aem.tools.PageTools;
 
 /**
  * @author Radosław Wesołowski
@@ -37,7 +37,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 
 	private GlobalLabelsDefinitions(final Resource resource, final Page currentPage) {
 		this.currentPage = currentPage;
-		relPath = ResourceTools.getRelativePath(resource, currentPage);
+		relPath = PageTools.getRelativePath(resource, currentPage);
 		final ComponentManager componentManager = resource.getResourceResolver().adaptTo(ComponentManager.class);
 		component = componentManager.getComponentOfResource(resource);
 		for (final Label l : getDefinitions(getPages())) {
@@ -52,7 +52,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 	 * Default constructor
 	 */
 	public GlobalLabelsDefinitions(final Resource resource) {
-		this(resource, ResourceTools.getContainingPage(resource));
+		this(resource, PageTools.getContainingPage(resource));
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 	}
 
 	public static GlobalLabelsDefinitions create(final Resource resource) {
-		final Page currentPage = ResourceTools.getContainingPage(resource);
+		final Page currentPage = PageTools.getContainingPage(resource);
 		return new GlobalLabelsDefinitions(currentPage.getContentResource(LABELS), currentPage);
 	}
 

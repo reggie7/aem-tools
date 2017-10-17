@@ -1,13 +1,10 @@
 package pl.enigmatic.aem.test;
 
 import java.awt.Dimension;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.jcr.RepositoryException;
 
 import pl.enigmatic.tools.MathTools;
 
@@ -24,18 +21,9 @@ public class HotspotsParser {
 	}
 
 	/**
-	 * Method for parsing imageMap with hotspots. Example input:
-	 * [circle(583,79,24)||"Hotspot1"][circle(360,71,18)"http://#"||"Hotspot2"]
-	 * Only first 3 hotspots are taken into list. If there are more than 3
-	 * hotspots they are ignored.
-	 * @param parent
-	 * @param imgHeight
-	 * @param imgWidth
-	 *
-	 * @throws RepositoryException
-	 * @throws IOException
+	 * Parses <code>imageMap</code> property
 	 */
-	public List<Hotspot> parseImageMap(final String imageMap) {
+	public List<Hotspot> parse(final String imageMap) {
 		final List<Hotspot> map = new ArrayList<>();
 		final Matcher matcher = PATTERN.matcher(imageMap);
 		while (matcher.find()) {

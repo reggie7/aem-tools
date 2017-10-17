@@ -2,7 +2,6 @@ package pl.enigmatic.aem;
 
 import java.text.SimpleDateFormat;
 
-import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -11,10 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Class for checking date format. It gets the input values from
- * <code>resource</code>, <code>request</code> and <code>properties</code> to
- * expose processed values driving behavior and final appearance of the news
- * teaser component.
+ * Checks date format pattern.
  *
  * @author Radosław Wesołowski
  *
@@ -22,51 +18,37 @@ import org.slf4j.LoggerFactory;
 @Model(adaptables = SlingHttpServletRequest.class)
 public class DateFormatValidator {
 
-	/**
-	 * Logger used to log warning when exception occurs.
-	 */
 	private static final Logger LOGGER = LoggerFactory.getLogger(DateFormatValidator.class);
 
 	@Inject
 	private String pattern;
 
-	private boolean valid;
-
-	/** the default constructor */
+	/** default constructor */
 	public DateFormatValidator() {
 		super();
 	}
 
 	/**
-	 * Checks correctness of the date pattern.
+	 * Checks if the given date pattern is correct.
 	 *
-	 * @param pattern
-	 *			the pattern to be checked
+	 * @param pattern the pattern to be checked
 	 * @return <code>true</code>, if the <code>pattern</code> is correct
 	 */
-	public static boolean checkDateFormat(final String pattern) {
+	public static boolean check(final String pattern) {
 		try {
 			new SimpleDateFormat(pattern).toString();
+			return true;
 		} catch (final IllegalArgumentException | NullPointerException e) {
-			DateFormatValidator.LOGGER.error("Pattern is not correct", e);
-			return false;
+			LOGGER.error("Pattern is not correct", e);
 		}
-		return true;
-	}
-
-	/**
-	 * Initializes all the <i>output</i> values of this object.
-	 */
-	@PostConstruct
-	protected void init() {
-		this.valid = checkDateFormat(this.pattern);
+		return false;
 	}
 
 	/**
 	 * @return the valid
 	 */
 	public boolean isValid() {
-		return this.valid;
+		return check(this.pattern);
 	}
 
 }

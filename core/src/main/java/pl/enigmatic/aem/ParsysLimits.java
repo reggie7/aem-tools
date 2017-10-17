@@ -21,7 +21,7 @@ import com.google.common.collect.Lists;
  * @author Radosław Wesołowski
  */
 @Model(adaptables = SlingHttpServletRequest.class)
-public class LimitedParsysComponent extends ResourceWrapper {
+public class ParsysLimits extends ResourceWrapper {
 
 	/** the min limit of the list size injected externally */
 	@Inject
@@ -39,7 +39,7 @@ public class LimitedParsysComponent extends ResourceWrapper {
 	private List<Resource> children = new LinkedList<>();
 
 	/** Default simple constructor. */
-	public LimitedParsysComponent(final SlingHttpServletRequest request) {
+	public ParsysLimits(final SlingHttpServletRequest request) {
 		super(request.getResource());
 	}
 

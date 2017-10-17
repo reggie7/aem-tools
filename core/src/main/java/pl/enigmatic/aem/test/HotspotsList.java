@@ -13,11 +13,10 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Optional;
 
-import pl.enigmatic.aem.ComponentModel;
 import pl.enigmatic.aem.IndexChildren;
 
 @Model(adaptables = SlingHttpServletRequest.class)
-public class HotspotsComponent extends ComponentModel {
+public class HotspotsList {
 
 	/** image size */
 	@Optional
@@ -35,8 +34,8 @@ public class HotspotsComponent extends ComponentModel {
 	private Resource items;
 
 	/** Default constructor */
-	public HotspotsComponent(final SlingHttpServletRequest request) {
-		super(request);
+	public HotspotsList() {
+		super();
 	}
 
 	/**
@@ -45,7 +44,7 @@ public class HotspotsComponent extends ComponentModel {
 	public List<Hotspot> getItems() {
 		if (size != null && StringUtils.isNotBlank(map)) {
 			final HotspotsParser parser = new HotspotsParser(size);
-			return parser.parseImageMap(map);
+			return parser.parse(map);
 		}
 		return new LinkedList<>();
 	}

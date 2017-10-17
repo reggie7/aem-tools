@@ -33,15 +33,14 @@ public class HasChildren extends AbstractMap<String, Boolean> {
 	}
 
 	/**
-	 * The {@link Map#get(Object)} method implementation that allows us to
+	 * The {@link Map#get(Object)} method implementation that allows
 	 * dynamically use any given path of current resource's child in order to
-	 * check it for children.
+	 * check for children.
 	 *
-	 * @param key
-	 *			the object representing path of the child to be checked for
+	 * @param key the object representing path of the child to be checked for
 	 *			children
 	 * @return <code>true</code> only if the child under the given
-	 *		 <code>key</code> path has anyc children
+	 *		 <code>key</code> path has any children
 	 *
 	 * @see java.util.AbstractMap#get(java.lang.Object)
 	 */
