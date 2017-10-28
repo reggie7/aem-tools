@@ -406,6 +406,12 @@
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>org.apache.felix.scr.annotations</artifactId>
+				<version>1.9.12</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
 				<groupId>javax.inject</groupId>
 				<artifactId>javax.inject</artifactId>
 				<version>1</version>
