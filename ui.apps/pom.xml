@@ -76,6 +76,11 @@
 							<target>/apps/enigmatic/install</target>
 						</embedded>
 						<embedded>
+							<groupId>com.googlecode.json-simple</groupId>
+							<artifactId>json-simple</artifactId>
+							<target>/apps/enigmatic/install</target>
+						</embedded>
+						<embedded>
 							<groupId>org.apache.commons</groupId>
 							<artifactId>commons-email</artifactId>
 							<target>/apps/mobirise/install</target>
