@@ -15,13 +15,15 @@ import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.json.simple.JSONObject;
 
+import pl.enigmatic.aem.DateFormatValidator;
+
 @SlingServlet(paths = "/bin/private/enigmatic/time/get.json", methods = { "GET", }, metatype = false)
 public class GetServerTimeServlet extends SlingAllMethodsServlet {
 
 	/** serial version UID */
 	private static final long serialVersionUID = -1930620361755118182L;
 
-	private static final DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	private static final DateFormat DEFAULT_FORMATTER = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	/** Default constructor */
 	public GetServerTimeServlet() {
@@ -31,6 +33,11 @@ public class GetServerTimeServlet extends SlingAllMethodsServlet {
 	@Override
 	@SuppressWarnings("unchecked")
 	protected void doGet(final SlingHttpServletRequest request, final SlingHttpServletResponse response) throws IOException, ServletException {
+		final String format = request.getParameter("format");
+		DateFormat formatter = DEFAULT_FORMATTER;
+		if (DateFormatValidator.check(format)) {
+			formatter = new SimpleDateFormat(format);
+		}
 		final JSONObject json = new JSONObject();
 		json.put("result", formatter.format(Calendar.getInstance().getTime()));
 		response.setContentType("application/json; charset=UTF-8");
