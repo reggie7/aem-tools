@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Dialog"
+	autoHeight="{Boolean}true"
+	width="700"
+	title="Mobirise Database Connection Service">
+	<items jcr:primaryType="cq:Panel"
+		height="400">
+		<items jcr:primaryType="cq:WidgetCollection">
+			<reference jcr:primaryType="cq:Widget"
+				fieldLabel="Database URL"
+				name="./reference"
+				allowBlank="{Boolean}false"
+				xtype="textfield" />
+			<username jcr:primaryType="cq:Widget"
+				fieldLabel="Username"
+				name="./username"
+				allowBlank="{Boolean}false"
+				xtype="textfield" />
+			<password jcr:primaryType="cq:Widget"
+				fieldLabel="Password"
+				name="./password"
+				allowBlank="{Boolean}false"
+				xtype="textfield" />
+		</items>
+	</items>
+</jcr:root>
