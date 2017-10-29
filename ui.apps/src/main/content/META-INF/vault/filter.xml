@@ -7,4 +7,6 @@
 	<filter root="/apps/mobirise" />
 	<filter root="/etc/designs/mobirise" />
 	<filter root="/conf/mobirise" />
+
+	<filter root="/etc/map/http" />
 </workspaceFilter>
