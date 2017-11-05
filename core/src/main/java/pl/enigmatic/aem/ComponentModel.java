@@ -17,7 +17,7 @@ import com.day.cq.wcm.api.components.Component;
  * Base for component model classes. Exposes fundamental objects used to perform
  * further calculations.
  * 
- * @author "Radosław Wesołowski<radoslaw.wesolowski@hi-res.de>"
+ * @author Radosław Wesołowski
  */
 public class ComponentModel extends ResourceWrapper {
 

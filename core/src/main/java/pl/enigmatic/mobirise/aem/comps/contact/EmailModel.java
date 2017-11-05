@@ -23,7 +23,6 @@ import pl.enigmatic.tools.TemplateSubstitutor;
  * and redirect user to redirect page
  *
  * @author Radosław Wesołowski
- * @author Payam Salman
  */
 @Model(adaptables = Resource.class)
 public class EmailModel {
