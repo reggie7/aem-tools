@@ -1,6 +1,8 @@
 # aem-tools
 'AEM Tools' project for the tools AEM lacks (or lacked when I needed them or I didn't know/couldn't find them) that I use often in the projects I take part in.
 
+Developed for and tested on AEM 6.3
+
 ## Modules
 
 The main parts of the template are:
@@ -49,5 +51,9 @@ http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
 
 ## Author
 
-http://reggie-7.pl/
-http://enigmatic.pl/
+Radosław Wesołowski:
+* [Linked In](https://www.linkedin.com/in/wesolowskiradoslaw/)
+* [reggie-7.pl](http://reggie-7.pl/)
+* [GitHub](https://github.com/reggie7)
+* [Stack Overflow](https://stackoverflow.com/users/4773331/rados%C5%82aw-weso%C5%82owski)
+* [Enigma Solutions](http://enigmatic.pl/)
