@@ -6,6 +6,8 @@ import org.apache.sling.api.resource.ResourceResolver;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 
+import java.util.Optional;
+
 /**
  * Utility with common useful methods to process {@link Page}.
  *
@@ -19,9 +21,11 @@ public final class PageTools {
 	}
 
 	public static Page getContainingPage(final Resource resource) {
-		final ResourceResolver resourceResolver = resource.getResourceResolver();
-		final PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
-		return pageManager.getContainingPage(resource);
+		return Optional.ofNullable(resource)
+				.map(r -> r.getResourceResolver())
+				.map(rr -> rr.adaptTo(PageManager.class))
+				.map(pageManager -> pageManager.getContainingPage(resource))
+				.orElse(null);
 	}
 
 	/**
