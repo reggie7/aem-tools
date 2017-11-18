@@ -25,6 +25,6 @@
 		name="./label">
 		<datasource jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/dialog/datasource"
-			provider="pl.enigmatic.aem.dialog.GlobalLabelsOptions" />
+			provider="pl.enigmatic.aem.dialog.datasource.providers.GlobalLabelsOptions" />
 	</label>
 </jcr:root>
