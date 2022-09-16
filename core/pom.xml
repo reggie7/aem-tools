@@ -91,6 +91,7 @@
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.scr.annotations</artifactId>
 		</dependency>
+
 		<!-- Other Dependencies -->
 		<dependency>
 			<groupId>javax.inject</groupId>

@@ -34,7 +34,7 @@ public class GlobalLabelsSubstitutor extends ComponentModel {
 	protected void init() {
 		if (substitutions == null) {
 			substitutions = new TemplateSubstitutor();
-			final GlobalLabels labels = new GlobalLabels(request);
+			final GlobalLabels labels = new GlobalLabels(request.getResource());
 			for (final String placeholder : labels.keySet()) {
 				final String value = labels.get(placeholder, String.class);
 				if (StringUtils.isNotBlank(value)) {

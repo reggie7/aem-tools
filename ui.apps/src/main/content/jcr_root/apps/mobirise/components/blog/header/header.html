@@ -8,8 +8,7 @@
 				<h3 class="mbr-header__text">${properties.text}</h3>
 				<span data-sly-test="${wcmmode.edit && (properties.author || properties.date)}"
 					class="author-msg-line author-notice">This component uses global labels.</span>
-				<p data-sly-test="${properties.author || properties.date}" class="mbr-header__subtext"
-					data-sly-use.labels="pl.enigmatic.aem.comps.global.GlobalLabels">
+				<p data-sly-test="${properties.author || properties.date}" class="mbr-header__subtext">
 					<sly data-sly-test="${properties.author}" data-sly-use.helper="${'pl.enigmatic.mobirise.aem.core.GetUser' @ id=properties.author}">
 						${labels['by']} ${helper.givenName} ${helper.familyName}
 					</sly>

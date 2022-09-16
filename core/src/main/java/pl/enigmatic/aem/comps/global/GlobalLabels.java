@@ -1,14 +1,13 @@
 package pl.enigmatic.aem.comps.global;
 
-import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
-
 import pl.enigmatic.aem.config.ConfigurationMap;
 
 /**
  * @author Radosław Wesołowski
  */
-@Model(adaptables = SlingHttpServletRequest.class)
+@Model(adaptables = Resource.class)
 public class GlobalLabels extends ConfigurationMap {
 
 	/** default serial version UUID */
@@ -17,8 +16,8 @@ public class GlobalLabels extends ConfigurationMap {
 	/**
 	 * Default constructor
 	 */
-	public GlobalLabels(final SlingHttpServletRequest request) {
-		super(GlobalLabelsDefinitions.LABELS, GlobalLabelsDefinitions.create(request.getResource()).toDefaults(), request, "value");
+	public GlobalLabels(final Resource resource) {
+		super(GlobalLabelsDefinitions.LABELS, GlobalLabelsDefinitions.create(resource).toDefaults(), resource, "value");
 	}
 
 }

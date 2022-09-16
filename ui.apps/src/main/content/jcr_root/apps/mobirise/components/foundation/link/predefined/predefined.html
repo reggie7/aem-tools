@@ -3,7 +3,7 @@
 	href="${helper.url}" class="${component.properties.css}">
 	<sly data-sly-use.ref="${'pl.enigmatic.aem.GetPage' @ input=model.path}" />
 	<sly data-sly-test.page="${ref.page}" />
-	<sly data-sly-test="${properties.label && !properties.text}" data-sly-use.labels="pl.enigmatic.aem.comps.global.GlobalLabels"
+	<sly data-sly-test="${properties.label && !properties.text}"
 		data-sly-test.label="${labels[properties.label]}" />
 	${properties.text || label || page.navigationTitle || page.pageTitle || page.title || page.name || model.path}
 </a>

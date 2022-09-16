@@ -1,7 +1,7 @@
 <p class="author-msg-box author-notice">
 	This is where you can override the global labels for the current page and all the pages below.
-	Otherwise values (if set there) will come from ascendant (parent, grandparent, etc.) pages.
-	Obviously the values set here can be overriden in descendant (child, grandchild, etc.) pages.
+	Otherwise, values (if set there) will come from ascendant (parent, grandparent, etc.) pages.
+	Obviously the values set here can be overridden in descendant (child, grandchild, etc.) pages.
 	You can then use the labels throughout the whole application in different components, e.g. to
 	reuse a common label inside links.
 </p>
@@ -17,8 +17,7 @@
 			<th>Final Value</th>
 		</tr>
 	</thead>
-	<tbody data-sly-use.values="pl.enigmatic.aem.comps.global.GlobalLabels"
-		data-sly-list="${definitions.entrySet}">
+	<tbody data-sly-list="${definitions.entrySet}">
 		<tr data-sly-test.value="${item.value}">
 			<td><strong>${value.text}</strong></td>
 			<td>${value.name}</td>
@@ -32,7 +31,7 @@
 				<sly data-sly-test="${ivs.source}" data-sly-resource="${ivs.source.path @ resourceType='enigmatic/author/link'}" />
 				<em data-sly-test="${!ivs.source}">Default</em>
 			</td>
-			<td>${values[item.key]}</td>
+			<td>${labels[item.key]}</td>
 		</tr>
 	</tbody>
 </table>
