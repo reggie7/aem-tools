@@ -12,12 +12,6 @@
 	<name>AEM Tools Project</name>
 	<description>Project for the tools AEM lacks (or lacked when I needed them or I didn't know/couldn't find them) that I use often in the projects I take part in.</description>
 
-	<modules>
-		<module>core</module>
-		<module>ui.apps</module>
-		<module>ui.content</module>
-	</modules>
-
 	<properties>
 		<aem.host>localhost</aem.host>
 		<aem.port>4502</aem.port>
@@ -283,6 +277,17 @@
 		</pluginManagement>
 	</build>
 	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>core</module>
+				<module>ui.apps</module>
+				<module>ui.content</module>
+			</modules>
+		</profile>
 		<!-- Development profile: install only the bundle -->
 		<profile>
 			<id>autoInstallBundle</id>
