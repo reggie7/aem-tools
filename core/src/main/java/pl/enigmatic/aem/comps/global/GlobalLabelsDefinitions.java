@@ -29,7 +29,8 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 	 * default serial version UID
 	 */
 	private static final long serialVersionUID = 1L;
-	public static final String LABELS = "labels";
+	public static final String NN_LABELS = "labels";
+	public static final String PN_VALUE = "value";
 	private static final String DEFINITIONS = "definitions";
 	private final transient Page currentPage;
 	private final String relPath;
@@ -64,11 +65,11 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 
 	public static GlobalLabelsDefinitions create(final Resource resource) {
 		final Page currentPage = PageTools.getContainingPage(resource);
-		return new GlobalLabelsDefinitions(currentPage.getContentResource(LABELS), currentPage);
+		return new GlobalLabelsDefinitions(currentPage.getContentResource(NN_LABELS), currentPage);
 	}
 
 	/**
-	 * Camel Case Name => camelCaseName 
+	 * Camel Case Name => camelCaseName
 	 * @param label property label
 	 * @return property name
 	 */

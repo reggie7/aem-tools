@@ -12,6 +12,8 @@
 			sling:resourceType="mobirise/global/labels" />
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
+			<labels jcr:primaryType="nt:unstructured"
+					sling:resourceType="mobirise/components/content/labels" />
 			<msgbox jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/msgbox"
 				text="Something went wrong. We apologize for the inconvenience. Please try again later."

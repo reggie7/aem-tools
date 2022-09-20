@@ -4,6 +4,8 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import pl.enigmatic.aem.config.ConfigurationMap;
 
+import static pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions.PN_VALUE;
+
 /**
  * @author Radosław Wesołowski
  */
@@ -17,7 +19,7 @@ public class GlobalLabels extends ConfigurationMap {
 	 * Default constructor
 	 */
 	public GlobalLabels(final Resource resource) {
-		super(GlobalLabelsDefinitions.LABELS, GlobalLabelsDefinitions.create(resource).toDefaults(), resource, "value");
+		super(GlobalLabelsDefinitions.NN_LABELS, GlobalLabelsDefinitions.create(resource).toDefaults(), resource, PN_VALUE);
 	}
 
 }
