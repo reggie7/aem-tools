@@ -14,6 +14,9 @@
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/global/labels" />
 		<content jcr:primaryType="nt:unstructured"
-			sling:resourceType="enigmatic/foundation/parsys" />
+			sling:resourceType="enigmatic/foundation/parsys">
+			<labels jcr:primaryType="nt:unstructured"
+					sling:resourceType="mobirise/components/content/labels" />
+		</content>
 	</jcr:content>
 </jcr:root>

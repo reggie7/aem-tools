@@ -112,8 +112,8 @@
 		</footer>
 		<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="enigmatic/foundation/parsys">
-			<!--stage jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/components/content/stage" /-->
+			<labels jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/components/content/labels" />
 			<features_1 jcr:primaryType="nt:unstructured"
 				sling:resourceType="mobirise/components/content/features"
 				columnsNumber="{Long}4"
