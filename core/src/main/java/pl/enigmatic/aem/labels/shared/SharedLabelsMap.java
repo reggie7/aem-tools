@@ -1,10 +1,12 @@
 package pl.enigmatic.aem.labels.shared;
 
+import com.day.cq.i18n.I18n;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Model;
 
+import javax.inject.Inject;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -23,6 +25,8 @@ public final class SharedLabelsMap extends HashMap<String, String> {
 	private static final long serialVersionUID = 1L;
 
 	private final List<ValueMap> sources = new LinkedList<>();
+	@Inject
+	private I18n i18n;
 
 	/**
 	 * Default constructor
@@ -38,7 +42,7 @@ public final class SharedLabelsMap extends HashMap<String, String> {
 		final String path = KeyTools.keyToPath(key, PN_VALUE);
 		return sources.stream().map(vm -> vm.get(path))
 				.filter(Objects::nonNull).map(String::valueOf).filter(StringUtils::isNotBlank)
-				.findFirst().orElseGet(key::toString);
+				.findFirst().orElseGet(() -> i18n.get(key.toString()));
 	}
 
 }
