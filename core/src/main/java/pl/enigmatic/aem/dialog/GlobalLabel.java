@@ -1,5 +1,6 @@
 package pl.enigmatic.aem.dialog;
 
+import com.day.cq.commons.jcr.JcrConstants;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 import org.apache.commons.lang3.StringUtils;
@@ -11,37 +12,68 @@ import org.apache.sling.api.resource.SyntheticResource;
 import org.apache.sling.api.resource.ValueMap;
 import pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions;
 
+import java.util.Locale;
 import java.util.Optional;
+
+import static pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions.PN_VALUE;
 
 public final class GlobalLabel {
 
-	private final Resource resource;
+	private static final String SLASH = "/";
+
+	private final ResourceResolver resolver;
+	private final Resource widget;
+	private final String name;
+	private final int depth;
+	private final Page page;
+	private final Resource target;
 
 	public GlobalLabel(final SlingHttpServletRequest request) {
-		final ResourceResolver resolver = request.getResourceResolver();
-		final ValueMap widget = request.getResource().getValueMap();
-		final String path = join(GlobalLabelsDefinitions.NN_LABELS, widget.get("name", String.class));
-		final int depth = widget.get("depth", 4);
-		final Optional<Page> pageOpt = Optional.of(request.getRequestPathInfo()).map(RequestPathInfo::getSuffixResource)
+		resolver = request.getResourceResolver();
+		widget = request.getResource();
+		final ValueMap widgetProps = widget.getValueMap();
+		name = widgetProps.get("name", String.class);
+		depth = widgetProps.get("depth", 4);
+		page = Optional.of(request.getRequestPathInfo()).map(RequestPathInfo::getSuffixResource)
 				.map(resolver.adaptTo(PageManager.class)::getContainingPage)
-				.map(page -> page.getParent(page.getDepth() - depth));
-		this.resource = pageOpt.map(p -> p.getContentResource(path)).orElseGet(() -> pageOpt.map(Page::getContentResource)
-				.map(Resource::getPath)
-				.map(p -> new SyntheticResource(resolver, join(p, path), ""))
-				.get()
+				.map(page -> page.getParent(page.getDepth() - depth))
+				.get();
+		target = name.startsWith(SLASH) ? resolveGlobalResource() : resolveLocalResource();
+	}
+
+	private Resource resolveGlobalResource() {
+		final Locale locale = page.getLanguage();
+		final String path = SLASH + join(
+				"content",
+				GlobalLabelsDefinitions.NN_LABELS,
+				locale.getLanguage().toLowerCase(),
+				locale.getCountry().toLowerCase(),
+				JcrConstants.JCR_CONTENT,
+				name
 		);
+		return Optional.of(path).map(resolver::getResource).orElseGet(() -> syntheticResource(path));
+	}
+
+	private Resource resolveLocalResource() {
+		final String path = join(GlobalLabelsDefinitions.NN_LABELS, name);
+		return Optional.of(path).map(page::getContentResource)
+				.orElseGet(() -> syntheticResource(join(page.getContentResource().getPath(), path)));
 	}
 
 	private static String join(final Object... path) {
-		return StringUtils.join(path, "/");
+		return StringUtils.join(path, SLASH);
+	}
+
+	private Resource syntheticResource(final String path) {
+		return new SyntheticResource(resolver, path, "");
 	}
 
 	public String getPath() {
-		return join(resource.getPath(), GlobalLabelsDefinitions.PN_VALUE);
+		return join(target.getPath(), PN_VALUE);
 	}
 
 	public String getValue() {
-		return resource.getValueMap().get(GlobalLabelsDefinitions.PN_VALUE, String.class);
+		return target.getValueMap().get(PN_VALUE, String.class);
 	}
 
 }

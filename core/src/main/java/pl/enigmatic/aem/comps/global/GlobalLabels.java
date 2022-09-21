@@ -10,7 +10,7 @@ import static pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions.PN_VALUE;
  * @author Radosław Wesołowski
  */
 @Model(adaptables = Resource.class)
-public class GlobalLabels extends ConfigurationMap {
+public final class GlobalLabels extends ConfigurationMap {
 
 	/** default serial version UUID */
 	private static final long serialVersionUID = 1L;

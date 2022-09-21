@@ -13,20 +13,24 @@
 				<items jcr:primaryType="nt:unstructured">
 					<next jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
-							fieldLabel="'Next' global label"
+							fieldLabel="'Next' shared label"
 							name="next" />
 					<open jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
-							fieldLabel="'Open' global label"
+							fieldLabel="'Open' shared label"
 							name="open" />
 					<close jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
-							fieldLabel="'Close' global label"
+							fieldLabel="'Close' shared label"
 							name="close" />
 					<request jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
-							fieldLabel="'Request' global label"
+							fieldLabel="'Request' shared label"
 							name="request" />
+					<cancel jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/dialog/label"
+							fieldLabel="'Cancel' global label"
+							name="/cancel" />
 				</items>
 			</column>
 		</items>
