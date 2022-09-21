@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
 		jcr:primaryType="nt:unstructured"
-		jcr:title="Sample Global Labels Component"
+		jcr:title="Sample 'Labels' Component"
 		sling:resourceType="cq/gui/components/authoring/dialog">
 	<content jcr:primaryType="nt:unstructured"
 			sling:resourceType="granite/ui/components/foundation/container">
@@ -17,7 +17,7 @@
 							name="i18n-label-local" />
 					<i18n-label-global jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
-							fieldLabel="'i18n-label-global' shared label"
+							fieldLabel="'i18n-label-global' global label"
 							name="/i18n-label-global" />
 					<local-label-set jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
@@ -25,7 +25,7 @@
 							name="local-label-set" />
 					<global-label-set jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
-							fieldLabel="'global-label-set' shared label"
+							fieldLabel="'global-label-set' global label"
 							name="/global-label-set" />
 					<local-label-unset jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
@@ -33,7 +33,7 @@
 							name="local-label-unset" />
 					<global-label-unset jcr:primaryType="nt:unstructured"
 							sling:resourceType="enigmatic/dialog/label"
-							fieldLabel="'global-label-unset' shared label"
+							fieldLabel="'global-label-unset' global label"
 							name="/global-label-unset" />
 				</items>
 			</column>

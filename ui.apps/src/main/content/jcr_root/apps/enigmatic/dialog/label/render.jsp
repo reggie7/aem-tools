@@ -111,7 +111,7 @@ TextField
     final SharedLabel label = new SharedLabel(slingRequest);
 
     attrs.add("type", "text");
-    attrs.add("name", label.getPath());
+    attrs.add("name", label.getValuePath());
     attrs.add("placeholder", i18n.getVar(cfg.get("emptyText", String.class)));
     attrs.addDisabled(cfg.get("disabled", false));
     attrs.add("autocomplete", cfg.get("autocomplete", String.class));
@@ -151,4 +151,5 @@ TextField
 
     attrs.addClass("coral-Textfield");
 
-%><input <%= attrs.build() %>>
+%><input <%= attrs.build() %> />
+<input name="<%= label.getPath() %>/sling:resourceType" type="hidden" value="enigmatic/labels/value" />

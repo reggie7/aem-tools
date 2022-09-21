@@ -29,6 +29,10 @@ public final class SharedLabel {
 	}
 
 	public String getPath() {
+		return target.getPath();
+	}
+
+	public String getValuePath() {
 		return KeyTools.keyToPath(target.getPath(), PN_VALUE);
 	}
 

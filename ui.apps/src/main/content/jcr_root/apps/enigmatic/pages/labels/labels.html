@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title data-sly-use.lib="enigmatic/libs/page.html">
+		<sly data-sly-call="${lib.title @ page=currentPage}" />
+	</title>
+	<sly data-sly-use.clientLib="granite/sightly/templates/clientlib.html"
+		 data-sly-call="${clientLib.all @ categories='enigmatic.author'}" />
+</head>
+<body>
+<sly data-sly-template.row="${@path}">
+	<tr id="${path}">
+		<td><strong>${path}</strong></td>
+		<td><div data-sly-resource="${path @ resourceType='enigmatic/labels/value'}"></div></td>
+	</tr>
+</sly>
+<table class="author-table author-margin">
+	<thead class="blue">
+	<tr>
+		<th>Label ID</th>
+		<th>Label Value</th>
+	</tr>
+	</thead>
+	<tbody>
+		<sly data-sly-call="${row @ path='i18n-label-global'}" />
+		<sly data-sly-call="${row @ path='global-label-set'}" />
+		<sly data-sly-call="${row @ path='global-label-unset'}" />
+	</tbody>
+</table>
+</body>
+</html>
