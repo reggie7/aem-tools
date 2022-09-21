@@ -35,6 +35,10 @@
 							sling:resourceType="enigmatic/dialog/label/shared"
 							fieldLabel="'global-label-unset' global label"
 							name="/global-label-unset" />
+					<global-label-unset jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/dialog/label/shared"
+							fieldLabel="Interpolated Label"
+							name="/interpolated" />
 				</items>
 			</column>
 		</items>

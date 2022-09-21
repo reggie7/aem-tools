@@ -3,4 +3,4 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="Labels Page"
 	sling:resourceSuperType="enigmatic/labels/page"
-	ids="[i18n-label-global,global-label-set,global-label-unset]" />
+	ids="[i18n-label-global,global-label-set,global-label-unset,interpolated]" />
