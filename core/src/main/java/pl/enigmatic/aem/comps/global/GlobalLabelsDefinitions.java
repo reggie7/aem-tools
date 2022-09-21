@@ -77,6 +77,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 		if (StringUtils.isBlank(label)) {
 			return null;
 		}
+
 		String result = WordUtils.capitalize(label);
 		result = result.replaceAll("\\W", StringUtils.EMPTY);
 		result = result.substring(0, 1).toLowerCase() + result.substring(1);
@@ -90,6 +91,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 			list.add(0, page);
 			page = page.getParent();
 		}
+
 		return list;
 	}
 
@@ -99,6 +101,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 		for (final String d : definitions) {
 			list.add(new Label(d));
 		}
+
 		for (final Page p : pages) {
 			final ValueMap vm = p.getProperties(relPath);
 			definitions = vm.get(DEFINITIONS, new String[0]);
@@ -106,6 +109,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 				list.add(new Label(d, p));
 			}
 		}
+
 		return list;
 	}
 
@@ -114,6 +118,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 		for (final Map.Entry<String, Label> e : entrySet()) {
 			map.put(e.getKey(), e.getValue().getText());
 		}
+
 		return map;
 	}
 
@@ -149,6 +154,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 		public String toString() {
 			return text;
 		}
+
 	}
 
 }

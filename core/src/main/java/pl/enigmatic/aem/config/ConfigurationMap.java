@@ -67,6 +67,7 @@ public class ConfigurationMap extends HashMap<String, Object> implements ValueMa
 					return defaultValue;
 				}
 			}
+
 			return value;
 		}
 	}
@@ -88,9 +89,11 @@ public class ConfigurationMap extends HashMap<String, Object> implements ValueMa
 		if (value == null || type == null) {
 			return (T) value;
 		}
+
 		if (String.class.equals(type)) {
 			return (T) String.valueOf(value);
 		}
+
 		return type.cast(value);
 	}
 

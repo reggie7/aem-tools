@@ -41,8 +41,10 @@ public class GlobalLabelsSubstitutor extends ComponentModel {
 					substitutions.put(placeholder, value);
 				}
 			}
+
 			request.setAttribute(getClass().getName(), substitutions);
 		}
+
 		text = substitutions.substitute(text);
 	}
 

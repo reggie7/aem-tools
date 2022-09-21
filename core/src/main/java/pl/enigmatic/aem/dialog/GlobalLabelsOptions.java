@@ -28,6 +28,7 @@ public class GlobalLabelsOptions extends ResourceWrapper implements GetOptions {
 			String text = l.getValue().getText();
 			list.add(new Entry(key, text));
 		}
+
 		return list;
 	}
 }

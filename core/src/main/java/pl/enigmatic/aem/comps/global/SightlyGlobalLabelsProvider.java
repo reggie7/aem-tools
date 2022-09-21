@@ -23,4 +23,5 @@ public final class SightlyGlobalLabelsProvider implements BindingsValuesProvider
 
         bindings.put(ON_NAME, ((Resource) bindings.get(SlingBindings.RESOURCE)).adaptTo(GlobalLabels.class));
     }
+
 }
