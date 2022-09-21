@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
-	jcr:primaryType="cq:Page">
-	<jcr:content jcr:primaryType="cq:PageContent"
-		jcr:title="Global Labels"
-		sling:resourceType="mobirise/global/labels/page" />
-</jcr:root>
+	jcr:primaryType="cq:Component"
+	jcr:title="Labels Page"
+	sling:resourceSuperType="enigmatic/labels/page"
+	ids="[i18n-label-global,global-label-set,global-label-unset]" />

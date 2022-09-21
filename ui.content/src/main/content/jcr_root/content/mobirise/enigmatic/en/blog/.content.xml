@@ -18,10 +18,10 @@
 		<labels jcr:primaryType="nt:unstructured"
 			sling:resourceType="mobirise/global/labels">
 			<by jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/global/labels/value"
+				sling:resourceType="enigmatic/labels/value"
 				value="By" />
 			<posted jcr:primaryType="nt:unstructured"
-				sling:resourceType="mobirise/global/labels/value"
+				sling:resourceType="enigmatic/labels/value"
 				value="posted" />
 		</labels>
 		<content jcr:primaryType="nt:unstructured"

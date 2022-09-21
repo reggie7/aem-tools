@@ -20,10 +20,11 @@
 		<th>Label Value</th>
 	</tr>
 	</thead>
-	<tbody>
-		<sly data-sly-call="${row @ path='i18n-label-global'}" />
-		<sly data-sly-call="${row @ path='global-label-set'}" />
-		<sly data-sly-call="${row @ path='global-label-unset'}" />
+	<tbody data-sly-list="${component.properties.ids}">
+		<tr id="${item}">
+			<td><strong>${item}</strong></td>
+			<td><div data-sly-resource="${item @ resourceType='enigmatic/labels/value'}"></div></td>
+		</tr>
 	</tbody>
 </table>
 </body>

@@ -3,9 +3,9 @@
 	jcr:primaryType="cq:Page">
 	<jcr:content jcr:primaryType="cq:PageContent"
 		jcr:title="Polski"
-		sling:resourceType="enigmatic/pages/labels">
+		sling:resourceType="mobirise/global/labels/page">
 		<global-label-set jcr:primaryType="nt:unstructured"
-			sling:resourceType="enigmatic/labels/value"
+			sling:resourceType="mobirise/labels/value"
 			value="To jest tłumaczenie globalne." />
 	</jcr:content>
 </jcr:root>
