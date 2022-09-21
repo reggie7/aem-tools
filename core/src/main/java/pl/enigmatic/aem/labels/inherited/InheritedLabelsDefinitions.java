@@ -17,6 +17,7 @@ import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.components.Component;
 import com.day.cq.wcm.api.components.ComponentManager;
 
+import pl.enigmatic.aem.labels.Constants;
 import pl.enigmatic.aem.tools.PageTools;
 
 /**
@@ -29,8 +30,6 @@ public class InheritedLabelsDefinitions extends LinkedHashMap<String, InheritedL
 	 * default serial version UID
 	 */
 	private static final long serialVersionUID = 1L;
-	public static final String NN_LABELS = "labels";
-	public static final String PN_VALUE = "value";
 	private static final String DEFINITIONS = "definitions";
 	private final transient Page currentPage;
 	private final String relPath;
@@ -65,7 +64,7 @@ public class InheritedLabelsDefinitions extends LinkedHashMap<String, InheritedL
 
 	public static InheritedLabelsDefinitions create(final Resource resource) {
 		final Page currentPage = PageTools.getContainingPage(resource);
-		return new InheritedLabelsDefinitions(currentPage.getContentResource(NN_LABELS), currentPage);
+		return new InheritedLabelsDefinitions(currentPage.getContentResource(Constants.NN_LABELS), currentPage);
 	}
 
 	/**

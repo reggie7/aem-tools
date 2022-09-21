@@ -34,7 +34,7 @@ public class InheritedLabelsSubstitutor extends ComponentModel {
 	protected void init() {
 		if (substitutions == null) {
 			substitutions = new TemplateSubstitutor();
-			final InheritedLabels labels = new InheritedLabels(request.getResource());
+			final InheritedLabelsMap labels = new InheritedLabelsMap(request.getResource());
 			for (final String placeholder : labels.keySet()) {
 				final String value = labels.get(placeholder, String.class);
 				if (StringUtils.isNotBlank(value)) {

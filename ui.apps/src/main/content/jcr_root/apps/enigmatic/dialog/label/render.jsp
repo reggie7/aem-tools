@@ -21,7 +21,7 @@
                   com.adobe.granite.ui.components.Config,
                   com.adobe.granite.ui.components.Field,
                   com.adobe.granite.ui.components.Tag,
-                  pl.enigmatic.aem.dialog.SharedLabel" %><%--###
+                  pl.enigmatic.aem.labels.shared.dialog.SharedLabel" %><%--###
 TextField
 =========
 
