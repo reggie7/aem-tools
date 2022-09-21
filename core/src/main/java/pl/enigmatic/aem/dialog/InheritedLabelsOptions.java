@@ -9,18 +9,18 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceWrapper;
 
-import pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions;
-import pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions.Label;
+import pl.enigmatic.aem.labels.inherited.InheritedLabelsDefinitions;
+import pl.enigmatic.aem.labels.inherited.InheritedLabelsDefinitions.Label;
 
-public class GlobalLabelsOptions extends ResourceWrapper implements GetOptions {
+public class InheritedLabelsOptions extends ResourceWrapper implements GetOptions {
 
-	public GlobalLabelsOptions(final Resource resource) {
+	public InheritedLabelsOptions(final Resource resource) {
 		super(resource);
 	}
 
 	@Override
 	public Collection<Entry> getOptions() {
-		final GlobalLabelsDefinitions labels = GlobalLabelsDefinitions.create(this);
+		final InheritedLabelsDefinitions labels = InheritedLabelsDefinitions.create(this);
 		final List<Entry> list = new LinkedList<>();
 		list.add(new Entry(StringUtils.EMPTY, StringUtils.EMPTY));
 		for (final Map.Entry<String, Label> l : labels.entrySet()) {

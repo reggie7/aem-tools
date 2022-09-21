@@ -4,9 +4,9 @@
 	<div class="caption">
 		<div data-sly-test="${properties.title || properties.text}">
 			<h3 data-sly-test="${properties.title}"
-				data-sly-use.gls="${'pl.enigmatic.aem.comps.global.GlobalLabelsSubstitutor' @ text=properties.title}">${gls.text}</h3>
+				data-sly-use.ils="${'pl.enigmatic.aem.labels.inherited.InheritedLabelsSubstitutor' @ text=properties.title}">${ils.text}</h3>
 			<p data-sly-test="${properties.text}"
-				data-sly-use.gls="${'pl.enigmatic.aem.comps.global.GlobalLabelsSubstitutor' @ text=properties.text}">${gls.text}</p>
+				data-sly-use.ils="${'pl.enigmatic.aem.labels.inherited.InheritedLabelsSubstitutor' @ text=properties.text}">${ils.text}</p>
 		</div>
 		<div data-sly-test="${!wcmmode.disabled || hasChildren['links']}"
 			class="group" data-sly-resource="${'links' @ resourceType='enigmatic/foundation/parsys'}"></div>

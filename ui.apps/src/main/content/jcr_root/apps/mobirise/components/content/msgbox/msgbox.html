@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-8">
-				<h2 data-sly-use.gls="${'pl.enigmatic.aem.comps.global.GlobalLabelsSubstitutor' @ text=properties.text}">${gls.text}</h2>
+				<h2 data-sly-use.ils="${'pl.enigmatic.aem.labels.inherited.InheritedLabelsSubstitutor' @ text=properties.text}">${ils.text}</h2>
 			</div>
 			<div class="col-sm-4" data-sly-use.hasChildren="pl.enigmatic.aem.HasChildren">
 				<div class="group" data-sly-test="${!wcmmode.disabled || hasChildren['links']}"

@@ -1,4 +1,4 @@
-package pl.enigmatic.aem.comps.global;
+package pl.enigmatic.aem.labels.inherited;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -23,7 +23,7 @@ import pl.enigmatic.aem.tools.PageTools;
  * @author Radosław Wesołowski
  */
 @Model(adaptables = {SlingHttpServletRequest.class, Resource.class})
-public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsDefinitions.Label> {
+public class InheritedLabelsDefinitions extends LinkedHashMap<String, InheritedLabelsDefinitions.Label> {
 
 	/**
 	 * default serial version UID
@@ -36,7 +36,7 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 	private final String relPath;
 	private final transient Component component;
 
-	private GlobalLabelsDefinitions(final Resource resource, final Page currentPage) {
+	private InheritedLabelsDefinitions(final Resource resource, final Page currentPage) {
 		this.currentPage = currentPage;
 		relPath = PageTools.getRelativePath(resource, currentPage);
 		final ComponentManager componentManager = resource.getResourceResolver().adaptTo(ComponentManager.class);
@@ -52,20 +52,20 @@ public class GlobalLabelsDefinitions extends LinkedHashMap<String, GlobalLabelsD
 	/**
 	 * Default constructor
 	 */
-	public GlobalLabelsDefinitions(final Resource resource) {
+	public InheritedLabelsDefinitions(final Resource resource) {
 		this(resource, PageTools.getContainingPage(resource));
 	}
 
 	/**
 	 * Default constructor
 	 */
-	public GlobalLabelsDefinitions(final SlingHttpServletRequest request) {
+	public InheritedLabelsDefinitions(final SlingHttpServletRequest request) {
 		this(request.getResource());
 	}
 
-	public static GlobalLabelsDefinitions create(final Resource resource) {
+	public static InheritedLabelsDefinitions create(final Resource resource) {
 		final Page currentPage = PageTools.getContainingPage(resource);
-		return new GlobalLabelsDefinitions(currentPage.getContentResource(NN_LABELS), currentPage);
+		return new InheritedLabelsDefinitions(currentPage.getContentResource(NN_LABELS), currentPage);
 	}
 
 	/**

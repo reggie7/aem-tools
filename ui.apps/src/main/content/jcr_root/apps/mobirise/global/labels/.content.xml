@@ -3,5 +3,5 @@
 	jcr:primaryType="cq:Component"
 	jcr:title="Global Labels"
 	jcr:description="Global labels"
-	sling:resourceSuperType="enigmatic/global/labels"
+	sling:resourceSuperType="enigmatic/labels"
 	definitions="[By,posted,Learn More,Previous,Next,Open,Close]" />

@@ -14,10 +14,10 @@
 			sling:resourceType="mobirise/global/labels"
 			definitions="[Submit,Clear,Company,Year]">
 			<company jcr:primaryType="nt:unstructured"
-				sling:resourceType="enigmatic/global/labels/value"
+				sling:resourceType="enigmatic/labels/value"
 				value="Reggie #7" />
 			<year jcr:primaryType="nt:unstructured"
-				sling:resourceType="enigmatic/global/labels/value"
+				sling:resourceType="enigmatic/labels/value"
 				value="2018" />
 		</labels>
 		<content jcr:primaryType="nt:unstructured"

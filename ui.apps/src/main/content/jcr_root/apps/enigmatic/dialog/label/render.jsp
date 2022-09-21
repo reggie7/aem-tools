@@ -21,7 +21,7 @@
                   com.adobe.granite.ui.components.Config,
                   com.adobe.granite.ui.components.Field,
                   com.adobe.granite.ui.components.Tag,
-                  pl.enigmatic.aem.dialog.GlobalLabel" %><%--###
+                  pl.enigmatic.aem.dialog.SharedLabel" %><%--###
 TextField
 =========
 
@@ -108,7 +108,7 @@ TextField
     attrs.addOthers(cfg.getProperties(), "id", "class", "rel", "title", "type", "name", "value", "emptyText", "disabled", "required", "validation", "maxlength", "fieldLabel", "fieldDescription", "renderReadOnly", "ignoreData");
     // End of attrs compatibility.
 
-    final GlobalLabel label = new GlobalLabel(slingRequest);
+    final SharedLabel label = new SharedLabel(slingRequest);
 
     attrs.add("type", "text");
     attrs.add("name", label.getPath());

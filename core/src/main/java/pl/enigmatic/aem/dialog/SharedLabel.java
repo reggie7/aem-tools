@@ -10,14 +10,14 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.SyntheticResource;
 import org.apache.sling.api.resource.ValueMap;
-import pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions;
+import pl.enigmatic.aem.labels.inherited.InheritedLabelsDefinitions;
 
 import java.util.Locale;
 import java.util.Optional;
 
-import static pl.enigmatic.aem.comps.global.GlobalLabelsDefinitions.PN_VALUE;
+import static pl.enigmatic.aem.labels.inherited.InheritedLabelsDefinitions.PN_VALUE;
 
-public final class GlobalLabel {
+public final class SharedLabel {
 
 	private static final String SLASH = "/";
 
@@ -28,7 +28,7 @@ public final class GlobalLabel {
 	private final Page page;
 	private final Resource target;
 
-	public GlobalLabel(final SlingHttpServletRequest request) {
+	public SharedLabel(final SlingHttpServletRequest request) {
 		resolver = request.getResourceResolver();
 		widget = request.getResource();
 		final ValueMap widgetProps = widget.getValueMap();
@@ -45,7 +45,7 @@ public final class GlobalLabel {
 		final Locale locale = page.getLanguage();
 		final String path = SLASH + join(
 				"content",
-				GlobalLabelsDefinitions.NN_LABELS,
+				InheritedLabelsDefinitions.NN_LABELS,
 				locale.getLanguage().toLowerCase(),
 				locale.getCountry().toLowerCase(),
 				JcrConstants.JCR_CONTENT,
@@ -55,7 +55,7 @@ public final class GlobalLabel {
 	}
 
 	private Resource resolveLocalResource() {
-		final String path = join(GlobalLabelsDefinitions.NN_LABELS, name);
+		final String path = join(InheritedLabelsDefinitions.NN_LABELS, name);
 		return Optional.of(path).map(page::getContentResource)
 				.orElseGet(() -> syntheticResource(join(page.getContentResource().getPath(), path)));
 	}

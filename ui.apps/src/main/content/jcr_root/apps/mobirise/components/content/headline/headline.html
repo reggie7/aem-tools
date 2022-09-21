@@ -5,8 +5,8 @@
 	<div class="mbr-section__container container mbr-section__container--isolated">
 		<div class="mbr-header mbr-header--wysiwyg row">
 			<div class="col-sm-8 col-sm-offset-2" data-sly-unwrap="${properties.align == 'left'}">
-				<h3 data-sly-use.gls="${'pl.enigmatic.aem.comps.global.GlobalLabelsSubstitutor' @ text=properties.text}"
-					class="mbr-header__text">${gls.text}</h3>
+				<h3 data-sly-use.ils="${'pl.enigmatic.aem.labels.inherited.InheritedLabelsSubstitutor' @ text=properties.text}"
+					class="mbr-header__text">${ils.text}</h3>
 			</div>
 		</div>
 	</div>

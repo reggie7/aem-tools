@@ -1,4 +1,4 @@
-package pl.enigmatic.aem.comps.global;
+package pl.enigmatic.aem.labels.inherited;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -14,7 +14,7 @@ import pl.enigmatic.tools.TemplateSubstitutor;
  * @author Radosław Wesołowski
  */
 @Model(adaptables = SlingHttpServletRequest.class)
-public class GlobalLabelsSubstitutor extends ComponentModel {
+public class InheritedLabelsSubstitutor extends ComponentModel {
 
 	@Inject
 	private String text;
@@ -25,7 +25,7 @@ public class GlobalLabelsSubstitutor extends ComponentModel {
 	 * Default constructor
 	 * @param request
 	 */
-	public GlobalLabelsSubstitutor(final SlingHttpServletRequest request) {
+	public InheritedLabelsSubstitutor(final SlingHttpServletRequest request) {
 		super(request);
 		substitutions = (TemplateSubstitutor) request.getAttribute(getClass().getName());
 	}
@@ -34,7 +34,7 @@ public class GlobalLabelsSubstitutor extends ComponentModel {
 	protected void init() {
 		if (substitutions == null) {
 			substitutions = new TemplateSubstitutor();
-			final GlobalLabels labels = new GlobalLabels(request.getResource());
+			final InheritedLabels labels = new InheritedLabels(request.getResource());
 			for (final String placeholder : labels.keySet()) {
 				final String value = labels.get(placeholder, String.class);
 				if (StringUtils.isNotBlank(value)) {
