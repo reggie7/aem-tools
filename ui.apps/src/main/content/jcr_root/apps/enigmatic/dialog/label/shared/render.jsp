@@ -2,7 +2,7 @@
   ADOBE CONFIDENTIAL
   ___________________
 
-  Copyright 2015 Adobe
+  Copyright 2013 Adobe
   All Rights Reserved.
 
   NOTICE: All information contained herein is, and remains
@@ -20,22 +20,24 @@
                   com.adobe.granite.ui.components.AttrBuilder,
                   com.adobe.granite.ui.components.Config,
                   com.adobe.granite.ui.components.Field,
-                  com.adobe.granite.ui.components.Tag" %><%--###
+                  com.adobe.granite.ui.components.Tag,
+                  pl.enigmatic.aem.labels.shared.dialog.SharedLabel" %><%--###
 TextField
 =========
 
-.. granite:servercomponent:: /libs/granite/ui/components/coral/foundation/form/textfield
-   :supertype: /libs/granite/ui/components/coral/foundation/form/field
+.. granite:servercomponent:: /libs/granite/ui/components/foundation/form/textfield
+   :supertype: /libs/granite/ui/components/foundation/form/field
+   :deprecated:
 
    A text field component.
 
-   It extends :granite:servercomponent:`Field </libs/granite/ui/components/coral/foundation/form/field>` component.
+   It extends :granite:servercomponent:`Field </libs/granite/ui/components/foundation/form/field>` component.
 
    It has the following content structure:
 
    .. gnd:gnd::
 
-      [granite:FormTextField] > granite:FormField
+      [granite:FormTextField] > granite:FormField, granite:commonAttrs
 
       /**
        * The name that identifies the field when submitting the form.
@@ -67,7 +69,7 @@ TextField
        *
        * See also `MDN documentation regarding autocomplete attribute <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input>`_.
        */
-      - autocomplete (String) = 'off'
+      - autocomplete (String)
 
       /**
        * The ``autofocus`` attribute to lets you specify that the field should have input focus when the page loads,
@@ -78,7 +80,7 @@ TextField
 
       /**
        * The name of the validator to be applied. E.g. ``foundation.jcr.name``.
-       * See :doc:`validation </jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index>` in Granite UI.
+       * See :doc:`validation </jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index>` in Granite UI.
        */
       - validation (String) multiple
 
@@ -98,13 +100,31 @@ TextField
     AttrBuilder attrs = tag.getAttrs();
     cmp.populateCommonAttrs(attrs);
 
+    // Start of attrs compatibility; please use cmp.populateCommonAttrs(attrs).
+    attrs.add("id", cfg.get("id", String.class));
+    attrs.addClass(cfg.get("class", String.class));
+    attrs.addRel(cfg.get("rel", String.class));
+    attrs.add("title", i18n.getVar(cfg.get("title", String.class)));
+    attrs.addOthers(cfg.getProperties(), "id", "class", "rel", "title", "type", "name", "value", "emptyText", "disabled", "required", "validation", "maxlength", "fieldLabel", "fieldDescription", "renderReadOnly", "ignoreData");
+    // End of attrs compatibility.
+
+    final SharedLabel label = new SharedLabel(slingRequest);
+
     attrs.add("type", "text");
-    attrs.add("name", cfg.get("name", String.class));
+    attrs.add("name", label.getValuePath());
     attrs.add("placeholder", i18n.getVar(cfg.get("emptyText", String.class)));
-    attrs.add("aria-label", i18n.getVar(cfg.get("emptyText", String.class)));
     attrs.addDisabled(cfg.get("disabled", false));
     attrs.add("autocomplete", cfg.get("autocomplete", String.class));
     attrs.addBoolean("autofocus", cfg.get("autofocus", false));
+
+    if (isMixed) {
+        attrs.addClass("foundation-field-mixed");
+        attrs.add("placeholder", i18n.get("<Mixed Entries>"));
+    } else {
+        attrs.add("value", label.getValue());
+    }
+
+    attrs.add("maxlength", cfg.get("maxlength", Integer.class));
 
     String fieldLabel = cfg.get("fieldLabel", String.class);
     String fieldDesc = cfg.get("fieldDescription", String.class);
@@ -119,29 +139,17 @@ TextField
     }
 
     if (StringUtils.isNotBlank(labelledBy)) {
-        attrs.add("labelledby", labelledBy);
+        attrs.add("aria-labelledby", labelledBy);
     }
-
-    if (isMixed) {
-        attrs.addClass("foundation-field-mixed");
-        attrs.add("placeholder", i18n.get("<Mixed Entries>"));
-        attrs.add("aria-label", i18n.get("<Mixed Entries>"));
-    } else {
-        attrs.add("value", vm.get("value", String.class));
-    }
-
-    attrs.add("maxlength", cfg.get("maxlength", Integer.class));
 
     if (cfg.get("required", false)) {
         attrs.add("aria-required", true);
     }
 
     String validation = StringUtils.join(cfg.get("validation", new String[0]), " ");
-    attrs.add("data-foundation-validation", validation);
-    attrs.add("data-validation", validation); // Compatibility
+    attrs.add("data-validation", validation);
 
-    // @coral
-    attrs.add("is", "coral-textfield");
+    attrs.addClass("coral-Textfield");
 
-%><input <%= attrs.build() %>>
-<input name="<%= cfg.get("name", String.class) %>/../sling:resourceType" type="hidden" value="enigmatic/labels/value" />
+%><input <%= attrs.build() %> />
+<input name="<%= label.getPath() %>/sling:resourceType" type="hidden" value="enigmatic/labels/value" />
