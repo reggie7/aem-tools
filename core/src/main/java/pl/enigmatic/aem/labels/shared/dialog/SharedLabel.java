@@ -3,11 +3,12 @@ package pl.enigmatic.aem.labels.shared.dialog;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
+import pl.enigmatic.aem.labels.shared.KeyTools;
 import pl.enigmatic.aem.labels.shared.SharedLabelSources;
 import pl.enigmatic.tools.PathTools;
 
-import static pl.enigmatic.aem.labels.Constants.PN_VALUE;
 import static pl.enigmatic.aem.labels.Constants.DEFAULT_LANG_ROOT_DEPTH;
+import static pl.enigmatic.aem.labels.Constants.PN_VALUE;
 
 public final class SharedLabel {
 
@@ -28,7 +29,7 @@ public final class SharedLabel {
 	}
 
 	public String getPath() {
-		return PathTools.path(target.getPath(), PN_VALUE);
+		return KeyTools.keyToPath(target.getPath(), PN_VALUE);
 	}
 
 	public String getValue() {

@@ -4,10 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Model;
-import pl.enigmatic.aem.config.ConfigurationMap;
-import pl.enigmatic.aem.labels.Constants;
-import pl.enigmatic.aem.labels.inherited.InheritedLabelsDefinitions;
-import pl.enigmatic.tools.PathTools;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -39,7 +35,7 @@ public final class SharedLabelsMap extends HashMap<String, String> {
 
 	@Override
 	public String get(final Object key) {
-		final String path = PathTools.path(key, PN_VALUE);
+		final String path = KeyTools.keyToPath(key, PN_VALUE);
 		return sources.stream().map(vm -> vm.get(path))
 				.filter(Objects::nonNull).map(String::valueOf).filter(StringUtils::isNotBlank)
 				.findFirst().orElseGet(key::toString);

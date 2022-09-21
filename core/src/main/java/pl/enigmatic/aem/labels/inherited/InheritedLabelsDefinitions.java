@@ -1,24 +1,18 @@
 package pl.enigmatic.aem.labels.inherited;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.components.Component;
+import com.day.cq.wcm.api.components.ComponentManager;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.text.WordUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Model;
-
-import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.components.Component;
-import com.day.cq.wcm.api.components.ComponentManager;
-
 import pl.enigmatic.aem.labels.Constants;
 import pl.enigmatic.aem.tools.PageTools;
+
+import java.util.*;
 
 /**
  * @author Radosław Wesołowski

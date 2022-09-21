@@ -1,14 +1,13 @@
 package pl.enigmatic.aem.labels.inherited;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
-
 import pl.enigmatic.aem.ComponentModel;
 import pl.enigmatic.tools.TemplateSubstitutor;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 /**
  * @author Radosław Wesołowski

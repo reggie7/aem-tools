@@ -27,10 +27,10 @@ public final class SharedLabelSources {
 				.map(resolver.adaptTo(PageManager.class)::getContainingPage)
 				.map(p -> p.getParent(p.getDepth() - langRootDepth))
 				.get();
-		langRootLabels = defaultIfNull(page.getContentResource(name), PathTools.path(page.getContentResource().getPath(), name));
+		langRootLabels = defaultIfNull(page.getContentResource(name), KeyTools.keyToPath(page.getContentResource().getPath(), name));
 		{
 			final Locale locale = page.getLanguage();
-			final String path = PathTools.separator + PathTools.path(
+			final String path = PathTools.separator + KeyTools.keyToPath(
 					Constants.CONTENT,
 					name,
 					locale.getLanguage().toLowerCase(),
@@ -46,23 +46,23 @@ public final class SharedLabelSources {
 	}
 
 	private Resource defaultChildIfNull(final Resource parent, final String path) {
-		return defaultIfNull(parent.getChild(path), PathTools.path(parent.getPath(), path));
+		return defaultIfNull(parent.getChild(path), KeyTools.keyToPath(parent.getPath(), path));
 	}
 
 	public Resource getLangRootLabels() {
 		return langRootLabels;
 	}
 
-	public Resource getLangRootLabel(final String path) {
-		return defaultChildIfNull(langRootLabels, path);
+	public Resource getLangRootLabel(final String key) {
+		return defaultChildIfNull(langRootLabels, KeyTools.keyToPath(key));
 	}
 
 	public Resource getGlobalLabels() {
 		return globalLabels;
 	}
 
-	public Resource getGlobalLabel(final String path) {
-		return defaultChildIfNull(globalLabels, path);
+	public Resource getGlobalLabel(final String key) {
+		return defaultChildIfNull(globalLabels, KeyTools.keyToPath(key));
 	}
 
 }
