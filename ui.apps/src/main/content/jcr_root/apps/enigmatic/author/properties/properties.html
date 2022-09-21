@@ -1,12 +1,12 @@
 <table data-sly-use.labels="pl.enigmatic.aem.PropertiesComponent"
-	data-sly-test="${!labels.empty}" class="author-table">
+	data-sly-test="${!inheritedLabels.empty}" class="author-table">
 	<thead class="blue">
 		<tr>
 			<th>Property</th>
 			<th>Value</th>
 		</tr>
 	</thead>
-	<tbody data-sly-list="${labels.entrySet}">
+	<tbody data-sly-list="${inheritedLabels.entrySet}">
 		<tr>
 			<td><strong>${item.value}</strong></td>
 			<td>${properties[item.key]}</td>

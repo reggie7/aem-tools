@@ -10,12 +10,12 @@
 					class="author-msg-line author-notice">This component uses global labels.</span>
 				<p data-sly-test="${properties.author || properties.date}" class="mbr-header__subtext">
 					<sly data-sly-test="${properties.author}" data-sly-use.helper="${'pl.enigmatic.mobirise.aem.core.GetUser' @ id=properties.author}">
-						${labels['by']} ${helper.givenName} ${helper.familyName}
+						${inheritedLabels['by']} ${helper.givenName} ${helper.familyName}
 					</sly>
 					<sly data-sly-test="${properties.date}"
 						data-sly-use.configs="pl.enigmatic.mobirise.aem.comps.global.GlobalConfig"
 						data-sly-use.helper="${'pl.enigmatic.aem.FormatDate' @ format=configs['date/format'], calendar=properties.date}">
-						${properties.date ? labels['posted'] : null} ${helper.toString}
+						${properties.date ? inheritedLabels['posted'] : null} ${helper.toString}
 					</sly>
 				</p>
 			</div>
