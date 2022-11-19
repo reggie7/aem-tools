@@ -1,5 +1,7 @@
 {
     "maark.button.yes": "YES",
     "maark.button.no": "NO",
-    "maark.dashboard.text": "I represent a DASHBOARD, you add me only once here in English branch, right?"
+    "maark.dashboard.text": "I represent a DASHBOARD, you add me only once here in English branch, right?",
+
+    "Proper I18N Usage": "Proper I18N Usage"
 }
