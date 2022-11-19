@@ -8,5 +8,8 @@
 	<filter root="/etc/designs/mobirise" />
 	<filter root="/conf/mobirise" />
 
+	<filter root="/apps/maark" />
+	<filter root="/etc/designs/maark" />
+
 	<filter root="/etc/map/http" />
 </workspaceFilter>

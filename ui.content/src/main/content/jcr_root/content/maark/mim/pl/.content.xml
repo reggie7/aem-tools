@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	jcr:primaryType="cq:Page">
+	<jcr:content jcr:primaryType="cq:PageContent"
+		jcr:title="Polski"
+		sling:resourceType="mobirise/pages/lang"
+		cq:designPath="/etc/designs/mobirise"
+		cq:template="/apps/mobirise/templates/lang"
+		cq:allowedTemplates="[/apps/maark/template]"
+		pageTitle="MIM"
+		subtitle="MIM w AEMie"
+		navTitle="Strona domowa">
+		<configs jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/configs" />
+		<labels jcr:primaryType="nt:unstructured"
+			sling:resourceType="mobirise/global/labels">
+			<local-label-set jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/labels/value"
+				value="To jest tłumaczenie lokalne." />
+		</labels>
+		<content jcr:primaryType="nt:unstructured"
+			sling:resourceType="enigmatic/foundation/parsys" />
+	</jcr:content>
+</jcr:root>

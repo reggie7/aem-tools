@@ -8,4 +8,6 @@
 	<filter root="/content/mobirise" />
 	<filter root="/content/dam/mobirise" />
 	<filter root="/content/projects/mobirise" />
+
+	<filter root="/content/maark" />
 </workspaceFilter>

@@ -1,0 +1,5 @@
+{
+    "i18n-label-local": "This local value comes from i18n.",
+    "i18n-label-global": "This global value comes from i18n.",
+    "interpolated": "This page title is '{0}' - and we got it through string interpolation."
+}
