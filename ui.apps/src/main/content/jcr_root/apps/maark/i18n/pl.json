@@ -1,5 +1,5 @@
 {
-    "i18n-label-local": "To jest lokalne tłumaczenie z i18n.",
-    "i18n-label-global": "To jest globalne tłumaczenie z i18n.",
-    "interpolated": "Strona ma tytuł '{0}' - dodaliśmy ją w interpolacji łańcucha."
+    "maark.button.yes": "TAK",
+    "maark.button.no": "NIE",
+    "maark.dashboard.text": "Reprezentuję BIEDĘ, wiecie, co z nim zrobić Polaki Cebulaki, prawda?"
 }
