@@ -10,7 +10,10 @@
 	<packaging>pom</packaging>
 	<version>2017.1-SNAPSHOT</version>
 	<name>AEM Tools Project</name>
-	<description>Project for the tools AEM lacks (or lacked when I needed them or I didn't know/couldn't find them) that I use often in the projects I take part in.</description>
+	<description>
+		Project for the tools AEM lacks (or lacked when I needed them / I didn't know/couldn't find them)
+		that I use often in the projects I take part in.
+	</description>
 
 	<properties>
 		<aem.host>localhost</aem.host>
