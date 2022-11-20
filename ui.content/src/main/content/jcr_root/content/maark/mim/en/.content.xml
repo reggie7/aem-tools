@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
-	jcr:primaryType="cq:Page">
+		  jcr:primaryType="cq:Page">
 	<jcr:content jcr:primaryType="cq:PageContent"
-		jcr:title="English"
-		sling:resourceType="mobirise/pages/lang"
-		cq:designPath="/etc/designs/mobirise"
-		cq:template="/apps/mobirise/templates/lang"
-	    cq:allowedTemplates="[/apps/maark/template]"
-		pageTitle="MIM"
-		subtitle="MIM AEM implementation"
-		navTitle="Home">
+				 jcr:title="English"
+				 sling:resourceType="mobirise/pages/lang"
+				 cq:designPath="/etc/designs/mobirise"
+				 cq:template="/apps/mobirise/templates/lang"
+				 cq:allowedTemplates="[/apps/maark/template]"
+				 pageTitle="MIM"
+				 subtitle="MIM AEM implementation"
+				 navTitle="Home">
 		<configs jcr:primaryType="nt:unstructured"
-			sling:resourceType="mobirise/global/configs" />
+				 sling:resourceType="mobirise/global/configs" />
 		<labels jcr:primaryType="nt:unstructured"
-			sling:resourceType="mobirise/global/labels">
-			<local-label-set jcr:primaryType="nt:unstructured"
+				sling:resourceType="mobirise/global/labels">
+			<yes jcr:primaryType="nt:unstructured"
+				 sling:resourceType="enigmatic/labels/value"
+				 value="Yes" />
+			<no jcr:primaryType="nt:unstructured"
 				sling:resourceType="enigmatic/labels/value"
-				value="This is a local value." />
+				value="No" />
+			<cancel jcr:primaryType="nt:unstructured"
+				sling:resourceType="enigmatic/labels/value"
+				value="Cancel" />
 		</labels>
 		<content jcr:primaryType="nt:unstructured"
-			sling:resourceType="enigmatic/foundation/parsys" />
+				 sling:resourceType="enigmatic/foundation/parsys" />
 	</jcr:content>
 </jcr:root>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-		jcr:primaryType="nt:unstructured"
-		jcr:title="Lang Page"
-		sling:resourceType="cq/gui/components/authoring/dialog">
+		  jcr:primaryType="nt:unstructured"
+		  jcr:title="Lang Page"
+		  sling:resourceType="cq/gui/components/authoring/dialog">
 	<content jcr:primaryType="nt:unstructured"
-			sling:resourceType="granite/ui/components/foundation/container">
+			 sling:resourceType="granite/ui/components/foundation/container">
 		<items jcr:primaryType="nt:unstructured">
 			<tabs jcr:primaryType="nt:unstructured"
-					sling:resourceType="granite/ui/components/coral/foundation/tabs">
+				  sling:resourceType="granite/ui/components/coral/foundation/tabs">
 				<items jcr:primaryType="nt:unstructured">
 					<labels jcr:primaryType="nt:unstructured"
 							jcr:title="Labels"
@@ -17,21 +17,44 @@
 									sling:resourceType="granite/ui/components/coral/foundation/container">
 								<items jcr:primaryType="nt:unstructured">
 									<i18n-label-local jcr:primaryType="nt:unstructured"
-											sling:resourceType="enigmatic/dialog/label"
-											fieldLabel="'i18n-label-local' shared label"
-											name="./labels/i18n-label-local/value" />
+													  sling:resourceType="enigmatic/dialog/label"
+													  fieldLabel="'i18n-label-local' shared label"
+													  name="./labels/i18n-label-local/value" />
 									<local-label-set jcr:primaryType="nt:unstructured"
-											sling:resourceType="enigmatic/dialog/label"
-											fieldLabel="'local-label-set' shared label"
-											name="./labels/local-label-set/value" />
+													 sling:resourceType="enigmatic/dialog/label"
+													 fieldLabel="'local-label-set' shared label"
+													 name="./labels/local-label-set/value" />
 									<local-label-unset jcr:primaryType="nt:unstructured"
-											sling:resourceType="enigmatic/dialog/label"
-											fieldLabel="'local-label-unset' shared label"
-											name="./labels/local-label-unset/value" />
+													   sling:resourceType="enigmatic/dialog/label"
+													   fieldLabel="'local-label-unset' shared label"
+													   name="./labels/local-label-unset/value" />
 								</items>
 							</column>
 						</items>
 					</labels>
+					<maark jcr:primaryType="nt:unstructured"
+						   jcr:title="Maark Labels"
+						   sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+						<items jcr:primaryType="nt:unstructured">
+							<column jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/container">
+								<items jcr:primaryType="nt:unstructured">
+									<yes jcr:primaryType="nt:unstructured"
+										 sling:resourceType="enigmatic/dialog/label"
+										 fieldLabel="'Yes' shared label"
+										 name="./labels/yes/value" />
+									<no jcr:primaryType="nt:unstructured"
+										sling:resourceType="enigmatic/dialog/label"
+										fieldLabel="'No' shared label"
+										name="./labels/no/value" />
+									<cancel jcr:primaryType="nt:unstructured"
+											sling:resourceType="enigmatic/dialog/label"
+											fieldLabel="'Cancel' shared label"
+											name="./labels/cancel/value" />
+								</items>
+							</column>
+						</items>
+					</maark>
 				</items>
 			</tabs>
 		</items>

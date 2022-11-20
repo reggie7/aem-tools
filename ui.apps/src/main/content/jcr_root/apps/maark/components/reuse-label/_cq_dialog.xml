@@ -15,14 +15,10 @@
 						 sling:resourceType="enigmatic/dialog/label/shared"
 						 fieldLabel="'Yes' shared label"
 						 name="yes" />
-					<no jcr:primaryType="nt:unstructured"
-						sling:resourceType="enigmatic/dialog/label/shared"
-						fieldLabel="'No' shared label"
-						name="no" />
-					<text jcr:primaryType="nt:unstructured"
-						  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-						  fieldLabel="Custom Text"
-						  name="./text" />
+					<cancel jcr:primaryType="nt:unstructured"
+							sling:resourceType="enigmatic/dialog/label/shared"
+							fieldLabel="'Cancel' shared label"
+							name="cancel" />
 				</items>
 			</column>
 		</items>
