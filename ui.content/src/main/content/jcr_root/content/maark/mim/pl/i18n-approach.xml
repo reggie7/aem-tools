@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
-	jcr:primaryType="cq:Page">
+		  jcr:primaryType="cq:Page">
 	<jcr:content jcr:primaryType="cq:PageContent"
-		jcr:title="Podejście I18N"
-		sling:resourceType="maark/page"
-		cq:template="/apps/maark/template"
-		cq:designPath="/etc/designs/maark">
+				 jcr:title="Podejście I18N"
+				 sling:resourceType="maark/page"
+				 cq:template="/apps/maark/template"
+				 cq:designPath="/etc/designs/maark">
 		<content jcr:primaryType="nt:unstructured"
-			sling:resourceType="enigmatic/foundation/parsys">
-			<i18n jcr:primaryType="nt:unstructured"
-				  sling:resourceType="maark/components/i18n" />
+				 sling:resourceType="enigmatic/foundation/parsys">
+			<i18n-labels jcr:primaryType="nt:unstructured"
+						 sling:resourceType="maark/components/i18n-labels" />
 		</content>
 	</jcr:content>
 </jcr:root>
