@@ -109,6 +109,7 @@ TextField
     // End of attrs compatibility.
 
     final SharedLabel label = new SharedLabel(slingRequest);
+    final com.day.cq.wcm.api.Page languageRoot = label.getLanguageRoot();
 
     attrs.add("type", "text");
     attrs.add("name", label.getValuePath());
@@ -153,3 +154,9 @@ TextField
 
 %><input <%= attrs.build() %> />
 <input name="<%= label.getPath() %>/sling:resourceType" type="hidden" value="enigmatic/labels/value" />
+<ui:includeClientLib categories="enigmatic.author.messages" />
+<p class="author-msg-line author-notice">
+    The value of <em><%= fieldLabel %></em> is stored inside the page <a href="/editor.html<%= languageRoot.getPath() %>.html" target="_blank"><%= languageRoot.getTitle() %></a>
+    (&#10140; <a href="/sites.html<%= languageRoot.getPath() %>" target="_blank">Sites</a> Console).
+    Remember to also <a href="/mnt/override/libs/wcm/core/content/common/managepublicationwizard.html?item=<%= languageRoot.getPath() %>" target="_blank">publish</a> it to see the label changes.
+</p>

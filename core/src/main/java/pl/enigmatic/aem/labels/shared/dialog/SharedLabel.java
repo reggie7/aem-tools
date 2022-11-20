@@ -1,5 +1,7 @@
 package pl.enigmatic.aem.labels.shared.dialog;
 
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.PageManager;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
@@ -16,6 +18,7 @@ public final class SharedLabel {
 	private final String name;
 	private final int depth;
 	private final Resource target;
+	private final Page languageRoot;
 
 	public SharedLabel(final SlingHttpServletRequest request) {
 		widget = request.getResource();
@@ -26,6 +29,7 @@ public final class SharedLabel {
 		target = name.startsWith(PathTools.separator)
 				? sources.getGlobalLabel(name.substring(PathTools.separator.length()))
 				: sources.getLangRootLabel(name);
+		languageRoot = request.getResourceResolver().adaptTo(PageManager.class).getContainingPage(target);
 	}
 
 	public String getPath() {
@@ -38,6 +42,10 @@ public final class SharedLabel {
 
 	public String getValue() {
 		return target.getValueMap().get(PN_VALUE, String.class);
+	}
+
+	public Page getLanguageRoot() {
+		return languageRoot;
 	}
 
 }
