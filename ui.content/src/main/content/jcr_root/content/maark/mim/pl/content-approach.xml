@@ -10,7 +10,7 @@
 				 sling:resourceType="enigmatic/foundation/parsys">
 			<content-labels jcr:primaryType="nt:unstructured"
 							sling:resourceType="maark/components/content-labels"
-							text="Reprezentuję BIEDĘ, wiecie, co z nim zrobić Polaki Cebulaki, prawda?" />
+							text="Reprezentuję BIEDĘ, wiecie, co z nim zrobić Polaki cebulaki, prawda?" />
 		</content>
 	</jcr:content>
 </jcr:root>

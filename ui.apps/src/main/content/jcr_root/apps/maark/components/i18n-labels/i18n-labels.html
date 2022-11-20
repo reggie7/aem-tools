@@ -4,21 +4,25 @@
         <div class="mbr-contacts mbr-contacts--wysiwyg row">
             <sly data-sly-test="${editmode}">
                 <p class="author-msg-box author-notice">
-                    This component illustrates current basic usage of i18n within MIM systems.
-                    It contains 2 separate sections showing basic usage scenarios.
+                    This component illustrates current basic usage of i18n in MIM systems within 2 scenarios.
                 </p>
 
                 <hr />
                 <p class="author-msg-box author-notice">
-                    Scenario #1 - a fake shared label. A component that is used only once within a language branch.
+                    Scenario #1 - a <strong>fake</strong> shared label.
+                    A component that is used only once within a language branch.
                 </p>
             </sly>
             <p>${'maark.dashboard.text' @ i18n}</p>
+            <p data-sly-test="${editmode}" class="author-msg-box author-warning">
+                Though what if you changed your mind and wanted to use it elsewhere in the same language branch,
+                but with different text?
+            </p>
 
             <hr />
             <p data-sly-test="${editmode}" class="author-msg-box author-notice">
-                Scenario #2 - truly shared labels. One can imagine that it makes a lot of sense
-                to extract common button labels and <strong>NOT</strong> to set them each time again and again.
+                Scenario #2 - <strong>truly</strong> shared labels. One can imagine that it makes a lot of sense
+                to extract common button labels and <strong>NOT</strong> set them each time again and again.
             </p>
             <p>
                 <a href="#" class="btn btn-info" style="margin-right: 1em;">${'maark.button.yes' @ i18n}</a>
@@ -26,15 +30,10 @@
             </p>
 
             <sly data-sly-test="${editmode}">
-                <br /><br /><hr />
+                <br /><hr />
                 <p class="author-msg-box author-edit">
-                    Note how there is no dialog - everything is configured in AEM Translator within dictionaries.
+                    Note how there is no dialog - everything is configured in <strong>AEM Translator</strong> within dictionaries.
                     Let's see the workflow now maybe...
-                </p>
-
-                <br /><br /><hr />
-                <p class="author-msg-box author-error">
-                    Let's see how it was supposed to be used now.
                 </p>
             </sly>
         </div>

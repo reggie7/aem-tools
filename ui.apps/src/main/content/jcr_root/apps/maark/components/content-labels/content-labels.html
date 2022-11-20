@@ -17,20 +17,16 @@
 
             <hr />
             <p data-sly-test="${editmode}" class="author-msg-box author-notice">
-                Scenario #2 - truly shared labels. One can imagine that it makes a lot of sense
+                Scenario #2 - <strong>truly</strong> shared labels. One can imagine that it makes a lot of sense
                 to extract common button labels and <strong>NOT</strong> to set them each time again and again.
             </p>
             <p>
                 <a href="#" class="btn btn-info" style="margin-right: 1em;">${labels.yes}</a>
-                <a href="#" class="btn btn-default" >${labels.no}</a>
+                <a href="#" class="btn btn-default">${labels.no}</a>
             </p>
 
             <sly data-sly-test="${editmode}">
-                <p class="author-msg-box author-warning">
-                    Though what if you changed your mind and wanted to use it elsewhere in the same language branch?
-                </p>
-
-                <br /><br /><hr />
+                <br /><hr />
                 <p class="author-msg-box author-edit">
                     Let's see the language pages now maybe?
                 </p>
@@ -41,9 +37,15 @@
                     How about we use the same label in another component?
                 </p>
 
-                <br /><br /><hr />
+                <br /><hr />
                 <p class="author-msg-box author-success">
-                    Let's see CRX DE now to show how you define it in a dialog and how you'd use it in HTL.
+                    Let's see CRX DE now to show how you define it
+                    in a <strong>dialog</strong> and how you'd use it in <strong>HTL</strong>.
+                </p>
+
+                <br /><hr />
+                <p class="author-msg-box author-error">
+                    Now, let's see how <strong>i18n</strong> is supposed to be used by design...
                 </p>
             </sly>
         </div>
