@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if [ -d "$HOME/.sdkman" ]; then
     source "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk version
@@ -9,7 +11,7 @@ if [ -d "$HOME/.sdkman" ]; then
         [[ "$candidate" =~ ^#.*$ || -z "$candidate" ]] && continue
         candidate=$(echo "$candidate" | xargs)
         version=$(echo "$version" | xargs)
-        if ! sdk list "$candidate" | grep -qE " $version(\s|\*|\+|$)"; then
+        if ! sdk list "$candidate" | grep -qE "installed\s*\\|\s*$version(\s|\*|\+|$)"; then
             echo "$candidate $version is NOT installed."
             all_installed=false
         else
