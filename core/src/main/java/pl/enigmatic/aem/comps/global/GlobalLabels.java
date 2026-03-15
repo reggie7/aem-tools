@@ -20,4 +20,9 @@ public class GlobalLabels extends ConfigurationMap {
 		super(GlobalLabelsDefinitions.LABELS, GlobalLabelsDefinitions.create(resource).toDefaults(), resource, "value");
 	}
 
+	@Override
+	protected StringInterpolator wrap(final Object key, final Object string) {
+		return new StringInterpolator(key, string);
+	}
+
 }

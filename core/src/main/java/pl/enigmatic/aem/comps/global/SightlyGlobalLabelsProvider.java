@@ -13,7 +13,7 @@ import org.osgi.service.component.annotations.Component;
 @Component(property = { "javax.script.name=sightly" })
 public final class SightlyGlobalLabelsProvider implements BindingsValuesProvider {
 
-    private static final String NAME = "labels";
+    private static final String NAME = GlobalLabelsDefinitions.LABELS;
 
     @Override
     public void addBindings(final Bindings bindings) {
@@ -21,6 +21,11 @@ public final class SightlyGlobalLabelsProvider implements BindingsValuesProvider
             return;
         }
 
-        bindings.put(NAME, ((Resource) bindings.get(SlingBindings.RESOURCE)).adaptTo(GlobalLabels.class));
+        bindings.put(NAME, getResource(bindings).adaptTo(GlobalLabels.class));
     }
+
+    private static Resource getResource(final Bindings bindings) {
+        return (Resource) bindings.get(SlingBindings.RESOURCE);
+    }
+
 }

@@ -58,17 +58,22 @@ public class ConfigurationMap extends HashMap<String, Object> implements ValueMa
 
 	private Object get(final Object key, final Object defaultValue) {
 		if (super.containsKey(key)) {
-			return super.get(key);
+			return wrap(key, super.get(key));
 		} else {
 			Object value = properties.getInherited(PathTools.path(path, key, suffix), Object.class);
 			if (value == null) {
 				value = defaults.get(key);
 				if (value == null) {
-					return defaultValue;
+					return wrap(key, defaultValue);
 				}
 			}
-			return value;
+
+			return wrap(key, value);
 		}
+	}
+
+	protected Object wrap(final Object key, final Object obj) {
+		return obj;
 	}
 
 	@Override
