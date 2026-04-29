@@ -3,8 +3,7 @@ package pl.enigmatic.aem.config.impl;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Service;
+import org.osgi.service.component.annotations.Component;
 import org.apache.sling.api.resource.ResourceResolver;
 
 import com.day.cq.wcm.api.Page;
@@ -14,8 +13,7 @@ import com.day.cq.wcm.webservicesupport.ConfigurationManager;
 
 import pl.enigmatic.aem.config.CloudServiceResolver;
 
-@Service
-@Component
+@Component(service = CloudServiceResolver.class)
 public class CloudServiceResolverImpl implements CloudServiceResolver {
 
 	private static final String[] EMPTY_PATHS = new String[]{};

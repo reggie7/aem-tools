@@ -9,7 +9,9 @@ import java.util.Calendar;
 
 import javax.servlet.ServletException;
 
-import org.apache.felix.scr.annotations.sling.SlingServlet;
+import javax.servlet.Servlet;
+
+import org.osgi.service.component.annotations.Component;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
@@ -17,7 +19,13 @@ import org.json.simple.JSONObject;
 
 import pl.enigmatic.aem.DateFormatValidator;
 
-@SlingServlet(paths = "/bin/private/enigmatic/time/get.json", methods = { "GET", }, metatype = false)
+@Component(
+    service = Servlet.class,
+    property = {
+        "sling.servlet.paths=/bin/private/enigmatic/time/get.json",
+        "sling.servlet.methods=GET"
+    }
+)
 public class GetServerTimeServlet extends SlingAllMethodsServlet {
 
 	/** serial version UID */

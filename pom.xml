@@ -27,6 +27,9 @@
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<java.version>21</java.version>
+		<aem.sdk.api>2026.1.23963.20260108T001551Z-251200</aem.sdk.api>
 	</properties>
 
 	<!-- ============================== -->
@@ -63,8 +66,8 @@
 									<version>[3.3.9,)</version>
 								</requireMavenVersion>
 								<requireJavaVersion>
-									<message>Project must be compiled with Java 8 or higher</message>
-										<version>1.8.0</version>
+									<message>Project must be compiled with Java 21 or higher</message>
+										<version>21</version>
 									</requireJavaVersion>
 								</rules>
 							</configuration>
@@ -76,8 +79,8 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
 					</configuration>
 				</plugin>
 				<!-- Maven IntelliJ IDEA Plugin -->
@@ -86,7 +89,7 @@
 					<artifactId>maven-idea-plugin</artifactId>
 					<version>2.2.1</version>
 					<configuration>
-						<jdkLevel>1.8</jdkLevel>
+						<jdkLevel>${java.version}</jdkLevel>
 						<linkModules>true</linkModules>
 						<downloadSources>true</downloadSources>
 					</configuration>
@@ -189,7 +192,7 @@
 				<plugin>
 					<groupId>org.apache.felix</groupId>
 					<artifactId>maven-bundle-plugin</artifactId>
-					<version>3.3.0</version>
+					<version>5.1.9</version>
 					<inherited>true</inherited>
 				</plugin>
 				<!-- Maven Enforcer Plugin -->
@@ -475,13 +478,7 @@
 				<version>6.0.1</version>
 				<scope>provided</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>org.apache.felix.scr.annotations</artifactId>
-				<version>1.9.12</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
+<dependency>
 				<groupId>javax.inject</groupId>
 				<artifactId>javax.inject</artifactId>
 				<version>1</version>
@@ -497,9 +494,8 @@
 			<!-- Apache Sling Dependencies -->
 			<dependency>
 				<groupId>com.adobe.aem</groupId>
-				<artifactId>uber-jar</artifactId>
-				<version>6.3.0</version>
-				<classifier>apis</classifier>
+				<artifactId>aem-sdk-api</artifactId>
+				<version>${aem.sdk.api}</version>
 				<scope>provided</scope>
 			</dependency>
 
