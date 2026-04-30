@@ -1,6 +1,8 @@
 ;(function ($, ns, channel, window, undefined) {
 	"use strict";
 
+	if (!ns.Inspectable) { return; }
+
 	var newComponentClass = 'new';
 
 	ns.Inspectable.prototype.hasPlaceholder_Super = ns.Inspectable.prototype.hasPlaceholder;
